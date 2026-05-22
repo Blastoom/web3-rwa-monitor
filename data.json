@@ -1,0 +1,1723 @@
+{
+  "metrics": {
+    "rwa_total": {
+      "value": 33500000000.0,
+      "delta_pct": -1.0924121641570712,
+      "unit": "USD",
+      "label": "RWA on-chain (excl. stablecoins)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 11800000000.0,
+      "delta_pct": 9.25925925925926,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 18200000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_bonds": {
+      "value": 6500000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Tokenized Bonds",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 1200000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_real_estate": {
+      "value": 580000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Tokenized Real Estate",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "buidl_aum": {
+      "value": 2532795614.0,
+      "delta_pct": -0.18776688685852996,
+      "unit": "USD",
+      "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 322990000000.0,
+      "delta_pct": 21.595319752886567,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 58.74,
+      "delta_pct": null,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 22.5,
+      "delta_pct": null,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 11200000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 2700000000.0,
+      "delta_pct": -60.526315789473685,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_gold": {
+      "value": 90700000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Tokenized Gold Volume Q",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 187500000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 4250000000000.0,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.0245,
+      "delta_pct": null,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 53.2,
+      "delta_pct": -20.603769530054908,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 27.0,
+      "delta_pct": -3.571428571428571,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "buidl_aum_usd": {
+      "value": 2532795614.0,
+      "delta_pct": -0.18776688685852996,
+      "unit": "USD",
+      "label": "buidl_aum_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_total_ex_stablecoins_usd": {
+      "value": 34020000000.0,
+      "delta_pct": 0.44286979627989376,
+      "unit": "",
+      "label": "rwa_total_ex_stablecoins_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_us_treasuries_aum_usd": {
+      "value": 10155065376.0,
+      "delta_pct": -21.156324720496894,
+      "unit": "",
+      "label": "tokenized_us_treasuries_aum_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "blackrock_buidl_aum_usd": {
+      "value": 2532795614.0,
+      "delta_pct": -0.18776688685852996,
+      "unit": "",
+      "label": "blackrock_buidl_aum_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_commodities_total_usd": {
+      "value": 9087037229.0,
+      "delta_pct": 32.82238427028182,
+      "unit": "",
+      "label": "tokenized_commodities_total_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed_index": {
+      "value": 29.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "fear_greed_index",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 72950000.0,
+      "delta_pct": 0,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
+      "source_url": ""
+    },
+    "dlr_avg_daily_volume": {
+      "value": 368000000000.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "dlr_avg_daily_volume",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_total_usd": {
+      "value": 33780000000.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "rwa_total_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_treasuries_usd": {
+      "value": 11510000000.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "tokenized_treasuries_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities_usd": {
+      "value": 6841632139.0,
+      "delta_pct": -7.5225483341668395,
+      "unit": "",
+      "label": "rwa_commodities_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_total_ex_stables_usd": {
+      "value": 33670000000.0,
+      "delta_pct": -0.11865915158706616,
+      "unit": "",
+      "label": "rwa_total_ex_stables_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities_total_usd": {
+      "value": 9300000000.0,
+      "delta_pct": -0.10741138560687433,
+      "unit": "",
+      "label": "rwa_commodities_total_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "liq_24h_usd": {
+      "value": 804000000.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "liq_24h_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_treas_usd": {
+      "value": 13249892049.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "tokenized_treas_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_treasuries_aum_usd": {
+      "value": 18600000000.0,
+      "delta_pct": 55.388471177944865,
+      "unit": "",
+      "label": "tokenized_treasuries_aum_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_total_ex_stables": {
+      "value": 33780000000.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "rwa_total_ex_stables",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_total_ex_stable": {
+      "value": 33780000000.0,
+      "delta_pct": 0.20765351527736575,
+      "unit": "",
+      "label": "rwa_total_ex_stable",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_treas_aum_usd": {
+      "value": 2971935149.0,
+      "delta_pct": null,
+      "unit": "",
+      "label": "tokenized_treas_aum_usd",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "dlr_avg_daily_usd": {
+      "value": 354000000000,
+      "delta_pct": null,
+      "unit": "usd",
+      "label": "dlr_avg_daily_usd",
+      "category": "",
+      "source_url": ""
+    },
+    "dlr_month_total_usd": {
+      "value": 8000000000000,
+      "delta_pct": null,
+      "unit": "usd",
+      "label": "dlr_month_total_usd",
+      "category": "",
+      "source_url": ""
+    },
+    "rwa_total_ex_stable_usd": {
+      "value": 33710000000,
+      "delta_pct": null,
+      "unit": "",
+      "label": "rwa_total_ex_stable_usd",
+      "category": "",
+      "source_url": ""
+    },
+    "tokenized_treasuries_aum": {
+      "value": 2971935149,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "tokenized_treasuries_aum",
+      "category": "",
+      "source_url": ""
+    },
+    "rwa_commodities_total": {
+      "value": 9066344345,
+      "delta_pct": null,
+      "unit": "USD",
+      "label": "rwa_commodities_total",
+      "category": "",
+      "source_url": ""
+    },
+    "broadridge_dlr_adv": {
+      "value": 354000000000.0,
+      "delta_pct": -3.804347826086957,
+      "unit": "USD",
+      "label": "Broadridge DLR Avg Daily Volume",
+      "category": "institutional",
+      "source_url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-392-percent-year-over-year-growth-in-march"
+    },
+    "mbridge_cum": {
+      "value": 55490000000,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Project mBridge cumulative",
+      "category": "institutional",
+      "source_url": "https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/"
+    },
+    "mbridge_txn": {
+      "value": 4047.0,
+      "delta_pct": 0.0,
+      "unit": "count",
+      "label": "mBridge transactions (count)",
+      "category": "institutional",
+      "source_url": "https://www.reuters.com/world/asia-pacific/china-led-cross-border-digital-currency-platform-sees-surge-2026-01-16/"
+    }
+  },
+  "metrics_list": [
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 33500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -370000000.0,
+      "delta_pct": -1.0924121641570712,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 11800000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1000000000.0,
+      "delta_pct": 9.25925925925926,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 18200000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_bonds",
+      "metric_label": "Tokenized Bonds",
+      "value_num": 6500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 1200000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_real_estate",
+      "metric_label": "Tokenized Real Estate",
+      "value_num": 580000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2532795614.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4764698.0,
+      "delta_pct": -0.18776688685852996,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 322990000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 57363000000.0,
+      "delta_pct": 21.595319752886567,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 58.74,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 22.5,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 11200000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 2700000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4140000000.0,
+      "delta_pct": -60.526315789473685,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_gold",
+      "metric_label": "Tokenized Gold Volume Q",
+      "value_num": 90700000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 187500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 4250000000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.0245,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 53.2,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -13.805700000000002,
+      "delta_pct": -20.603769530054908,
+      "captured_at": "2026-05-22 20:09:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 27.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -1.0,
+      "delta_pct": -3.571428571428571,
+      "captured_at": "2026-05-22 19:27:28"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "buidl_aum_usd",
+      "metric_label": "buidl_aum_usd",
+      "value_num": 2532795614.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4764698.0,
+      "delta_pct": -0.18776688685852996,
+      "captured_at": "2026-05-22 19:01:50"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total_ex_stablecoins_usd",
+      "metric_label": "rwa_total_ex_stablecoins_usd",
+      "value_num": 34020000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 150000000.0,
+      "delta_pct": 0.44286979627989376,
+      "captured_at": "2026-05-22 13:21:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_us_treasuries_aum_usd",
+      "metric_label": "tokenized_us_treasuries_aum_usd",
+      "value_num": 10155065376.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -2724934624.0,
+      "delta_pct": -21.156324720496894,
+      "captured_at": "2026-05-22 13:21:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "blackrock_buidl_aum_usd",
+      "metric_label": "blackrock_buidl_aum_usd",
+      "value_num": 2532795614.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4764698.0,
+      "delta_pct": -0.18776688685852996,
+      "captured_at": "2026-05-22 13:21:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_commodities_total_usd",
+      "metric_label": "tokenized_commodities_total_usd",
+      "value_num": 9087037229.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 2245541890.0,
+      "delta_pct": 32.82238427028182,
+      "captured_at": "2026-05-22 13:21:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "fear_greed_index",
+      "metric_label": "fear_greed_index",
+      "value_num": 29.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-22 13:21:05"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 72950000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 72950000.0,
+      "delta_pct": 0,
+      "captured_at": "2026-05-22 01:17:10"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "dlr_avg_daily_volume",
+      "metric_label": "dlr_avg_daily_volume",
+      "value_num": 368000000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-22 01:17:10"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total_usd",
+      "metric_label": "rwa_total_usd",
+      "value_num": 33780000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-21 19:09:38"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treasuries_usd",
+      "metric_label": "tokenized_treasuries_usd",
+      "value_num": 11510000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-21 19:09:38"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities_usd",
+      "metric_label": "rwa_commodities_usd",
+      "value_num": 6841632139.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -556530349.0,
+      "delta_pct": -7.5225483341668395,
+      "captured_at": "2026-05-21 19:09:38"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total_ex_stables_usd",
+      "metric_label": "rwa_total_ex_stables_usd",
+      "value_num": 33670000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -40000000.0,
+      "delta_pct": -0.11865915158706616,
+      "captured_at": "2026-05-21 07:00:40"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities_total_usd",
+      "metric_label": "rwa_commodities_total_usd",
+      "value_num": 9300000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -10000000.0,
+      "delta_pct": -0.10741138560687433,
+      "captured_at": "2026-05-21 07:00:40"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "liq_24h_usd",
+      "metric_label": "liq_24h_usd",
+      "value_num": 804000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-21 07:00:40"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas_usd",
+      "metric_label": "tokenized_treas_usd",
+      "value_num": 13249892049.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-20 07:17:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treasuries_aum_usd",
+      "metric_label": "tokenized_treasuries_aum_usd",
+      "value_num": 18600000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 6630000000.0,
+      "delta_pct": 55.388471177944865,
+      "captured_at": "2026-05-20 01:10:18"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total_ex_stables",
+      "metric_label": "rwa_total_ex_stables",
+      "value_num": 33780000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-19 19:07:10"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total_ex_stable",
+      "metric_label": "rwa_total_ex_stable",
+      "value_num": 33780000000.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 70000000.0,
+      "delta_pct": 0.20765351527736575,
+      "captured_at": "2026-05-19 13:24:14"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas_aum_usd",
+      "metric_label": "tokenized_treas_aum_usd",
+      "value_num": 2971935149.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-19 06:59:24"
+    },
+    {
+      "metric_key": "dlr_avg_daily_usd",
+      "value_num": 354000000000,
+      "unit": "usd",
+      "source": "broadridge.com",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-18 13:30:53"
+    },
+    {
+      "metric_key": "dlr_month_total_usd",
+      "value_num": 8000000000000,
+      "unit": "usd",
+      "source": "broadridge.com",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-18 13:30:53"
+    },
+    {
+      "metric_key": "rwa_total_ex_stable_usd",
+      "value_num": 33710000000,
+      "value_str": "$33.71B",
+      "source": "https://app.rwa.xyz/",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-18 01:13:48"
+    },
+    {
+      "metric_key": "tokenized_treasuries_aum",
+      "value_num": 2971935149,
+      "unit": "USD",
+      "source": "rwa.xyz",
+      "url": "https://app.rwa.xyz/",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-17 07:10:06"
+    },
+    {
+      "metric_key": "rwa_commodities_total",
+      "value_num": 9066344345,
+      "unit": "USD",
+      "source": "rwa.xyz",
+      "url": "https://app.rwa.xyz/",
+      "delta_num": null,
+      "delta_pct": null,
+      "captured_at": "2026-05-17 07:10:06"
+    },
+    {
+      "category": "institutional",
+      "metric_key": "broadridge_dlr_adv",
+      "metric_label": "Broadridge DLR Avg Daily Volume",
+      "value_num": 354000000000.0,
+      "unit": "USD",
+      "source_url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-392-percent-year-over-year-growth-in-march",
+      "source_name": "Broadridge",
+      "delta_num": -14000000000.0,
+      "delta_pct": -3.804347826086957,
+      "captured_at": "2026-05-16 13:14:05"
+    },
+    {
+      "category": "institutional",
+      "metric_key": "mbridge_cum",
+      "metric_label": "Project mBridge cumulative",
+      "value_num": 55490000000,
+      "unit": "USD",
+      "source_url": "https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/",
+      "source_name": "Atlantic Council",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-14 01:06:58"
+    },
+    {
+      "id": 19,
+      "captured_at": "2026-05-11T15:34:30.330680",
+      "category": "institutional",
+      "metric_key": "mbridge_txn",
+      "metric_label": "mBridge transactions (count)",
+      "value_num": 4047.0,
+      "value_text": null,
+      "unit": "count",
+      "source_url": "https://www.reuters.com/world/asia-pacific/china-led-cross-border-digital-currency-platform-sees-surge-2026-01-16/",
+      "source_name": "Reuters",
+      "delta_num": 0.0,
+      "delta_pct": 0.0
+    }
+  ],
+  "news": [
+    {
+      "title": "Mercado Bitcoin announces $200M RWA issuance on Stellar Network",
+      "url": "https://stellar.org/press/mercado-bitcoin-announces-usd200-million-rwa-issuance-on-stellar-network",
+      "body": "Brazil's largest crypto exchange Mercado Bitcoin announced a $200M tokenized RWA issuance on Stellar, with focus on private credit. 20% of MB custody is already RWA.",
+      "source": "Stellar",
+      "date": "2025-09-18T00:00:00Z",
+      "category": "issuance",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [
+        "mercado_bitcoin"
+      ],
+      "markets": [
+        "tokenized_credit",
+        "tokenized_treasuries"
+      ],
+      "regions": [
+        "Latin America"
+      ],
+      "tags": [
+        "entity:mercado_bitcoin",
+        "market:tokenized_credit",
+        "market:tokenized_treasuries",
+        "region:Latin America"
+      ]
+    },
+    {
+      "title": "QNB issues Qatar's first native digital bond in $500M landmark deal",
+      "url": "https://qna.org.qa/en/News-Area/News/2025-11/24/qnb-issues-qatars-first-native-digital-bond-in-us-500m-landmark-deal",
+      "body": "Qatar National Bank issued Qatar's first native digital bond, a $500 million landmark transaction. Issuance settled natively on DLT.",
+      "source": "QNA",
+      "date": "2025-11-24T00:00:00Z",
+      "category": "issuance",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [
+        "qnb_qatar"
+      ],
+      "markets": [
+        "tokenized_bonds"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:qnb_qatar",
+        "market:tokenized_bonds",
+        "region:Middle East"
+      ]
+    },
+    {
+      "title": "IHC, ADQ and FAB pioneer UAE Dirham-backed stablecoin",
+      "url": "https://www.adq.ae/newsroom/ihc-adq-and-fab-pioneer-uae-dirham-backed-stablecoin-for-the-digital-economy/",
+      "body": "Three UAE institutions \u2014 IHC, ADQ and FAB \u2014 announced plans to launch a CBUAE-regulated Dirham-backed stablecoin issued by FAB.",
+      "source": "ADQ Newsroom",
+      "date": "2025-04-28T00:00:00Z",
+      "category": "stablecoin",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [
+        "adq_uae",
+        "fab_uae",
+        "ihc_uae"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:adq_uae",
+        "entity:fab_uae",
+        "entity:ihc_uae",
+        "market:stablecoins",
+        "region:Middle East"
+      ]
+    },
+    {
+      "title": "Aptos approves Proposal 183: 2.1B APT supply cap and 100% gas burns",
+      "url": "https://everstake.one/resources/blog/aptos-news-2026",
+      "body": "Aptos network passed Proposal 183 in March 2026 introducing a 2.1B APT hard supply cap, 100% gas-fee burns, and reduced staking rewards. BUIDL deployed $500M extra on Aptos.",
+      "source": "Everstake",
+      "date": "2026-03-15T00:00:00Z",
+      "category": "regulation",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [
+        "blackrock_buidl"
+      ],
+      "markets": [
+        "defi",
+        "tokenized_treasuries"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:blackrock_buidl",
+        "market:defi",
+        "market:tokenized_treasuries"
+      ]
+    },
+    {
+      "title": "MUFG Progmat pivots to Avalanche for tokenized securities",
+      "url": "https://www.ledgerinsights.com/tokenized-securities-platform-progmat-pivots-to-avalanche-blockchain/",
+      "body": "Japan's MUFG Progmat tokenization platform pivoted to Avalanche subnets in Feb 2026. MUFG issued public-offering digital subordinated bonds in Oct 2025.",
+      "source": "Ledger Insights",
+      "date": "2026-02-10T00:00:00Z",
+      "category": "tokenization",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "tokenized_bonds"
+      ],
+      "regions": [
+        "Asia-Pacific",
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "market:tokenized_bonds",
+        "region:Asia-Pacific",
+        "region:North America"
+      ]
+    },
+    {
+      "title": "ADGM FSRA announces FRT rules effective January 1, 2026",
+      "url": "https://www.adgm.com/media/announcements/adgm-fsra-presents-key-enhancements-to-its-digital-assets-framework-at-abu-dhabi-finance-week-2025",
+      "body": "Abu Dhabi Global Market's FSRA presented enhancements to its Virtual Asset framework. Fiat-Referenced Token rules effective Jan 1, 2026 with 20+ regulated firms operating.",
+      "source": "ADGM",
+      "date": "2025-11-15T00:00:00Z",
+      "category": "regulation",
+      "severity": "info",
+      "captured_at": "2026-05-22 20:09:49",
+      "entity_ids": [
+        "adgm_fsra"
+      ],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:adgm_fsra",
+        "market:regulation",
+        "region:Middle East"
+      ]
+    },
+    {
+      "title": "SEC is said to ready plan for trading tokenized stocks (innovation exemption)",
+      "url": "https://www.bloomberg.com/news/articles/2026-05-18/sec-is-said-to-ready-plan-for-trading-crypto-versions-of-stocks",
+      "source": "Bloomberg",
+      "published": "2026-05-19",
+      "severity": "warning",
+      "category": "regulation",
+      "summary": "Bloomberg reports the SEC may release an innovation exemption framework to enable trading digital versions of securities (tokenized stocks) as soon as this week.",
+      "captured_at": "2026-05-22 07:09:52",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
+    {
+      "title": "FinCEN and OFAC publish proposed rule for stablecoin issuers under the GENIUS Act (30-day comment period)",
+      "url": "https://www.gtlaw.com/en/insights/2026/5/fincen-and-ofac-propose-aml-cft-sanctions-framework-for-payment-stablecoin-issuers-under-genius-act",
+      "source": "Greenberg Traurig",
+      "ts": "2026-05-21",
+      "severity": "info",
+      "category": "policy",
+      "body": "El 10 Abr 2026 FinCEN y OFAC emitieron una Proposed Rule para implementar requisitos AML/CFT y sanciones para permitted payment stablecoin issuers bajo GENIUS Act; comentarios hasta 9 Jun 2026.",
+      "captured_at": "2026-05-22 01:17:10",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins"
+      ]
+    },
+    {
+      "title": "Broadridge DLR: record volumes in March (+392% YoY)",
+      "url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-392-percent-year-over-year-growth-in-march",
+      "source": "Broadridge",
+      "severity": "info",
+      "summary": "Broadridge report\u00f3 que su plataforma Distributed Ledger Repo (DLR) proces\u00f3 un promedio de ~$354B/d\u00eda en marzo y casi $8T en volumen mensual (marzo), con crecimiento interanual de 392%.",
+      "captured_at": "2026-05-18 13:30:53",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "category": "regulation",
+      "title": "Treasury Proposes Rule to Implement the GENIUS Act's ...",
+      "summary": "U.S. Treasury (FinCEN/OFAC) issued a proposed rule implementing GENIUS Act AML and sanctions compliance requirements for permitted payment stablecoin issuers.",
+      "url": "https://home.treasury.gov/news/press-releases/sb0435",
+      "source": "U.S. Treasury",
+      "published_date": "2026-05-15",
+      "severity": "info",
+      "captured_at": "2026-05-15 13:23:10",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins",
+        "tokenized_treasuries"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins",
+        "market:tokenized_treasuries"
+      ]
+    },
+    {
+      "category": "regulation",
+      "title": "Securitize CEO: Tokenized Stocks Will DOUBLE Crypto - YouTube",
+      "summary": "\ud83d\udea8 The future of Wall Street is going on-chain.\n\nAt Consensus 2026 in Miami, Securitize Founder & CEO Carlos Domingo breaks down why tokenized equities, stablecoins, and AI-powered \u201cagentic trading\u201d could radically transform global capital m",
+      "url": "https://www.youtube.com/watch?v=jVJDt_-lEtY",
+      "source": "www.youtube.com",
+      "published_date": "2026-05-14",
+      "severity": "info",
+      "captured_at": "2026-05-15 01:16:00",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
+    {
+      "category": "institutional",
+      "title": "Broadridge says DLR processed nearly $8T in March with $354B average daily volume",
+      "summary": "Broadridge announced its Distributed Ledger Repo (DLR) processed nearly $8 trillion in March and averaged $354 billion in daily repo transactions during the month, reporting 392% year-over-year growth.",
+      "url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-392-percent-year-over-year-growth-in-march",
+      "source": "Broadridge",
+      "published_date": "2026-04-09",
+      "severity": "info",
+      "captured_at": "2026-05-14 13:23:39",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "id": 29,
+      "captured_at": "2026-05-13 19:12:44",
+      "category": "regulation",
+      "title": "Statement on Tokenized Securities",
+      "summary": "Statement  # Statement on Tokenized Securities  Division of Corporation Finance, Division of Investment Management, Division of Trading and Markets  Washington D.C.  Jan. 28, 2026  ## Introduction  As part of an effort to provide greater clarity on the application of the federal",
+      "url": "https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities",
+      "source": "SEC",
+      "published_date": "2026-01-28",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
+    {
+      "id": 21,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "institutional",
+      "title": "JPM Coin: Bank-Backed USD Deposit Token from Kinexys ...",
+      "summary": "Discover how JPM Coin, a 1:1 bank-backed deposit token from Kinexys by J.P. Morgan, helps institutions unlock trapped capital and settle around the clock.",
+      "url": "https://www.jpmorgan.com/kinexys/jpm-coin",
+      "source": "www.jpmorgan.com",
+      "published_date": "",
+      "severity": "info",
+      "entity_ids": [
+        "jpmorgan_kinexys"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_deposits"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:jpmorgan_kinexys",
+        "market:repo",
+        "market:tokenized_deposits"
+      ]
+    },
+    {
+      "id": 22,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "regulation",
+      "title": "Fact Sheet: President Donald J. Trump Signs GENIUS Act ...",
+      "summary": "- Stablecoin issuers must comply with strict marketing rules to protect consumers from deceptive practices.\nCrucially, they are forbidden from making misleading claims that their stablecoins are backed by the U.S. government, federally insured, or legal tender.\n- The GENIUS Act aligns State and Federal stablecoin frameworks, ensuring fair and consistent regulation throughout the country.\n- In the event of insolvency of a stablecoin issuer, the GENIUS Act prioritizes stablecoin holders\u2019 claims over all other creditors, ensuring a final backstop of consumer protection.\n**ENSURING U.S. DOLLAR GLOBAL RESERVE CURRENCY STATUS: ** By driving demand for U.S. Treasuries, stablecoins will play a crucial role in ensuring the continued global dominance of the U.S. dollar as the world\u2019s reserve currency.\n\u2026\n- The GENIUS Act explicitly subjects stablecoin issuers to the Bank Secrecy Act, thereby clearly obligating them to establish effective anti-money laundering and sanctions compliance programs with risk assessments, sanctions list verification, and customer identification.\n- This legislation improves the Treasury Department\u2019s ability to combat illicit stablecoin activities by enhancing its sanctions evasion and money laundering enforcement capabilities.",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
+      "source": "www.whitehouse.gov",
+      "published_date": "2025-07-18",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins"
+      ]
+    },
+    {
+      "id": 23,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "regulation",
+      "title": "SEC issues interpretation clarifying how federal securities laws apply to crypto assets",
+      "summary": "SEC published an interpretation clarifying how federal securities laws apply to certain crypto assets and transactions, including a taxonomy covering stablecoins and digital securities and guidance on airdrops, staking, and wrapped assets.",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets",
+      "source": "SEC",
+      "published_date": "2026-03-17",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
+    {
+      "id": 24,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "regulation",
+      "title": "White House fact sheet: GENIUS Act signed into law (stablecoin framework)",
+      "summary": "The White House says the GENIUS Act creates a federal regulatory system for stablecoins, including 100% reserve backing and monthly public reserve disclosures, and applies Bank Secrecy Act obligations to issuers.",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
+      "source": "The White House",
+      "published_date": "2025-07-18",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins"
+      ]
+    },
+    {
+      "id": 25,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "institutional",
+      "title": "Atlantic Council: mBridge processed ~4,000 cross-border transactions cumulatively worth ~$55.49B",
+      "summary": "Atlantic Council reports mBridge has processed more than 4,000 cross-border transactions with cumulative value around $55.49B and that the digital yuan represents ~95.3% of total settlement volume.",
+      "url": "https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/",
+      "source": "Atlantic Council",
+      "published_date": "2026-01-16",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "cbdc",
+        "cross_border_payments"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "market:cbdc",
+        "market:cross_border_payments",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "id": 26,
+      "captured_at": "2026-05-13 13:21:42",
+      "category": "institutional",
+      "title": "HSBC expands tokenized deposit service to the United States",
+      "summary": "HSBC announced an expansion of its tokenized deposit service to the U.S., extending availability of its tokenized deposit capability for eligible clients.",
+      "url": "https://www.about.us.hsbc.com/newsroom/press-releases/hsbc-expands-tokenized-deposit-service-to-the-united-states",
+      "source": "HSBC",
+      "published_date": "2026-04-13",
+      "severity": "info",
+      "entity_ids": [
+        "hsbc_orion"
+      ],
+      "markets": [
+        "tokenized_bonds",
+        "tokenized_deposits"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "entity:hsbc_orion",
+        "market:tokenized_bonds",
+        "market:tokenized_deposits",
+        "region:North America"
+      ]
+    },
+    {
+      "id": 13,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "regulation",
+      "title": "Treasury (FinCEN/OFAC) proposes rule to implement GENIUS Act stablecoin AML/sanctions requirements",
+      "summary": "FinCEN and OFAC issued a joint proposed rule to implement GENIUS Act requirements for payment stablecoins, including anti-money laundering and sanctions compliance obligations, treating permitted payment stablecoin issuers as financial institutions under the Bank Secrecy Act.",
+      "url": "https://home.treasury.gov/news/press-releases/sb0435",
+      "source": "U.S. Department of the Treasury",
+      "published_date": "2026-04-09",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins",
+        "tokenized_treasuries"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins",
+        "market:tokenized_treasuries"
+      ]
+    },
+    {
+      "id": 14,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "institutional",
+      "title": "Broadridge DLR April 2026 repo ADV hits $368B (nearly $8T monthly)",
+      "summary": "Broadridge reported its Distributed Ledger Repo processed an average daily volume of $368B in April 2026, totaling nearly $8T for the month, reflecting sustained institutional adoption of tokenized settlement.",
+      "url": "https://www.stocktitan.net/news/BR/broadridge-s-distributed-ledger-repo-achieves-268-year-over-year-j0vn4w3fcthm.html",
+      "source": "Stock Titan (PRNewswire relay)",
+      "published_date": "2026-05-04",
+      "severity": "info",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "id": 15,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "institutional",
+      "title": "HSBC launches Tokenized Deposit Service in the United States",
+      "summary": "HSBC announced the launch of its Tokenized Deposit Service (TDS) in the U.S., expanding its digital money capabilities for 24/7 on-chain domestic and cross-border funds movement for eligible corporate/institutional clients.",
+      "url": "https://www.about.us.hsbc.com/newsroom/press-releases/hsbc-expands-tokenized-deposit-service-to-the-united-states",
+      "source": "HSBC",
+      "published_date": "2026-04-13",
+      "severity": "info",
+      "entity_ids": [
+        "hsbc_orion"
+      ],
+      "markets": [
+        "tokenized_bonds",
+        "tokenized_deposits"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "entity:hsbc_orion",
+        "market:tokenized_bonds",
+        "market:tokenized_deposits",
+        "region:North America"
+      ]
+    },
+    {
+      "id": 16,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "regulation",
+      "title": "White House: GENIUS Act signed into law (stablecoin legislation)",
+      "summary": "The White House fact sheet says the GENIUS Act explicitly subjects stablecoin issuers to the Bank Secrecy Act and strengthens AML/sanctions compliance expectations for issuers.",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
+      "source": "White House",
+      "published_date": "2025-07-18",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins"
+      ]
+    },
+    {
+      "id": 17,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "institutional",
+      "title": "Broadridge: DLR platform processed $365B average daily repo volume in January 2026",
+      "summary": "Broadridge announced its Distributed Ledger Repo (DLR) platform processed an average of $365B in daily repo transactions during January 2026, totaling $7.3T for the month.",
+      "url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-508-percent-year-over-year-growth-in-january",
+      "source": "Broadridge",
+      "published_date": "2026-02-12",
+      "severity": "info",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "id": 18,
+      "captured_at": "2026-05-13 13:21:40",
+      "category": "onchain",
+      "title": "Report: Project mBridge surpassed $55B in cross-border payments",
+      "summary": "A news report says the China-led multi-CBDC project mBridge topped $55B in cross-border payments.",
+      "url": "https://www.fastbull.com/news-detail/chinaled-cbdc-project-mbridge-tops-55b-in-crossborder-news_6100_0_2026_1_2550_3",
+      "source": "FastBull",
+      "published_date": "2026-01-17",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "cbdc",
+        "cross_border_payments"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "market:cbdc",
+        "market:cross_border_payments",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "id": 11,
+      "captured_at": "2026-05-13 13:21:39",
+      "category": "institutional",
+      "title": "Broadridge DLR platform reaches US$368B ADV in April",
+      "summary": "Securities Finance Times reports Broadridge's Distributed Ledger Repo (DLR) processed US$368B average daily volumes in April (nearly US$8T total for the month).",
+      "url": "https://www.securitiesfinancetimes.com/securitieslendingnews/industryarticle.php?article_id=228646",
+      "source": "Securities Finance Times",
+      "published_date": "2026-05-05",
+      "severity": "info",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "id": 12,
+      "captured_at": "2026-05-13 13:21:39",
+      "category": "risk",
+      "title": "Crypto liquidations hit ~US$1.45B in 24 hours",
+      "summary": "CoinSpeaker (via Yahoo Finance) reports ~US$1.45B liquidations over the last 24 hours in a sharp market downturn.",
+      "url": "https://finance.yahoo.com/news/crypto-liquidations-hit-1-4-183507624.html",
+      "source": "CoinSpeaker via Yahoo Finance",
+      "published_date": "2026-02-05",
+      "severity": "critical",
+      "entity_ids": [],
+      "markets": [
+        "risk"
+      ],
+      "regions": [],
+      "tags": [
+        "market:risk"
+      ]
+    },
+    {
+      "id": 1,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "institutional",
+      "title": "JPMorgan Kinexys + Mastercard + Ripple complete first cross-border tokenized Treasury redemption",
+      "summary": "First near real-time cross-border, cross-bank redemption of a tokenized U.S. Treasury fund via XRP Ledger and bank rails. Asset leg cleared in ~3 seconds.",
+      "url": "https://www.prnewswire.com/news-releases/ondo-kinexys-by-jp-morgan-mastercard-and-ripple-complete-first-cross-border-cross-bank-redemption-of-tokenized-us-treasuries-302764324.html",
+      "source": "PR Newswire",
+      "published_date": "2026-05-06",
+      "severity": "info",
+      "entity_ids": [
+        "jpmorgan_kinexys"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_deposits",
+        "tokenized_treasuries"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "entity:jpmorgan_kinexys",
+        "market:repo",
+        "market:tokenized_deposits",
+        "market:tokenized_treasuries",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "id": 2,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "institutional",
+      "title": "BlackRock BUIDL goes live on Uniswap via UniswapX",
+      "summary": "$2.4B BUIDL fund becomes accessible to eligible investors through UniswapX \u2014 BlackRock's first direct DeFi protocol engagement.",
+      "url": "https://coinmarketcap.com/academy/article/uniswap-jumps-20percent-as-blackrock-brings-buidl-to-uniswap",
+      "source": "CoinMarketCap",
+      "published_date": "2026-04-28",
+      "severity": "info",
+      "entity_ids": [
+        "blackrock_buidl"
+      ],
+      "markets": [
+        "tokenized_treasuries"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:blackrock_buidl",
+        "market:tokenized_treasuries"
+      ]
+    },
+    {
+      "id": 3,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "regulation",
+      "title": "SEC approves Nasdaq tokenized stock trading for Russell 1000",
+      "summary": "Nasdaq can now support trading of eligible securities in either conventional format or as blockchain-based digital tokens. Initial scope: Russell 1000 + major ETFs.",
+      "url": "https://www.wellesleyhillsfinancial.com/2026/03/22/sec-approves-nasdaq-plan-to-enable-tokenized-stock-trading/",
+      "source": "Wellesley Hills Financial",
+      "published_date": "2026-03-22",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
+    {
+      "id": 4,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "onchain",
+      "title": "Tokenized RWA market hits $29B in Q1 2026 (+263% YoY)",
+      "summary": "Total tokenized RWA value on-chain (excl. stablecoins) reaches ~$29B, up from $7.9B in 2024. Tokenized Treasuries lead growth at $13.4B.",
+      "url": "https://investax.io/blog/q1-2026-real-world-asset-tokenization-market-report",
+      "source": "InvestaX",
+      "published_date": "2026-04-16",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
+    {
+      "id": 5,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "institutional",
+      "title": "Broadridge DLR processes nearly $9T in December repo volume",
+      "summary": "DLR platform on Canton Network processed $384B average daily volume in December 2025, scaling to ~$9T monthly aggregate.",
+      "url": "https://www.broadridge.com/press-release/2026/broadridge-distributed-ledger-repo-platform-december",
+      "source": "Broadridge",
+      "published_date": "2026-01-08",
+      "severity": "info",
+      "entity_ids": [
+        "broadridge_dlr"
+      ],
+      "markets": [
+        "repo"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:broadridge_dlr",
+        "market:repo"
+      ]
+    },
+    {
+      "id": 6,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "institutional",
+      "title": "Project mBridge crosses $55.5B in cross-border CBDC transactions",
+      "summary": "China-led mBridge platform processed 4,047 transactions, ~95% denominated in digital yuan. BIS exited project leadership in late 2024.",
+      "url": "https://www.reuters.com/world/asia-pacific/china-led-cross-border-digital-currency-platform-sees-surge-2026-01-16/",
+      "source": "Reuters",
+      "published_date": "2026-01-16",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "cbdc",
+        "cross_border_payments"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "market:cbdc",
+        "market:cross_border_payments",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "id": 7,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "risk",
+      "title": "October 10, 2025: $19.13B crypto liquidation \u2014 largest in history",
+      "summary": "Trump's 100% tariff threat on China imports triggered cascade. 1.63M positions liquidated in 24h; $3.21B vanished in 60 seconds at 21:15 UTC.",
+      "url": "https://www.cnn.com/2025/10/11/business/trump-tariffs-crypto-selloff",
+      "source": "CNN",
+      "published_date": "2025-10-11",
+      "severity": "critical",
+      "entity_ids": [],
+      "markets": [
+        "risk"
+      ],
+      "regions": [],
+      "tags": [
+        "market:risk"
+      ]
+    },
+    {
+      "id": 8,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "regulation",
+      "title": "GENIUS Act signed into US federal stablecoin law",
+      "summary": "President Trump signed the GENIUS Act establishing federal framework for USD stablecoin issuance, routing institutional capital toward bank-issued tokenized deposits.",
+      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
+      "source": "White House",
+      "published_date": "2025-07-18",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [
+        "regulation",
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:regulation",
+        "market:stablecoins"
+      ]
+    },
+    {
+      "id": 9,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "institutional",
+      "title": "HKMA launches Project Ensemble Phase 2 (Ensemble^TX^) for 2026",
+      "summary": "New phase to operationalize tokenized deposits across HKD, USD, CNH for institutional treasury management. Standard Chartered + Ant International integration.",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2025/11/20251113-3/",
+      "source": "HKMA",
+      "published_date": "2025-11-13",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "id": 10,
+      "captured_at": "2026-05-11 15:34:30",
+      "category": "regulation",
+      "title": "Tokenization market projections: McKinsey $2T vs BCG $16-30T by 2030",
+      "summary": "Divergent forecasts for RWA tokenization addressable market. Baseline trajectory suggests $30T by 2034 if G-SIB deployments continue scaling.",
+      "url": "https://www.mintlayer.org/blogs/16-30-trillion-by-2030-unlocking-the-rwa-opportunity",
+      "source": "Mintlayer",
+      "published_date": "2025-12-16",
+      "severity": "info",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    }
+  ],
+  "alerts": [],
+  "last_update": "2026-05-22 20:09:49",
+  "server_time_utc": "2026-05-22T20:09:49.391215Z"
+}

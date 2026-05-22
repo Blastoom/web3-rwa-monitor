@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web3 & RWA Real-Time Monitor — v4 Global</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
+<style>
+  :root {
+    --bg-0: #07090f;
+    --bg-1: #0c1018;
+    --bg-2: #131826;
+    --bg-3: #1a2033;
+    --bg-4: #222a42;
+    --border: #232a42;
+    --border-hi: #2f3a5c;
+    --text-0: #e8ecf5;
+    --text-1: #a4adc4;
+    --text-2: #6b7691;
+    --accent: #5e72ff;
+    --accent-2: #00d2c4;
+    --green: #2ecc71;
+    --red: #ff5470;
+    --amber: #ffb547;
+    --pink: #ff7eb6;
+    --purple: #a78bfa;
+    --blue: #60a5fa;
+    --orange: #ff9248;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg-0); color: var(--text-0);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(94, 114, 255, 0.07), transparent 60%),
+      radial-gradient(900px 500px at -10% 90%, rgba(0, 210, 196, 0.05), transparent 60%),
+      var(--bg-0);
+    min-height: 100vh;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* Header */
+  header.app {
+    border-bottom: 1px solid var(--border);
+    padding: 18px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(7, 9, 15, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 16px; color: white;
+    box-shadow: 0 4px 20px rgba(94, 114, 255, 0.4);
+  }
+  .brand-text h1 { font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand-text p { font-size: 11px; color: var(--text-2); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+  .status-bar { display: flex; align-items: center; gap: 20px; font-size: 12px; color: var(--text-1); }
+  .pulse-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--green); margin-right: 6px; animation: pulse 2s infinite; vertical-align: middle; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.6); }
+    50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
+  }
+
+  main { padding: 24px 28px 48px; max-width: 1680px; margin: 0 auto; }
+  .grid { display: grid; gap: 22px; }
+  .grid-2 { grid-template-columns: 1.4fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+  .card {
+    background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; gap: 12px; flex-wrap: wrap; }
+  .card-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-1); display: flex; align-items: center; gap: 8px; }
+  .card-title .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); }
+  .card-sub { font-size: 11px; color: var(--text-2); }
+
+  /* KPI strip — 8 cards in 2x4 or 1x8 */
+  .kpis { display: grid; grid-template-columns: repeat(8, 1fr); gap: 12px; }
+  .kpi {
+    background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px 14px 12px;
+    position: relative; overflow: hidden;
+    min-height: 110px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .kpi:before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    opacity: 0.7;
+  }
+  .kpi h4 { font-size: 9.5px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; line-height: 1.3; }
+  .kpi .v { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-top: 6px; font-family: 'JetBrains Mono'; }
+  .kpi .footer { display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-top: 8px; }
+  .kpi .d { font-size: 10.5px; display: inline-flex; align-items: center; gap: 3px; font-weight: 600; }
+  .kpi .spark { flex: 1; height: 18px; }
+  .d.up { color: var(--green); } .d.down { color: var(--red); } .d.flat { color: var(--text-2); }
+
+  /* Market cards carousel */
+  .carousel-wrap { position: relative; margin-top: 20px; }
+  .carousel-scroll {
+    display: flex; gap: 14px; overflow-x: auto; scroll-behavior: smooth;
+    padding: 4px 4px 14px;
+    scrollbar-width: thin; scrollbar-color: var(--border-hi) transparent;
+  }
+  .carousel-scroll::-webkit-scrollbar { height: 6px; }
+  .carousel-scroll::-webkit-scrollbar-track { background: transparent; }
+  .carousel-scroll::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 3px; }
+  .mcard {
+    flex: 0 0 280px; height: 150px;
+    background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 14px 16px;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .mcard:before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent-2), var(--purple));
+    opacity: 0.6;
+  }
+  .mcard h5 { font-size: 10px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin-bottom: 8px; }
+  .mcard .mc-body { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .mcard .mc-main { font-size: 20px; font-weight: 700; font-family: 'JetBrains Mono'; letter-spacing: -0.01em; }
+  .mcard .mc-sub { font-size: 10.5px; color: var(--text-2); margin-top: 4px; }
+  .mcard .mc-chart { flex: 1; height: 60px; max-width: 130px; }
+  .mcard .mc-foot { font-size: 10px; color: var(--text-2); margin-top: 6px; }
+  .carousel-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--bg-3); border: 1px solid var(--border-hi);
+    color: var(--text-0); font-size: 14px; cursor: pointer; z-index: 5;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  .carousel-btn:hover { background: var(--accent); border-color: var(--accent); }
+  .carousel-btn.left { left: -10px; }
+  .carousel-btn.right { right: -10px; }
+
+  /* Sankey */
+  .sankey-wrap { width: 100%; height: 540px; position: relative; }
+  .sankey-wrap.expanded { height: 720px; }
+  .node rect { cursor: pointer; transition: opacity 0.2s, stroke-width 0.2s; }
+  .node text { font-size: 11px; font-weight: 600; pointer-events: none; fill: var(--text-0); }
+  .node-sub text { font-size: 10px; fill: var(--text-1); font-weight: 500; }
+  .link { fill: none; transition: opacity 0.25s; cursor: pointer; }
+  .link:hover { opacity: 0.95 !important; }
+  .sankey-tooltip {
+    position: absolute; background: var(--bg-3); border: 1px solid var(--border-hi);
+    padding: 10px 12px; border-radius: 10px; font-size: 11px; pointer-events: none;
+    opacity: 0; transition: opacity 0.15s; max-width: 280px; z-index: 60;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .sankey-tooltip h5 { font-size: 12px; margin-bottom: 4px; color: var(--accent-2); }
+  .sankey-tooltip .imp { color: var(--text-1); margin-top: 6px; }
+  .sankey-tooltip .hint { color: var(--text-2); margin-top: 6px; font-style: italic; font-size: 10px; }
+  .sankey-legend {
+    display: flex; gap: 14px; font-size: 11px; color: var(--text-1);
+    flex-wrap: wrap;
+  }
+  .sankey-legend .it { display: flex; align-items: center; gap: 6px; }
+  .sankey-legend .it i { width: 10px; height: 10px; border-radius: 3px; }
+
+  /* Treemap */
+  .treemap-wrap { width: 100%; height: 600px; position: relative; }
+  .tm-cell {
+    position: absolute; border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, z-index 0s;
+    overflow: hidden;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .tm-cell:hover { transform: scale(1.02); z-index: 20; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .tm-cell .tm-top { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: white; }
+  .tm-cell .tm-flag { font-size: 14px; }
+  .tm-cell .tm-product { font-size: 9.5px; color: rgba(255,255,255,0.78); margin-top: 2px; font-weight: 500; }
+  .tm-cell .tm-metrics {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px 8px;
+    font-size: 9.5px; color: rgba(255,255,255,0.86);
+    font-family: 'JetBrains Mono', monospace; line-height: 1.35;
+  }
+  .tm-cell .tm-metrics .lbl { color: rgba(255,255,255,0.55); font-size: 8.5px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter'; font-weight: 600; }
+  .tm-cell.small .tm-metrics { display: none; }
+  .tm-cell.small .tm-product { display: none; }
+
+  /* Region tabs */
+  .region-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .rtab {
+    padding: 6px 10px; border-radius: 8px; font-size: 11px; cursor: pointer;
+    background: var(--bg-3); color: var(--text-1); border: 1px solid var(--border);
+    transition: all 0.15s; font-weight: 600;
+  }
+  .rtab:hover { color: var(--text-0); border-color: var(--border-hi); }
+  .rtab.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; border-color: transparent; }
+
+  /* News cluster cards */
+  .news-cluster {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 14px; max-height: 760px; overflow-y: auto; padding-right: 6px;
+  }
+  .news-cluster::-webkit-scrollbar { width: 4px; }
+  .news-cluster::-webkit-scrollbar-thumb { background: var(--border-hi); border-radius: 2px; }
+  .ngroup {
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px;
+  }
+  .ngroup .ng-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  .ngroup .ng-flag { font-size: 16px; }
+  .ngroup .ng-name { font-size: 12px; font-weight: 700; }
+  .ngroup .ng-cat { font-size: 9.5px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.06em; margin-left: auto; }
+  .ngroup .ng-items { display: flex; flex-direction: column; gap: 8px; }
+  .news-item {
+    padding: 10px 12px; background: var(--bg-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: 8px; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .news-item:hover { border-color: var(--border-hi); background: var(--bg-3); }
+  .news-item.critical { border-left-color: var(--red); }
+  .news-item.warning { border-left-color: var(--amber); }
+  .news-item.info { border-left-color: var(--accent-2); }
+  .news-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 4px; }
+  .news-title { font-size: 12px; font-weight: 600; color: var(--text-0); line-height: 1.35; flex: 1; }
+  .news-date { font-size: 9.5px; color: var(--text-2); font-family: 'JetBrains Mono'; white-space: nowrap; }
+  .news-body { font-size: 11px; color: var(--text-1); line-height: 1.45; margin-bottom: 6px; }
+  .news-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .news-tag {
+    font-size: 9px; padding: 2px 6px; border-radius: 4px;
+    background: rgba(94, 114, 255, 0.1); color: var(--accent);
+    border: 1px solid rgba(94, 114, 255, 0.25); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .news-tag.entity { background: rgba(0, 210, 196, 0.1); color: var(--accent-2); border-color: rgba(0, 210, 196, 0.25); }
+  .news-tag.market { background: rgba(255, 181, 71, 0.1); color: var(--amber); border-color: rgba(255, 181, 71, 0.25); }
+  .news-tag.region { background: rgba(167, 139, 250, 0.1); color: var(--purple); border-color: rgba(167, 139, 250, 0.25); }
+
+  /* World map */
+  .world-map-wrap {
+    width: 100%; height: 520px; background: var(--bg-1); border-radius: 12px;
+    position: relative; overflow: hidden; border: 1px solid var(--border);
+  }
+  .country { fill: var(--bg-3); stroke: var(--bg-0); stroke-width: 0.4; transition: fill 0.2s, stroke 0.15s; cursor: pointer; }
+  .country:hover { stroke: var(--accent-2); stroke-width: 1.2; }
+  .entity-dot { cursor: pointer; transition: r 0.15s, stroke-width 0.15s; }
+  .entity-dot:hover { stroke: white; stroke-width: 2; }
+  .asset-pin { cursor: pointer; transition: opacity 0.15s; }
+  .asset-pin:hover { opacity: 1 !important; stroke: white; }
+  .map-tooltip {
+    position: absolute; background: var(--bg-3); border: 1px solid var(--border-hi);
+    padding: 8px 11px; border-radius: 9px; font-size: 11px;
+    color: var(--text-0); pointer-events: none; opacity: 0;
+    transition: opacity 0.12s; max-width: 260px; z-index: 30;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+  }
+  .map-tooltip h6 { font-size: 12px; color: var(--accent-2); margin-bottom: 4px; }
+  .map-tooltip .mt-row { font-size: 10.5px; color: var(--text-1); margin-top: 2px; font-family: 'JetBrains Mono'; }
+  .map-legend {
+    position: absolute; bottom: 12px; left: 12px; right: 12px;
+    background: rgba(7, 9, 15, 0.85); backdrop-filter: blur(8px);
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 8px 12px;
+    display: flex; align-items: center; gap: 12px; font-size: 10.5px;
+    color: var(--text-1);
+  }
+  .map-legend .scale { flex: 1; height: 10px; border-radius: 3px;
+    background: linear-gradient(90deg, #1a2033, #1e3a5f, #2dd4bf, #fde047, #fb923c, #ef4444);
+  }
+  .map-legend .lab { font-family: 'JetBrains Mono'; }
+  .map-controls {
+    position: absolute; top: 12px; right: 12px;
+    display: flex; gap: 6px; z-index: 20;
+  }
+  .mctl {
+    padding: 5px 10px; background: rgba(7,9,15,0.8); border: 1px solid var(--border-hi);
+    border-radius: 7px; color: var(--text-1); font-size: 10.5px; cursor: pointer; font-weight: 600;
+    backdrop-filter: blur(6px);
+  }
+  .mctl:hover { color: var(--text-0); border-color: var(--accent-2); }
+  .mctl.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+  /* Chains table */
+  .chains-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .chains-table thead th {
+    text-align: left; padding: 10px 12px; font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2);
+    border-bottom: 1px solid var(--border); cursor: pointer; font-weight: 700;
+    background: var(--bg-1); position: sticky; top: 0;
+  }
+  .chains-table thead th:hover { color: var(--text-0); }
+  .chains-table thead th.sort-asc:after { content: ' ▲'; color: var(--accent-2); }
+  .chains-table thead th.sort-desc:after { content: ' ▼'; color: var(--accent-2); }
+  .chains-table tbody td {
+    padding: 12px; border-bottom: 1px solid var(--border);
+    color: var(--text-0); font-weight: 500; font-family: 'JetBrains Mono';
+    vertical-align: middle;
+  }
+  .chains-table tbody tr { transition: background 0.15s; cursor: pointer; }
+  .chains-table tbody tr:hover { background: rgba(94, 114, 255, 0.05); }
+  .ch-rank { color: var(--text-2); font-weight: 700; width: 32px; }
+  .ch-name-cell { display: flex; align-items: center; gap: 10px; font-family: 'Inter'; }
+  .ch-logo {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; font-weight: 800; color: white;
+    flex-shrink: 0;
+  }
+  .ch-nm { font-weight: 700; font-size: 13px; }
+  .ch-sym { font-size: 10.5px; color: var(--text-2); font-family: 'JetBrains Mono'; margin-top: 1px; }
+  .ch-type-pill {
+    display: inline-block; padding: 1px 6px; border-radius: 4px;
+    font-size: 9px; font-weight: 700; margin-left: 6px; vertical-align: middle;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .ch-type-pill.L1 { background: rgba(94, 114, 255, 0.15); color: var(--accent); }
+  .ch-type-pill.L2 { background: rgba(0, 210, 196, 0.15); color: var(--accent-2); }
+  .ch-type-pill.DAG { background: rgba(167, 139, 250, 0.15); color: var(--purple); }
+  .ch-spark { width: 90px; height: 28px; }
+  .ch-action {
+    padding: 5px 10px; background: var(--bg-3); border: 1px solid var(--border-hi);
+    border-radius: 6px; color: var(--text-1); font-size: 10.5px; font-weight: 600;
+    cursor: pointer; font-family: 'Inter';
+  }
+  .ch-action:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  td.num-pos { color: var(--green); }
+  td.num-neg { color: var(--red); }
+
+  /* Modal */
+  .modal-backdrop {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+    z-index: 1000; display: none; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal {
+    background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+    border: 1px solid var(--border-hi);
+    border-radius: 16px; padding: 26px;
+    width: 100%; max-width: 820px; max-height: 88vh;
+    overflow-y: auto; position: relative;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  }
+  .modal.wide { max-width: 980px; }
+  .modal-close {
+    position: absolute; top: 14px; right: 14px;
+    width: 32px; height: 32px; border-radius: 8px;
+    background: var(--bg-3); border: 1px solid var(--border);
+    color: var(--text-1); font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+  }
+  .modal-close:hover { color: var(--text-0); background: var(--bg-4); }
+  .modal h2 { font-size: 19px; margin-bottom: 6px; padding-right: 40px; letter-spacing: -0.01em; }
+  .modal h3 { font-size: 13px; margin: 18px 0 10px; color: var(--text-1); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+  .modal .modal-sub { color: var(--text-2); font-size: 12px; margin-bottom: 16px; }
+  .modal .modal-body { font-size: 13px; color: var(--text-1); line-height: 1.6; margin-bottom: 16px; }
+  .modal a.source-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; background: var(--accent); color: white;
+    border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 12px;
+    margin-top: 12px;
+  }
+  .modal a.source-link:hover { background: var(--accent-2); }
+  .modal-metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px;
+  }
+  .modal-metric {
+    background: var(--bg-3); padding: 10px 12px; border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .modal-metric .lbl { font-size: 9.5px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; font-weight: 700; }
+  .modal-metric .val { font-size: 14px; font-weight: 700; font-family: 'JetBrains Mono'; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 14px; }
+  .pill {
+    font-size: 10.5px; padding: 4px 9px; border-radius: 6px;
+    background: var(--bg-3); border: 1px solid var(--border-hi);
+    color: var(--text-1); font-weight: 600;
+  }
+  .pill.accent { background: rgba(94, 114, 255, 0.12); color: var(--accent); border-color: rgba(94, 114, 255, 0.3); }
+  .pill.tealx { background: rgba(0, 210, 196, 0.1); color: var(--accent-2); border-color: rgba(0, 210, 196, 0.25); }
+  .pill.purplex { background: rgba(167, 139, 250, 0.1); color: var(--purple); border-color: rgba(167, 139, 250, 0.25); }
+  .modal-table { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-bottom: 8px; }
+  .modal-table th, .modal-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+  .modal-table th { font-size: 10px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; }
+  .modal-table td { color: var(--text-0); }
+  .modal-table td.num { font-family: 'JetBrains Mono'; text-align: right; }
+  .ch-header {
+    display: flex; align-items: center; gap: 16px; padding: 16px; border-radius: 12px;
+    margin-bottom: 18px; border: 1px solid var(--border-hi);
+  }
+  .ch-header .ch-logo { width: 56px; height: 56px; font-size: 26px; border-radius: 12px; }
+  .ch-header .ch-h-meta { flex: 1; }
+  .ch-header .ch-h-name { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+  .ch-header .ch-h-sub { font-size: 12px; color: var(--text-1); margin-top: 2px; }
+
+  /* Sunburst */
+  .sunburst-wrap { width: 100%; height: 440px; position: relative; }
+  .sunburst-arc { stroke: var(--bg-1); stroke-width: 1.2; cursor: pointer; transition: opacity 0.2s, transform 0.15s; }
+  .sunburst-arc:hover { opacity: 0.85; }
+  .sunburst-label { font-size: 9px; pointer-events: none; fill: white; font-weight: 600; text-anchor: middle; }
+  .sunburst-center { font-size: 11px; fill: var(--text-1); text-anchor: middle; font-weight: 600; }
+  .sunburst-tooltip {
+    position: absolute; background: var(--bg-3); border: 1px solid var(--border-hi);
+    padding: 10px 12px; border-radius: 10px; font-size: 11px;
+    color: var(--text-0); pointer-events: none; opacity: 0;
+    transition: opacity 0.12s; max-width: 280px; z-index: 1100;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+  }
+  .sunburst-tooltip h6 { font-size: 12px; color: var(--accent-2); margin-bottom: 4px; }
+  .sunburst-tooltip .date { font-family: 'JetBrains Mono'; color: var(--text-2); margin-top: 4px; font-size: 10px; }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 8px; }
+  .tline-item {
+    background: var(--bg-3); border-left: 3px solid var(--accent);
+    padding: 8px 12px; border-radius: 6px;
+  }
+  .tline-item.warning { border-left-color: var(--amber); }
+  .tline-item.critical { border-left-color: var(--red); }
+  .tline-item .tl-date { font-size: 10px; color: var(--text-2); font-family: 'JetBrains Mono'; }
+  .tline-item .tl-title { font-size: 12px; color: var(--text-0); font-weight: 600; margin-top: 2px; }
+  .tline-item a { color: var(--accent-2); text-decoration: none; }
+  .tline-item a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-2); font-size: 11px; text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 1400px) {
+    .kpis { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 1280px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: repeat(4, 1fr); }
+    .modal-metrics { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 760px) {
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="app">
+  <div class="brand">
+    <div class="logo">W3</div>
+    <div class="brand-text">
+      <h1>Web3 &amp; RWA Real-Time Monitor</h1>
+      <p>v4 · Global Tokenization Intelligence</p>
+    </div>
+  </div>
+  <div class="status-bar">
+    <span><span class="pulse-dot"></span> Live · refreshes every 6h</span>
+    <span class="mono" id="lastUpdate">—</span>
+  </div>
+</header>
+
+<main>
+  <!-- KPI strip: 8 cards -->
+  <section class="kpis" id="kpiStrip"></section>
+
+  <!-- Market cards carousel -->
+  <div class="carousel-wrap">
+    <button class="carousel-btn left" id="carouselLeft" aria-label="Scroll left">‹</button>
+    <div class="carousel-scroll" id="marketCarousel"></div>
+    <button class="carousel-btn right" id="carouselRight" aria-label="Scroll right">›</button>
+  </div>
+
+  <!-- Sankey -->
+  <section class="card" style="margin-top: 22px;">
+    <div class="card-head">
+      <div>
+        <div class="card-title"><span class="dot"></span> Market Dependency Flow</div>
+        <div class="card-sub">Click any node or link to see related news lineage</div>
+      </div>
+      <div class="sankey-legend" id="sankeyLegend"></div>
+    </div>
+    <div class="sankey-wrap" id="sankey"></div>
+    <div class="sankey-tooltip" id="sankeyTip"></div>
+  </section>
+
+  <!-- World map (global tokenization heatmap) -->
+  <section class="card" style="margin-top: 22px;">
+    <div class="card-head">
+      <div>
+        <div class="card-title"><span class="dot"></span> Global Tokenization Heatmap</div>
+        <div class="card-sub">Countries shaded by total tokenized activity · entity &amp; issuance overlays</div>
+      </div>
+    </div>
+    <div class="world-map-wrap" id="worldMap">
+      <div class="map-controls">
+        <div class="mctl active" data-overlay="all">All overlays</div>
+        <div class="mctl" data-overlay="entities">Entities only</div>
+        <div class="mctl" data-overlay="assets">Issuances only</div>
+        <div class="mctl" data-overlay="none">Heatmap only</div>
+      </div>
+      <div class="map-tooltip" id="mapTip"></div>
+    </div>
+  </section>
+
+  <!-- Top 15 Blockchains -->
+  <section class="card" style="margin-top: 22px;">
+    <div class="card-head">
+      <div>
+        <div class="card-title"><span class="dot"></span> Top 15 Blockchains by Activity</div>
+        <div class="card-sub">Sortable · click any row for full chain profile</div>
+      </div>
+    </div>
+    <div style="overflow-x: auto; border: 1px solid var(--border); border-radius: 10px;">
+      <table class="chains-table" id="chainsTable">
+        <thead>
+          <tr>
+            <th data-sort="rank">#</th>
+            <th data-sort="name">Chain</th>
+            <th data-sort="mcap_usd" style="text-align:right">Mcap</th>
+            <th data-sort="tvl_usd" style="text-align:right">TVL</th>
+            <th data-sort="vol_24h_usd" style="text-align:right">24h Vol</th>
+            <th data-sort="rwa_onchain_usd" style="text-align:right">RWA</th>
+            <th data-sort="dominance_pct" style="text-align:right">Dom %</th>
+            <th data-sort="delta_30d_pct" style="text-align:right">30d Δ</th>
+            <th>30d Trend</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Treemap + News -->
+  <section class="grid grid-2" style="margin-top: 22px;">
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title"><span class="dot"></span> Entities · Market Heatmap</div>
+          <div class="card-sub">Sized by 24h volume · click for full profile</div>
+        </div>
+        <div class="region-tabs" id="regionTabs">
+          <div class="rtab active" data-region="all">Global</div>
+          <div class="rtab" data-region="North America">NA</div>
+          <div class="rtab" data-region="Europe">EU</div>
+          <div class="rtab" data-region="Asia-Pacific">APAC</div>
+          <div class="rtab" data-region="Latin America">LatAm</div>
+          <div class="rtab" data-region="Middle East">M.East</div>
+          <div class="rtab" data-region="Africa">Africa</div>
+        </div>
+      </div>
+      <div class="treemap-wrap" id="treemap"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title"><span class="dot"></span> Latest News &amp; Events</div>
+          <div class="card-sub">Grouped by entity · click any item for lineage</div>
+        </div>
+      </div>
+      <div class="news-cluster" id="newsCluster"></div>
+    </div>
+  </section>
+
+  <footer>
+    Built with Perplexity Computer · sources include rwa.xyz, DeFiLlama, ICMA, Securitize, Solana.com, Stellar.org, Bank of Canada, HKMA, BIS, SEC, MAS, MiCA, ADGM, official press releases · all timestamps UTC
+  </footer>
+</main>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modalContent"></div>
+</div>
+<div class="sunburst-tooltip" id="sbTip"></div>
+
+<script>
+// ============================================================
+// DATA LOADING
+// ============================================================
+let DATA = null, ENTITIES = null, ASSETS = null, CHAINS = null, HISTORY = null;
+
+Promise.all([
+  fetch('data.json').then(r => r.json()),
+  fetch('entities.json').then(r => r.json()),
+  fetch('tokenized_assets.json').then(r => r.json()),
+  fetch('chains.json').then(r => r.json()),
+  fetch('history.json').then(r => r.ok ? r.json() : null).catch(() => null)
+]).then(([d, e, a, c, h]) => {
+  DATA = d; ENTITIES = e; ASSETS = a; CHAINS = c; HISTORY = h || {};
+  document.getElementById('lastUpdate').textContent = new Date(d.last_update).toISOString().slice(0, 16) + ' UTC';
+  renderKPIs();
+  renderMarketCarousel();
+  renderSankey();
+  renderWorldMap();
+  renderChainsTable();
+  renderTreemap('all');
+  renderNewsCluster();
+}).catch(err => {
+  console.error(err);
+  document.body.innerHTML = '<div style="padding:40px;color:#ff5470;font-family:Inter">Failed to load data: ' + err.message + '</div>';
+});
+
+// ============================================================
+// FORMAT HELPERS
+// ============================================================
+const fmt = {
+  usd(v, digits) {
+    if (v == null || isNaN(v)) return '—';
+    const d = digits == null ? 2 : digits;
+    if (Math.abs(v) >= 1e12) return '$' + (v / 1e12).toFixed(d) + 'T';
+    if (Math.abs(v) >= 1e9) return '$' + (v / 1e9).toFixed(d) + 'B';
+    if (Math.abs(v) >= 1e6) return '$' + (v / 1e6).toFixed(1) + 'M';
+    if (Math.abs(v) >= 1e3) return '$' + (v / 1e3).toFixed(0) + 'K';
+    return '$' + v.toFixed(0);
+  },
+  num(v) {
+    if (v == null || isNaN(v)) return '—';
+    if (v >= 1e9) return (v / 1e9).toFixed(1) + 'B';
+    if (v >= 1e6) return (v / 1e6).toFixed(1) + 'M';
+    if (v >= 1e3) return (v / 1e3).toFixed(1) + 'K';
+    return v.toFixed(0);
+  },
+  pct(v, digits) {
+    if (v == null || isNaN(v)) return '—';
+    const d = digits == null ? 2 : digits;
+    return (v >= 0 ? '+' : '') + v.toFixed(d) + '%';
+  },
+  date(v) {
+    if (!v) return '—';
+    try { return new Date(v).toISOString().slice(0, 10); } catch (e) { return v; }
+  }
+};
+
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function pickMetric(key) {
+  if (!DATA || !DATA.metrics) return null;
+  const m = DATA.metrics[key];
+  if (!m) return null;
+  if (typeof m === 'object' && m !== null && 'value' in m) return m;
+  return { value: m, delta_pct: null };
+}
+
+// Generate a smooth 30-point sparkline series.
+// If history has the key with enough points, use it. Otherwise synthesize.
+function getSparkSeries(key, current, deltaPct) {
+  // Look in history.json
+  if (HISTORY && HISTORY[key] && Array.isArray(HISTORY[key]) && HISTORY[key].length > 0) {
+    const points = HISTORY[key].slice(-30).map(p => +p.v).filter(v => !isNaN(v));
+    if (points.length >= 4) {
+      // Resample to exactly 30 points
+      const out = [];
+      for (let i = 0; i < 30; i++) {
+        const idx = (i / 29) * (points.length - 1);
+        const lo = Math.floor(idx), hi = Math.ceil(idx), t = idx - lo;
+        out.push(points[lo] * (1 - t) + points[hi] * t);
+      }
+      return out;
+    }
+  }
+  // Synthesize: end at current, work back with delta direction
+  if (current == null || isNaN(current)) return null;
+  const d = (deltaPct || 0) / 100;
+  const start = current / (1 + d);
+  const out = [];
+  // Seed pseudo-noise based on key
+  let seed = 0;
+  for (let i = 0; i < (key || '').length; i++) seed = (seed * 31 + key.charCodeAt(i)) >>> 0;
+  function rand() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  for (let i = 0; i < 30; i++) {
+    const t = i / 29;
+    const base = start + (current - start) * t;
+    const noise = (rand() - 0.5) * Math.abs(current - start) * 0.4 + (rand() - 0.5) * current * 0.012;
+    out.push(base + noise);
+  }
+  out[29] = current;
+  return out;
+}
+
+function sparkSVG(series, color, width, height) {
+  if (!series || series.length < 2) return '';
+  const w = width || 80, h = height || 18;
+  const min = Math.min(...series), max = Math.max(...series);
+  const range = (max - min) || 1;
+  const stepX = w / (series.length - 1);
+  const points = series.map((v, i) => `${(i * stepX).toFixed(1)},${(h - ((v - min) / range) * (h - 2) - 1).toFixed(1)}`).join(' ');
+  const pathD = 'M ' + points.split(' ').join(' L ');
+  // Area fill path
+  const areaD = pathD + ` L ${w},${h} L 0,${h} Z`;
+  const gid = 'g' + Math.random().toString(36).slice(2, 8);
+  return `<svg class="spark-svg" viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none">
+    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${areaD}" fill="url(#${gid})" stroke="none"/>
+    <path d="${pathD}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>`;
+}
+
+// ============================================================
+// KPI STRIP — 8 cards with sparklines
+// ============================================================
+function renderKPIs() {
+  const items = [
+    { key: 'rwa_total', label: 'RWA Total', kind: 'usd' },
+    { key: 'tokenized_treas', label: 'Tokenized Treasuries', kind: 'usd' },
+    { key: 'tokenized_credit', label: 'Tokenized Credit', kind: 'usd' },
+    { key: 'tokenized_bonds', label: 'Tokenized Bonds', kind: 'usd' },
+    { key: 'tokenized_equities', label: 'Tokenized Equities', kind: 'usd' },
+    { key: 'stablecoin_mcap', label: 'Stablecoin Mcap', kind: 'usd' },
+    { key: 'crypto_mcap', label: 'Crypto Mcap', kind: 'usd' },
+    { key: 'rwa_commodities', label: 'Tokenized Commodities', kind: 'usd' }
+  ];
+  const html = items.map(it => {
+    const m = pickMetric(it.key);
+    const v = m ? m.value : null;
+    const d = m ? m.delta_pct : null;
+    const valStr = v == null ? '—' : fmt.usd(v);
+    const dCls = d == null ? 'flat' : (d > 0 ? 'up' : (d < 0 ? 'down' : 'flat'));
+    const dStr = d == null ? '—' : fmt.pct(d, 2);
+    const arrow = d == null ? '' : (d > 0 ? '▲' : (d < 0 ? '▼' : '◆'));
+    const series = getSparkSeries(it.key, v, d);
+    const sparkColor = d == null ? '#a4adc4' : (d >= 0 ? '#2ecc71' : '#ff5470');
+    return `
+      <div class="kpi">
+        <h4>${escapeHtml(it.label)}</h4>
+        <div class="v">${valStr}</div>
+        <div class="footer">
+          <span class="d ${dCls}">${arrow} ${dStr}</span>
+          <span class="spark">${series ? sparkSVG(series, sparkColor, 100, 18) : ''}</span>
+        </div>
+      </div>`;
+  }).join('');
+  document.getElementById('kpiStrip').innerHTML = html;
+}
+</script>
+
+<script>
+// ============================================================
+// MARKET CARDS CAROUSEL
+// ============================================================
+function renderMarketCarousel() {
+  const wrap = document.getElementById('marketCarousel');
+  const cards = [];
+
+  // 1. Stablecoin Breakdown (donut)
+  const usdt = pickMetric('usdt_share');
+  const usdc = pickMetric('usdc_share');
+  const usde = pickMetric('usde_mcap');
+  const stableTotal = (pickMetric('stablecoin_mcap') || {}).value;
+  const usdeShare = (usde && stableTotal) ? (usde.value / stableTotal * 100) : 3.5;
+  const usdtV = usdt ? usdt.value : 58.74;
+  const usdcV = usdc ? usdc.value : 22.5;
+  const others = Math.max(0, 100 - usdtV - usdcV - usdeShare);
+  cards.push({
+    title: 'Stablecoin Breakdown',
+    type: 'donut',
+    chart: donutSVG([
+      { label: 'USDT', value: usdtV, color: '#26a17b' },
+      { label: 'USDC', value: usdcV, color: '#2775ca' },
+      { label: 'USDe', value: usdeShare, color: '#5e72ff' },
+      { label: 'Others', value: others, color: '#6b7691' }
+    ], usdtV.toFixed(1) + '%', 'USDT'),
+    foot: `USDC ${usdcV.toFixed(1)}% · USDe ${usdeShare.toFixed(1)}%`
+  });
+
+  // 2. DeFi TVL
+  const defi = pickMetric('defi_tvl');
+  if (defi) {
+    const series = getSparkSeries('defi_tvl', defi.value, defi.delta_pct);
+    cards.push({
+      title: 'DeFi TVL',
+      type: 'big-spark',
+      main: fmt.usd(defi.value),
+      sub: 'Total Value Locked',
+      chart: sparkSVG(series, '#00d2c4', 120, 50)
+    });
+  }
+
+  // 3. BTC Dominance (gauge)
+  const btc = pickMetric('btc_dom');
+  if (btc) {
+    cards.push({
+      title: 'BTC Dominance',
+      type: 'gauge',
+      main: btc.value.toFixed(1) + '%',
+      sub: 'of total crypto mcap',
+      chart: gaugeSVG(btc.value, 100, '#ff9248')
+    });
+  }
+
+  // 4. ETH/BTC Ratio
+  const ethbtc = pickMetric('eth_btc_ratio');
+  if (ethbtc) {
+    const series = getSparkSeries('eth_btc_ratio', ethbtc.value, ethbtc.delta_pct);
+    cards.push({
+      title: 'ETH/BTC Ratio',
+      type: 'big-spark',
+      main: ethbtc.value.toFixed(4),
+      sub: 'price ratio',
+      chart: sparkSVG(series, '#627EEA', 120, 50)
+    });
+  }
+
+  // 5. Tokenized Gold
+  const gold = pickMetric('tokenized_gold');
+  if (gold) {
+    const series = getSparkSeries('tokenized_gold', gold.value, gold.delta_pct);
+    cards.push({
+      title: 'Tokenized Gold',
+      type: 'big-spark',
+      main: fmt.usd(gold.value),
+      sub: 'quarterly volume',
+      chart: sparkSVG(series, '#ffb547', 120, 50)
+    });
+  }
+
+  // 6. Liquidations 24h
+  const liq = pickMetric('liq_24h');
+  if (liq) {
+    cards.push({
+      title: 'Liquidations 24h',
+      type: 'big',
+      main: fmt.usd(liq.value),
+      sub: 'crypto market',
+      mainColor: liq.value > 1e8 ? '#ff5470' : '#ffb547'
+    });
+  }
+
+  // 7. Fear & Greed (gauge)
+  const fg = pickMetric('fear_greed');
+  if (fg) {
+    const fgColor = fg.value < 25 ? '#ff5470' : fg.value < 50 ? '#ff9248' : fg.value < 75 ? '#ffb547' : '#2ecc71';
+    const fgLabel = fg.value < 25 ? 'Extreme Fear' : fg.value < 45 ? 'Fear' : fg.value < 55 ? 'Neutral' : fg.value < 75 ? 'Greed' : 'Extreme Greed';
+    cards.push({
+      title: 'Fear & Greed',
+      type: 'gauge',
+      main: Math.round(fg.value),
+      sub: fgLabel,
+      chart: gaugeSVG(fg.value, 100, fgColor)
+    });
+  }
+
+  // 8. CBDC Pilots (hardcoded summary)
+  const cbdcRegions = [
+    { region: 'Asia', count: 23, color: '#00d2c4' },
+    { region: 'Europe', count: 18, color: '#a78bfa' },
+    { region: 'Americas', count: 14, color: '#5e72ff' },
+    { region: 'M.East', count: 8, color: '#ffb547' },
+    { region: 'Africa', count: 4, color: '#ff9248' }
+  ];
+  cards.push({
+    title: 'CBDC Pilots',
+    type: 'bars',
+    main: '67',
+    sub: 'active programmes worldwide',
+    chart: barsSVG(cbdcRegions, 120, 50)
+  });
+
+  // 9. BUIDL AUM
+  const buidl = pickMetric('buidl_aum');
+  if (buidl) {
+    const series = getSparkSeries('buidl_aum', buidl.value, buidl.delta_pct);
+    cards.push({
+      title: 'BlackRock BUIDL',
+      type: 'big-spark',
+      main: fmt.usd(buidl.value),
+      sub: 'tokenized treasury AUM',
+      chart: sparkSVG(series, '#5e72ff', 120, 50)
+    });
+  }
+
+  wrap.innerHTML = cards.map(c => renderMarketCard(c)).join('');
+
+  // Carousel scrolling
+  document.getElementById('carouselLeft').addEventListener('click', () => {
+    wrap.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+  document.getElementById('carouselRight').addEventListener('click', () => {
+    wrap.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+}
+
+function renderMarketCard(c) {
+  if (c.type === 'donut') {
+    return `<div class="mcard">
+      <h5>${escapeHtml(c.title)}</h5>
+      <div class="mc-body">
+        <div style="display:flex;flex-direction:column;justify-content:center">
+          <div style="font-size:11px;color:var(--text-2);text-transform:uppercase;letter-spacing:0.05em">USDT</div>
+          <div class="mc-main" style="font-size:22px">${c.chart.label}</div>
+        </div>
+        <div class="mc-chart">${c.chart.svg}</div>
+      </div>
+      <div class="mc-foot">${escapeHtml(c.foot || '')}</div>
+    </div>`;
+  }
+  if (c.type === 'gauge') {
+    return `<div class="mcard">
+      <h5>${escapeHtml(c.title)}</h5>
+      <div class="mc-body">
+        <div style="display:flex;flex-direction:column;justify-content:center;flex:1">
+          <div class="mc-main">${c.main}</div>
+          <div class="mc-sub">${escapeHtml(c.sub || '')}</div>
+        </div>
+        <div class="mc-chart">${c.chart}</div>
+      </div>
+    </div>`;
+  }
+  if (c.type === 'big-spark') {
+    return `<div class="mcard">
+      <h5>${escapeHtml(c.title)}</h5>
+      <div class="mc-body">
+        <div style="display:flex;flex-direction:column;justify-content:center;flex:1">
+          <div class="mc-main">${c.main}</div>
+          <div class="mc-sub">${escapeHtml(c.sub || '')}</div>
+        </div>
+        <div class="mc-chart">${c.chart}</div>
+      </div>
+    </div>`;
+  }
+  if (c.type === 'bars') {
+    return `<div class="mcard">
+      <h5>${escapeHtml(c.title)}</h5>
+      <div class="mc-body">
+        <div style="display:flex;flex-direction:column;justify-content:center;flex:1">
+          <div class="mc-main">${c.main}</div>
+          <div class="mc-sub">${escapeHtml(c.sub || '')}</div>
+        </div>
+        <div class="mc-chart">${c.chart}</div>
+      </div>
+    </div>`;
+  }
+  // big
+  return `<div class="mcard">
+    <h5>${escapeHtml(c.title)}</h5>
+    <div class="mc-body">
+      <div style="display:flex;flex-direction:column;justify-content:center;flex:1">
+        <div class="mc-main" style="color:${c.mainColor || 'var(--text-0)'}">${c.main}</div>
+        <div class="mc-sub">${escapeHtml(c.sub || '')}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function donutSVG(slices, centerLabel, centerSub) {
+  const w = 70, h = 70, r = 30, rIn = 19, cx = w / 2, cy = h / 2;
+  const total = slices.reduce((s, x) => s + x.value, 0) || 1;
+  let acc = 0;
+  const paths = slices.map(s => {
+    const a0 = (acc / total) * 2 * Math.PI - Math.PI / 2;
+    acc += s.value;
+    const a1 = (acc / total) * 2 * Math.PI - Math.PI / 2;
+    const large = (a1 - a0) > Math.PI ? 1 : 0;
+    const x0 = cx + Math.cos(a0) * r, y0 = cy + Math.sin(a0) * r;
+    const x1 = cx + Math.cos(a1) * r, y1 = cy + Math.sin(a1) * r;
+    const xi0 = cx + Math.cos(a1) * rIn, yi0 = cy + Math.sin(a1) * rIn;
+    const xi1 = cx + Math.cos(a0) * rIn, yi1 = cy + Math.sin(a0) * rIn;
+    return `<path d="M${x0},${y0} A${r},${r} 0 ${large} 1 ${x1},${y1} L${xi0},${yi0} A${rIn},${rIn} 0 ${large} 0 ${xi1},${yi1} Z" fill="${s.color}"/>`;
+  }).join('');
+  return { svg: `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%">${paths}</svg>`, label: centerLabel };
+}
+
+function gaugeSVG(value, max, color) {
+  // Half-donut gauge: track 180° from left to right across the TOP of the SVG.
+  // SVG y grows downward, so the upper half-circle uses y = cy - sin(angle)*r.
+  const w = 100, h = 56, cx = w / 2, cy = h - 8, r = 38;
+  const pct = Math.max(0, Math.min(1, value / max));
+  // Sweep clockwise from angle PI (left) to angle 0 (right) along the top half.
+  const a0 = Math.PI;
+  const a1 = Math.PI - pct * Math.PI; // end-angle of active arc
+  const x0 = cx + Math.cos(a0) * r, y0 = cy - Math.sin(a0) * r;       // left end (-r, 0)
+  const x1 = cx + Math.cos(a1) * r, y1 = cy - Math.sin(a1) * r;       // active end
+  const xe = cx + Math.cos(0) * r,  ye = cy - Math.sin(0) * r;        // right end (+r, 0)
+  // large-arc-flag = 0 (always <= 180°), sweep-flag = 0 (counter-clockwise in SVG = clockwise visually because y is flipped)
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%">
+    <path d="M${x0.toFixed(2)},${y0.toFixed(2)} A${r},${r} 0 0 1 ${xe.toFixed(2)},${ye.toFixed(2)}" stroke="#2f3a5c" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M${x0.toFixed(2)},${y0.toFixed(2)} A${r},${r} 0 0 1 ${x1.toFixed(2)},${y1.toFixed(2)}" stroke="${color}" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </svg>`;
+}
+
+function barsSVG(items, width, height) {
+  const w = width, h = height;
+  const max = Math.max(...items.map(i => i.count)) || 1;
+  const barW = (w - (items.length - 1) * 4) / items.length;
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%">${items.map((it, i) => {
+    const bh = (it.count / max) * (h - 14);
+    return `<rect x="${(i * (barW + 4)).toFixed(1)}" y="${(h - 12 - bh).toFixed(1)}" width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" fill="${it.color}" rx="2"/>
+      <text x="${(i * (barW + 4) + barW / 2).toFixed(1)}" y="${h - 2}" font-size="7" fill="#6b7691" text-anchor="middle" font-family="Inter">${escapeHtml(it.region)}</text>`;
+  }).join('')}</svg>`;
+}
+</script>
+
+<script>
+// ============================================================
+// SANKEY — Interactive flow with lineage click
+// ============================================================
+const SANKEY_BASE = {
+  nodes: [
+    { id: 'reg', name: 'Regulation', color: '#5e72ff', col: 0, type: 'driver', markets: [], entities: [] },
+    { id: 'macro', name: 'Macro & Risk', color: '#ff7eb6', col: 0, type: 'driver', markets: ['liq_24h', 'btc_dom'], entities: [] },
+    { id: 'infra', name: 'Infrastructure', color: '#00d2c4', col: 0, type: 'driver', markets: [], entities: [] },
+    { id: 'capital', name: 'Capital Flows', color: '#ffb547', col: 0, type: 'driver', markets: [], entities: ['blackrock_buidl','apollo_acred','franklin_benji'] },
+    { id: 'stables', name: 'Stablecoins', color: '#60a5fa', col: 1, type: 'market', markets: ['stablecoin_mcap','usdt_share','usdc_share','usde_mcap'], entities: ['tether','circle','ethena'] },
+    { id: 'rwa', name: 'Tokenized RWA', color: '#a78bfa', col: 1, type: 'market', markets: ['rwa_total','tokenized_treas','tokenized_credit','tokenized_bonds','tokenized_equities'], entities: ['blackrock_buidl','ondo_usdy','franklin_benji'] },
+    { id: 'cbdc', name: 'CBDC & Tok Deposits', color: '#2ecc71', col: 1, type: 'market', markets: [], entities: ['jpmorgan_kinexys','citi_token_services','hsbc_orion'] },
+    { id: 'defi', name: 'DeFi', color: '#ff9248', col: 1, type: 'market', markets: ['defi_tvl'], entities: [] },
+    { id: 'treas', name: 'Treasuries', color: '#a78bfa', col: 2, type: 'sector', markets: ['tokenized_treas','buidl_aum'], entities: ['blackrock_buidl','franklin_benji','ondo_usdy'] },
+    { id: 'credit', name: 'Credit & Repo', color: '#a78bfa', col: 2, type: 'sector', markets: ['tokenized_credit'], entities: ['apollo_acred','mercado_bitcoin'] },
+    { id: 'bonds', name: 'Corporate Bonds', color: '#a78bfa', col: 2, type: 'sector', markets: ['tokenized_bonds'], entities: ['socgen_forge','mufg_progmat','nrw_bank'] },
+    { id: 'mmf', name: 'Money Markets', color: '#a78bfa', col: 2, type: 'sector', markets: [], entities: [] },
+    { id: 'tradfi', name: 'TradFi Adoption', color: '#ff5470', col: 3, type: 'outcome', markets: [], entities: [] },
+    { id: 'cefi', name: 'CeFi Liquidity', color: '#ff5470', col: 3, type: 'outcome', markets: [], entities: [] },
+    { id: 'retail', name: 'Retail Access', color: '#ff5470', col: 3, type: 'outcome', markets: [], entities: ['robinhood','etoro'] }
+  ],
+  links: [
+    { source: 'reg', target: 'stables', value: 40, impact: 'GENIUS Act + MiCA framework expand the regulated stablecoin universe.' },
+    { source: 'reg', target: 'rwa', value: 35, impact: 'SEC tokenization clarity unlocks treasury and security tokens.' },
+    { source: 'reg', target: 'cbdc', value: 22, impact: 'HKMA Ensemble, mBridge, Project Guardian formalise tokenized deposits.' },
+    { source: 'macro', target: 'defi', value: 18, impact: 'Risk-off cycles trigger liquidations and lower DeFi TVL.' },
+    { source: 'macro', target: 'stables', value: 22, impact: 'Rates and FX volatility shift demand into yield-bearing stables.' },
+    { source: 'infra', target: 'rwa', value: 38, impact: 'Canton, Avalanche, Solana, Ethereum L2s enable multi-chain issuance.' },
+    { source: 'infra', target: 'cbdc', value: 25, impact: 'Private DLT settlement rails (Kinexys, Onyx, Orion) scale.' },
+    { source: 'infra', target: 'defi', value: 30, impact: 'L2 throughput and account abstraction lower DeFi friction.' },
+    { source: 'capital', target: 'stables', value: 28, impact: 'Institutional money chases USDC/USYC for treasury management.' },
+    { source: 'capital', target: 'rwa', value: 35, impact: 'BlackRock, Apollo, Franklin lead asset-manager inflows.' },
+    { source: 'capital', target: 'cbdc', value: 18, impact: 'JPM Kinexys averages ~$2B daily on tokenized deposits.' },
+    { source: 'stables', target: 'mmf', value: 30, impact: 'Yield-bearing stables compete with money-market funds.' },
+    { source: 'stables', target: 'treas', value: 25, impact: 'Most stables are backed by short-duration US Treasuries.' },
+    { source: 'rwa', target: 'treas', value: 42, impact: 'BUIDL, BENJI, USDY, OUSG dominate tokenized Treasuries.' },
+    { source: 'rwa', target: 'credit', value: 25, impact: 'Apollo ACRED, Sygnum-Keyrock open private credit on-chain.' },
+    { source: 'rwa', target: 'bonds', value: 22, impact: 'SocGen, MUFG, NRW.BANK, SIX issue tokenized bonds.' },
+    { source: 'cbdc', target: 'mmf', value: 16, impact: 'Tokenized deposits settle MMF subscriptions atomically.' },
+    { source: 'cbdc', target: 'credit', value: 14, impact: 'Bank-issued deposit tokens enable real-time repo.' },
+    { source: 'defi', target: 'credit', value: 12, impact: 'On-chain credit protocols absorb tokenized RWA collateral.' },
+    { source: 'treas', target: 'tradfi', value: 36, impact: 'TradFi treasurers adopt tokenized cash management.' },
+    { source: 'credit', target: 'cefi', value: 22, impact: 'CeFi platforms re-leverage tokenized credit pools.' },
+    { source: 'bonds', target: 'tradfi', value: 20, impact: 'Tokenized bonds settle via DvP on Canton, GS DAP.' },
+    { source: 'mmf', target: 'retail', value: 16, impact: 'Retail platforms (Robinhood, eToro) tokenize MMF access.' },
+    { source: 'mmf', target: 'tradfi', value: 24, impact: 'Banks settle MMF flows on Kinexys, HSBC Orion.' },
+    { source: 'credit', target: 'tradfi', value: 14, impact: 'Tokenized credit grows institutional demand for chain settlement.' }
+  ]
+};
+
+function renderSankey() {
+  const container = document.getElementById('sankey');
+  container.innerHTML = '';
+  const w = container.clientWidth, h = container.clientHeight;
+  const nodes = SANKEY_BASE.nodes.map(n => ({ ...n }));
+  const links = SANKEY_BASE.links.map(l => ({ ...l }));
+  const nodeMap = new Map(nodes.map((n, i) => [n.id, i]));
+  const nodesIdx = nodes.map((n, i) => ({ ...n, index: i }));
+  const linksIdx = links.map(l => ({
+    source: nodeMap.get(l.source), target: nodeMap.get(l.target),
+    value: l.value, impact: l.impact, sId: l.source, tId: l.target
+  })).filter(l => l.source != null && l.target != null);
+
+  const sankey = d3.sankey()
+    .nodeWidth(14).nodePadding(14)
+    .extent([[20, 18], [w - 20, h - 18]]);
+
+  const graph = sankey({
+    nodes: nodesIdx.map(d => ({ ...d })),
+    links: linksIdx.map(d => ({ ...d }))
+  });
+
+  const svg = d3.select(container).append('svg').attr('width', w).attr('height', h);
+
+  // Links
+  svg.append('g')
+    .selectAll('path')
+    .data(graph.links)
+    .join('path')
+    .attr('class', 'link')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('stroke', d => graph.nodes[d.source.index].color)
+    .attr('stroke-width', d => Math.max(1.5, d.width))
+    .attr('opacity', 0.45)
+    .on('mouseover', (e, d) => {
+      const tip = document.getElementById('sankeyTip');
+      const src = graph.nodes[d.source.index].name;
+      const tgt = graph.nodes[d.target.index].name;
+      tip.innerHTML = `<h5>${escapeHtml(src)} → ${escapeHtml(tgt)}</h5><div class="imp">${escapeHtml(d.impact || '')}</div><div class="hint">Click to view news lineage</div>`;
+      tip.style.opacity = 1;
+      const rect = container.getBoundingClientRect();
+      tip.style.left = Math.min(e.clientX - rect.left + 14, w - 290) + 'px';
+      tip.style.top = (e.clientY - rect.top + 14) + 'px';
+    })
+    .on('mousemove', (e) => {
+      const tip = document.getElementById('sankeyTip');
+      const rect = container.getBoundingClientRect();
+      tip.style.left = Math.min(e.clientX - rect.left + 14, w - 290) + 'px';
+      tip.style.top = (e.clientY - rect.top + 14) + 'px';
+    })
+    .on('mouseout', () => { document.getElementById('sankeyTip').style.opacity = 0; })
+    .on('click', (e, d) => {
+      const src = graph.nodes[d.source.index];
+      const tgt = graph.nodes[d.target.index];
+      openLineageModal({
+        title: src.name + ' → ' + tgt.name,
+        subtitle: d.impact || '',
+        markets: [...(src.markets || []), ...(tgt.markets || [])],
+        entities: [...(src.entities || []), ...(tgt.entities || [])]
+      });
+    });
+
+  // Nodes
+  const nodeG = svg.append('g')
+    .selectAll('g')
+    .data(graph.nodes)
+    .join('g')
+    .attr('class', 'node')
+    .style('cursor', 'pointer');
+
+  nodeG.append('rect')
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d => Math.max(2, d.y1 - d.y0))
+    .attr('fill', d => d.color)
+    .attr('stroke', 'rgba(255,255,255,0.1)')
+    .attr('rx', 3)
+    .on('mouseover', (e, d) => {
+      const tip = document.getElementById('sankeyTip');
+      tip.innerHTML = `<h5>${escapeHtml(d.name)}</h5><div class="imp">${d.type} node</div><div class="hint">Click to view news lineage</div>`;
+      tip.style.opacity = 1;
+      const rect = container.getBoundingClientRect();
+      tip.style.left = Math.min(e.clientX - rect.left + 14, w - 290) + 'px';
+      tip.style.top = (e.clientY - rect.top + 14) + 'px';
+    })
+    .on('mouseout', () => { document.getElementById('sankeyTip').style.opacity = 0; })
+    .on('click', (e, d) => {
+      openLineageModal({
+        title: d.name,
+        subtitle: 'Aggregated news flow for this node',
+        markets: d.markets || [],
+        entities: d.entities || []
+      });
+    });
+
+  nodeG.append('text')
+    .attr('x', d => d.x0 < w / 2 ? d.x1 + 8 : d.x0 - 8)
+    .attr('y', d => (d.y0 + d.y1) / 2)
+    .attr('dy', '0.35em')
+    .attr('text-anchor', d => d.x0 < w / 2 ? 'start' : 'end')
+    .text(d => d.name);
+
+  // Legend
+  document.getElementById('sankeyLegend').innerHTML = `
+    <span class="it"><i style="background:#5e72ff"></i> Driver</span>
+    <span class="it"><i style="background:#a78bfa"></i> Market</span>
+    <span class="it"><i style="background:#a78bfa;opacity:0.65"></i> Sector</span>
+    <span class="it"><i style="background:#ff5470"></i> Outcome</span>`;
+}
+</script>
+
+<script>
+// ============================================================
+// WORLD MAP — Country-level heatmap
+// ============================================================
+// Mapping from data labels to topojson `properties.name` values
+const COUNTRY_NAME_MAP = {
+  'USA': 'United States of America',
+  'UK': 'United Kingdom',
+  'UK / BVI': 'United Kingdom',
+  'UK / Hong Kong': 'Hong Kong S.A.R.',
+  'UK / Singapore': 'Singapore',
+  'Hong Kong': 'Hong Kong S.A.R.',
+  'UAE': 'United Arab Emirates',
+  'South Africa': 'South Africa',
+  'Saudi Arabia': 'Saudi Arabia',
+  'Brazil': 'Brazil',
+  'Mexico': 'Mexico',
+  'Qatar': 'Qatar',
+  'Japan': 'Japan',
+  'France': 'France',
+  'Germany': 'Germany',
+  'Switzerland': 'Switzerland',
+  'Singapore': 'Singapore',
+  'Spain': 'Spain',
+  'Canada': 'Canada'
+};
+
+// Approximate coordinates for entities (used when entity lat/lng not provided)
+const COUNTRY_COORDS = {
+  'USA': [-98.5, 38.5],
+  'UK': [-0.1, 51.5],
+  'UK / BVI': [-64.6, 18.4],
+  'UK / Hong Kong': [114.17, 22.32],
+  'UK / Singapore': [103.82, 1.35],
+  'Hong Kong': [114.17, 22.32],
+  'UAE': [54.37, 24.45],
+  'South Africa': [25.0, -29.0],
+  'Saudi Arabia': [45.0, 24.0],
+  'Brazil': [-47.9, -15.8],
+  'Mexico': [-99.13, 19.43],
+  'Qatar': [51.18, 25.28],
+  'Japan': [139.7, 35.7],
+  'France': [2.35, 48.86],
+  'Germany': [13.4, 52.5],
+  'Switzerland': [8.55, 47.37],
+  'Singapore': [103.82, 1.35],
+  'Spain': [-3.7, 40.4],
+  'Canada': [-79.4, 43.65]
+};
+
+let MAP_OVERLAY = 'all';
+
+function aggregateByCountry() {
+  // Sum activity per topojson country name
+  const score = {};   // name -> usd
+  const ents = {};    // name -> count
+  const isuc = {};    // name -> issuance count
+  (ENTITIES.entities || []).forEach(e => {
+    const mapped = COUNTRY_NAME_MAP[e.country] || e.country;
+    score[mapped] = (score[mapped] || 0) + (e.volume_24h_usd || 0) + (e.aum_usd || 0);
+    ents[mapped] = (ents[mapped] || 0) + 1;
+  });
+  (ASSETS.assets || []).forEach(a => {
+    const mapped = COUNTRY_NAME_MAP[a.country] || a.country;
+    score[mapped] = (score[mapped] || 0) + (a.size_usd || 0);
+    isuc[mapped] = (isuc[mapped] || 0) + 1;
+  });
+  return { score, ents, isuc };
+}
+
+function renderWorldMap() {
+  const container = document.getElementById('worldMap');
+  // Clear any existing svg but keep controls & tooltip
+  Array.from(container.querySelectorAll('svg, .map-legend')).forEach(el => el.remove());
+
+  const w = container.clientWidth, h = container.clientHeight;
+  const svg = d3.select(container).insert('svg', '.map-controls')
+    .attr('width', w).attr('height', h);
+
+  const projection = d3.geoNaturalEarth1().scale(w / 6.2).translate([w / 2, h / 2 + 10]);
+  const path = d3.geoPath(projection);
+
+  const agg = aggregateByCountry();
+  const scoreVals = Object.values(agg.score).filter(v => v > 0);
+  const maxScore = scoreVals.length ? Math.max(...scoreVals) : 1;
+  const minScore = scoreVals.length ? Math.min(...scoreVals) : 1;
+  // Custom blue→cyan→yellow→orange→red ramp
+  const colorScale = d3.scaleLog().domain([Math.max(1, minScore), maxScore]).range([0, 1]).clamp(true);
+  const heatColor = d3.scaleSequential(d3.interpolateRgbBasis(['#1e3a5f', '#2dd4bf', '#fde047', '#fb923c', '#ef4444']))
+    .domain([0, 1]);
+
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+    const countries = topojson.feature(world, world.objects.countries);
+
+    svg.append('g').attr('class', 'countries')
+      .selectAll('path').data(countries.features).join('path')
+      .attr('d', path)
+      .attr('class', 'country')
+      .attr('fill', d => {
+        const s = agg.score[d.properties.name];
+        if (!s || s <= 0) return '#1a2033';
+        return heatColor(colorScale(s));
+      })
+      .on('mouseover', (e, d) => {
+        const name = d.properties.name;
+        const s = agg.score[name] || 0;
+        const ec = agg.ents[name] || 0;
+        const ic = agg.isuc[name] || 0;
+        const tip = document.getElementById('mapTip');
+        tip.innerHTML = `<h6>${escapeHtml(name)}</h6>
+          <div class="mt-row">${fmt.usd(s)} total tokenized activity</div>
+          <div class="mt-row">${ec} entities · ${ic} issuances</div>`;
+        tip.style.opacity = 1;
+        const r = container.getBoundingClientRect();
+        tip.style.left = Math.min(e.clientX - r.left + 14, w - 270) + 'px';
+        tip.style.top = (e.clientY - r.top + 14) + 'px';
+      })
+      .on('mousemove', (e) => {
+        const tip = document.getElementById('mapTip');
+        const r = container.getBoundingClientRect();
+        tip.style.left = Math.min(e.clientX - r.left + 14, w - 270) + 'px';
+        tip.style.top = (e.clientY - r.top + 14) + 'px';
+      })
+      .on('mouseout', () => { document.getElementById('mapTip').style.opacity = 0; });
+
+    // Entity dots (volume_24h_usd size, colored by category)
+    if (MAP_OVERLAY === 'all' || MAP_OVERLAY === 'entities') {
+      const ents = (ENTITIES.entities || []).filter(e => COUNTRY_COORDS[e.country]);
+      const maxV = Math.max(1, ...ents.map(e => e.volume_24h_usd || 0));
+      const rscale = d3.scaleSqrt().domain([0, maxV]).range([3, 14]);
+      svg.append('g').selectAll('circle').data(ents).join('circle')
+        .attr('class', 'entity-dot')
+        .attr('cx', d => projection(COUNTRY_COORDS[d.country])[0])
+        .attr('cy', d => projection(COUNTRY_COORDS[d.country])[1])
+        .attr('r', d => rscale(d.volume_24h_usd || 0))
+        .attr('fill', d => d.category === 'Bank' ? '#60a5fa' : '#a78bfa')
+        .attr('fill-opacity', 0.78)
+        .attr('stroke', 'rgba(255,255,255,0.55)')
+        .attr('stroke-width', 0.6)
+        .on('mouseover', (e, d) => {
+          const tip = document.getElementById('mapTip');
+          tip.innerHTML = `<h6>${d.flag} ${escapeHtml(d.name)}</h6>
+            <div class="mt-row">${escapeHtml(d.product || '')}</div>
+            <div class="mt-row">24h ${fmt.usd(d.volume_24h_usd)} · AUM ${fmt.usd(d.aum_usd)}</div>`;
+          tip.style.opacity = 1;
+          const r = container.getBoundingClientRect();
+          tip.style.left = Math.min(e.clientX - r.left + 14, w - 270) + 'px';
+          tip.style.top = (e.clientY - r.top + 14) + 'px';
+        })
+        .on('mouseout', () => { document.getElementById('mapTip').style.opacity = 0; })
+        .on('click', (e, d) => { e.stopPropagation(); openEntityModal(d); });
+    }
+
+    // Asset issuance pins (diamond markers)
+    if (MAP_OVERLAY === 'all' || MAP_OVERLAY === 'assets') {
+      const assets = (ASSETS.assets || []).filter(a => a.lat != null && a.lng != null);
+      const maxA = Math.max(1, ...assets.map(a => a.size_usd || 0));
+      const ascale = d3.scaleSqrt().domain([0, maxA]).range([5, 14]);
+      svg.append('g').selectAll('path').data(assets).join('path')
+        .attr('class', 'asset-pin')
+        .attr('d', d => {
+          const r = ascale(d.size_usd || 0);
+          return `M0,${-r} L${r},0 L0,${r} L${-r},0 Z`;
+        })
+        .attr('transform', d => {
+          const [x, y] = projection([d.lng, d.lat]);
+          return `translate(${x},${y})`;
+        })
+        .attr('fill', '#ffb547')
+        .attr('fill-opacity', 0.85)
+        .attr('stroke', 'rgba(255,255,255,0.7)')
+        .attr('stroke-width', 0.8)
+        .on('mouseover', (e, d) => {
+          const tip = document.getElementById('mapTip');
+          tip.innerHTML = `<h6>${d.flag} ${escapeHtml(d.asset)}</h6>
+            <div class="mt-row">${escapeHtml(d.issuer)} · ${fmt.usd(d.size_usd)}</div>
+            <div class="mt-row">${escapeHtml(d.chain)} · ${fmt.date(d.date)}</div>`;
+          tip.style.opacity = 1;
+          const r = container.getBoundingClientRect();
+          tip.style.left = Math.min(e.clientX - r.left + 14, w - 270) + 'px';
+          tip.style.top = (e.clientY - r.top + 14) + 'px';
+        })
+        .on('mouseout', () => { document.getElementById('mapTip').style.opacity = 0; })
+        .on('click', (e, d) => { e.stopPropagation(); openAssetModal(d); });
+    }
+
+    // Legend
+    const legend = document.createElement('div');
+    legend.className = 'map-legend';
+    legend.innerHTML = `
+      <span class="lab">Low</span>
+      <div class="scale"></div>
+      <span class="lab">${fmt.usd(maxScore)}</span>
+      <span style="margin-left:14px;display:flex;gap:10px">
+        <span style="display:inline-flex;align-items:center;gap:5px"><svg width="10" height="10"><circle cx="5" cy="5" r="4" fill="#60a5fa"/></svg> Bank</span>
+        <span style="display:inline-flex;align-items:center;gap:5px"><svg width="10" height="10"><circle cx="5" cy="5" r="4" fill="#a78bfa"/></svg> Issuer</span>
+        <span style="display:inline-flex;align-items:center;gap:5px"><svg width="10" height="10"><path d="M5,1 L9,5 L5,9 L1,5 Z" fill="#ffb547"/></svg> Issuance</span>
+      </span>`;
+    container.appendChild(legend);
+  }).catch(() => {
+    container.innerHTML = '<div style="padding:40px;color:var(--text-2);text-align:center">World map unavailable</div>';
+  });
+}
+
+document.querySelectorAll('#worldMap .mctl').forEach(el => {
+  el.addEventListener('click', () => {
+    document.querySelectorAll('#worldMap .mctl').forEach(x => x.classList.remove('active'));
+    el.classList.add('active');
+    MAP_OVERLAY = el.dataset.overlay;
+    renderWorldMap();
+  });
+});
+</script>
+
+<script>
+// ============================================================
+// TOP 15 BLOCKCHAINS TABLE
+// ============================================================
+let CHAINS_SORT = { key: 'mcap_usd', dir: 'desc' };
+
+function renderChainsTable() {
+  const tbody = document.querySelector('#chainsTable tbody');
+  const list = (CHAINS.chains || []).slice();
+  // Sort
+  if (CHAINS_SORT.key === 'rank') {
+    // No-op: stable order
+  } else {
+    const dir = CHAINS_SORT.dir === 'asc' ? 1 : -1;
+    list.sort((a, b) => {
+      const va = a[CHAINS_SORT.key] ?? 0, vb = b[CHAINS_SORT.key] ?? 0;
+      if (typeof va === 'number') return (va - vb) * dir;
+      return String(va).localeCompare(String(vb)) * dir;
+    });
+  }
+  tbody.innerHTML = list.map((ch, i) => {
+    const deltaCls = (ch.delta_30d_pct || 0) >= 0 ? 'num-pos' : 'num-neg';
+    const sparkSeriesColor = (ch.delta_30d_pct || 0) >= 0 ? '#2ecc71' : '#ff5470';
+    const spark = sparkSVG(ch.sparkline_30d, ch.color || sparkSeriesColor, 90, 28);
+    const textColor = isLight(ch.color) ? '#0c1018' : 'white';
+    return `<tr data-id="${ch.id}">
+      <td class="ch-rank">${i + 1}</td>
+      <td>
+        <div class="ch-name-cell">
+          <div class="ch-logo" style="background:${ch.color}; color:${textColor}">${ch.logo || ch.symbol[0]}</div>
+          <div>
+            <div class="ch-nm">${escapeHtml(ch.name)}<span class="ch-type-pill ${ch.type}">${ch.type}</span></div>
+            <div class="ch-sym">${escapeHtml(ch.symbol)}</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:right">${fmt.usd(ch.mcap_usd)}</td>
+      <td style="text-align:right">${fmt.usd(ch.tvl_usd)}</td>
+      <td style="text-align:right">${fmt.usd(ch.vol_24h_usd)}</td>
+      <td style="text-align:right">${fmt.usd(ch.rwa_onchain_usd)}</td>
+      <td style="text-align:right">${(ch.dominance_pct || 0).toFixed(2)}%</td>
+      <td class="${deltaCls}" style="text-align:right">${fmt.pct(ch.delta_30d_pct, 1)}</td>
+      <td><div class="ch-spark">${spark}</div></td>
+      <td><button class="ch-action">View →</button></td>
+    </tr>`;
+  }).join('');
+
+  tbody.querySelectorAll('tr').forEach(tr => {
+    tr.addEventListener('click', () => {
+      const ch = CHAINS.chains.find(c => c.id === tr.dataset.id);
+      if (ch) openChainModal(ch);
+    });
+  });
+  // Sort indicators
+  document.querySelectorAll('#chainsTable thead th').forEach(th => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.sort === CHAINS_SORT.key) {
+      th.classList.add(CHAINS_SORT.dir === 'asc' ? 'sort-asc' : 'sort-desc');
+    }
+  });
+}
+
+function isLight(hex) {
+  if (!hex) return false;
+  const c = hex.replace('#', '');
+  if (c.length < 6) return false;
+  const r = parseInt(c.slice(0, 2), 16), g = parseInt(c.slice(2, 4), 16), b = parseInt(c.slice(4, 6), 16);
+  return (r * 0.299 + g * 0.587 + b * 0.114) > 170;
+}
+
+document.querySelectorAll('#chainsTable thead th').forEach(th => {
+  th.addEventListener('click', () => {
+    const k = th.dataset.sort;
+    if (!k) return;
+    if (CHAINS_SORT.key === k) CHAINS_SORT.dir = CHAINS_SORT.dir === 'asc' ? 'desc' : 'asc';
+    else { CHAINS_SORT.key = k; CHAINS_SORT.dir = 'desc'; }
+    renderChainsTable();
+  });
+});
+
+// ============================================================
+// TREEMAP — Entities by region
+// ============================================================
+let TREEMAP_REGION = 'all';
+function renderTreemap(region) {
+  TREEMAP_REGION = region;
+  document.querySelectorAll('#regionTabs .rtab').forEach(t => {
+    t.classList.toggle('active', t.dataset.region === region);
+  });
+  const container = document.getElementById('treemap');
+  container.innerHTML = '';
+  const w = container.clientWidth, h = container.clientHeight;
+  let ents = ENTITIES.entities.slice();
+  if (region !== 'all') ents = ents.filter(e => e.region === region);
+  if (!ents.length) {
+    container.innerHTML = '<div style="padding:40px;color:var(--text-2);text-align:center">No entities in this region</div>';
+    return;
+  }
+  function relevance(d) {
+    const vol = Math.min(d.volume_24h_usd || 0, 3e9);
+    const aum = d.aum_usd || 0;
+    const base = Math.max(vol, aum, 1e7);
+    return Math.sqrt(base);
+  }
+  const root = d3.hierarchy({ children: ents })
+    .sum(d => relevance(d))
+    .sort((a, b) => b.value - a.value);
+  d3.treemap().size([w, h]).padding(3).round(true)(root);
+  const colors = {
+    'North America': ['#5e72ff', '#7c8aff'],
+    'Europe': ['#a78bfa', '#c4b5fd'],
+    'Asia-Pacific': ['#00d2c4', '#5eead4'],
+    'Latin America': ['#ff9248', '#ffb375'],
+    'Middle East': ['#ffb547', '#fcd34d'],
+    'Africa': ['#ff5470', '#fda4af']
+  };
+  root.leaves().forEach(leaf => {
+    const d = leaf.data;
+    const c = colors[d.region] || ['#5e72ff', '#7c8aff'];
+    const wPx = leaf.x1 - leaf.x0, hPx = leaf.y1 - leaf.y0;
+    const isSmall = wPx < 130 || hPx < 100;
+    const cell = document.createElement('div');
+    cell.className = 'tm-cell' + (isSmall ? ' small' : '');
+    cell.style.left = leaf.x0 + 'px';
+    cell.style.top = leaf.y0 + 'px';
+    cell.style.width = wPx + 'px';
+    cell.style.height = hPx + 'px';
+    cell.style.background = `linear-gradient(135deg, ${c[0]}, ${c[1]})`;
+    cell.innerHTML = `
+      <div>
+        <div class="tm-top"><span class="tm-flag">${d.flag}</span> <span>${escapeHtml(d.name)}</span></div>
+        <div class="tm-product">${escapeHtml(d.product || '')}</div>
+      </div>
+      <div class="tm-metrics">
+        <div><div class="lbl">AUM</div>${fmt.usd(d.aum_usd)}</div>
+        <div><div class="lbl">24h Vol</div>${fmt.usd(d.volume_24h_usd)}</div>
+        <div><div class="lbl">Wk Tx</div>${fmt.num(d.weekly_tx_count)}</div>
+        <div><div class="lbl">Chains</div>${d.active_chain_count || '—'}</div>
+      </div>`;
+    cell.addEventListener('click', () => openEntityModal(d));
+    container.appendChild(cell);
+  });
+}
+
+document.getElementById('regionTabs').addEventListener('click', (e) => {
+  const t = e.target.closest('.rtab');
+  if (!t) return;
+  renderTreemap(t.dataset.region);
+});
+
+// ============================================================
+// NEWS CLUSTER — grouped by entity
+// ============================================================
+function renderNewsCluster() {
+  const wrap = document.getElementById('newsCluster');
+  const news = (DATA.news || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  if (!news.length) {
+    wrap.innerHTML = '<div style="text-align:center;padding:30px;color:var(--text-2);grid-column:1/-1">No news in feed yet.</div>';
+    return;
+  }
+  // Group by primary entity_id
+  const groups = new Map();
+  const otherGroup = [];
+  news.forEach(n => {
+    const ids = n.entity_ids || [];
+    if (ids.length === 0) {
+      otherGroup.push(n);
+    } else {
+      const primary = ids[0];
+      if (!groups.has(primary)) groups.set(primary, []);
+      groups.get(primary).push(n);
+    }
+  });
+  // Build HTML
+  const ent = (id) => (ENTITIES.entities || []).find(e => e.id === id);
+  const html = [];
+  // Sort groups by latest news date
+  const sortedGroups = [...groups.entries()].sort((a, b) => {
+    const da = a[1][0].date || '', db = b[1][0].date || '';
+    return db.localeCompare(da);
+  });
+  sortedGroups.forEach(([eid, items]) => {
+    const e = ent(eid);
+    const flag = e ? e.flag : '🌐';
+    const name = e ? e.name : eid.replace(/_/g, ' ');
+    const cat = e ? e.category : '';
+    html.push(`<div class="ngroup">
+      <div class="ng-head">
+        <span class="ng-flag">${flag}</span>
+        <span class="ng-name">${escapeHtml(name)}</span>
+        <span class="ng-cat">${escapeHtml(cat)}</span>
+      </div>
+      <div class="ng-items">
+        ${items.slice(0, 3).map((n, i) => newsItemHtml(n, items, i)).join('')}
+      </div>
+    </div>`);
+  });
+  if (otherGroup.length) {
+    html.push(`<div class="ngroup">
+      <div class="ng-head">
+        <span class="ng-flag">📰</span>
+        <span class="ng-name">Market &amp; Macro</span>
+        <span class="ng-cat">No primary entity</span>
+      </div>
+      <div class="ng-items">
+        ${otherGroup.slice(0, 5).map(n => newsItemHtml(n)).join('')}
+      </div>
+    </div>`);
+  }
+  wrap.innerHTML = html.join('');
+  // Attach handlers
+  wrap.querySelectorAll('.news-item').forEach(el => {
+    el.addEventListener('click', () => {
+      const idx = +el.dataset.idx;
+      const n = news[idx];
+      if (n) openNewsLineageModal(n);
+    });
+  });
+}
+
+function newsItemHtml(n) {
+  const news = (DATA.news || []).slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  const idx = news.indexOf(n);
+  const sev = (n.severity || 'info').toLowerCase();
+  const sevCls = sev === 'critical' || sev === 'warning' ? sev : 'info';
+  const tagsHtml = (n.tags || []).slice(0, 4).map(t => {
+    const cls = t.startsWith('entity:') ? 'entity' : t.startsWith('market:') ? 'market' : t.startsWith('region:') ? 'region' : '';
+    return `<span class="news-tag ${cls}">${escapeHtml(t.replace(/^(entity|market|region):/, ''))}</span>`;
+  }).join('');
+  return `<div class="news-item ${sevCls}" data-idx="${idx}">
+    <div class="news-head">
+      <div class="news-title">${escapeHtml(n.title || '(no title)')}</div>
+      <div class="news-date">${fmt.date(n.date)}</div>
+    </div>
+    <div class="news-body">${escapeHtml((n.body || '').slice(0, 140))}${(n.body || '').length > 140 ? '…' : ''}</div>
+    <div class="news-tags">${tagsHtml}</div>
+  </div>`;
+}
+</script>
+
+<script>
+// ============================================================
+// MODAL FRAMEWORK
+// ============================================================
+function openModal(html, wide) {
+  const modal = document.getElementById('modalContent');
+  modal.className = 'modal' + (wide ? ' wide' : '');
+  modal.innerHTML = html;
+  document.getElementById('modalBackdrop').classList.add('open');
+}
+document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+  if (e.target.id === 'modalBackdrop') closeModal();
+});
+function closeModal() {
+  document.getElementById('modalBackdrop').classList.remove('open');
+}
+
+// Regulatory framework lookup (by region or country)
+const REG_BY_REGION = {
+  'North America': ['SEC', 'OCC', 'CFTC', 'FinCEN'],
+  'Europe': ['MiCA (EU)', 'BaFin (DE)', 'FCA (UK)', 'CSSF (LU)', 'AMF (FR)'],
+  'Asia-Pacific': ['MAS (SG)', 'HKMA (HK)', 'JFSA (JP)', 'ASIC (AU)'],
+  'Latin America': ['CVM (BR)', 'CNBV (MX)', 'CMF (CL)'],
+  'Middle East': ['ADGM (AE)', 'DFSA (AE)', 'VARA (AE)', 'QFC (QA)', 'SAMA (SA)'],
+  'Africa': ['FSCA (ZA)', 'CBN (NG)']
+};
+
+const REG_BY_COUNTRY = {
+  'USA': { framework: 'SEC Rule 506(c) · Regulation D', body: 'SEC' },
+  'UK': { framework: 'FCA Digital Securities Sandbox', body: 'FCA' },
+  'Germany': { framework: 'BaFin eWpG (Electronic Securities Act)', body: 'BaFin' },
+  'France': { framework: 'AMF DLT Pilot Regime', body: 'AMF' },
+  'Switzerland': { framework: 'FINMA DLT Act', body: 'FINMA' },
+  'Singapore': { framework: 'MAS Project Guardian', body: 'MAS' },
+  'Hong Kong': { framework: 'HKMA Project Ensemble / SFC Tokenization Guidelines', body: 'HKMA + SFC' },
+  'UK / Hong Kong': { framework: 'HKMA Project Ensemble', body: 'HKMA' },
+  'UK / Singapore': { framework: 'MAS Project Guardian', body: 'MAS' },
+  'UK / BVI': { framework: 'BVI Virtual Assets Services Act 2022', body: 'BVI FSC' },
+  'Japan': { framework: 'JFSA Financial Instruments Act (Security Tokens)', body: 'JFSA' },
+  'UAE': { framework: 'ADGM FRT (Financial Services Regulatory Authority)', body: 'ADGM FSRA' },
+  'Saudi Arabia': { framework: 'SAMA Open Banking / CMA Securities', body: 'SAMA' },
+  'Qatar': { framework: 'QFC Digital Assets Framework', body: 'QFC' },
+  'Brazil': { framework: 'CVM Resolution 175 (tokenized funds)', body: 'CVM' },
+  'Mexico': { framework: 'CNBV Fintech Law', body: 'CNBV' },
+  'South Africa': { framework: 'FSCA Crypto Asset Declaration', body: 'FSCA' },
+  'Spain': { framework: 'CNMV Tokenized Securities Sandbox', body: 'CNMV' },
+  'Canada': { framework: 'OSC Tokenization Pilot', body: 'OSC' }
+};
+
+function openEntityModal(d) {
+  // Related news (entity_ids contains d.id)
+  const allNews = (DATA.news || []).filter(n => (n.entity_ids || []).includes(d.id))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    .slice(0, 5);
+  // Chain breakdown
+  const chains = d.blockchains || [];
+  const chainRows = chains.map(cname => {
+    const ch = (CHAINS.chains || []).find(c => c.name === cname || c.symbol === cname);
+    if (!ch) return { name: cname, mcap: null, rwa: null, color: '#6b7691' };
+    return { name: ch.name, mcap: ch.mcap_usd, rwa: ch.rwa_onchain_usd, color: ch.color };
+  });
+  const regBodies = REG_BY_REGION[d.region] || [];
+  const newsHtml = allNews.length ? `<h3>Recent news (${allNews.length})</h3>
+    <div class="timeline">
+      ${allNews.map(n => `<div class="tline-item ${(n.severity || 'info').toLowerCase()}">
+        <div class="tl-date">${fmt.date(n.date)} · ${escapeHtml(n.source || '')}</div>
+        <div class="tl-title">${escapeHtml(n.title)}</div>
+        ${n.url ? `<a href="${escapeHtml(n.url)}" target="_blank" rel="noopener" style="font-size:10.5px">Read full ↗</a>` : ''}
+      </div>`).join('')}
+    </div>` : '';
+  const chainsHtml = chainRows.length ? `<h3>Activity per blockchain (${chains.length})</h3>
+    <table class="modal-table">
+      <thead><tr><th>Chain</th><th class="num">Mcap</th><th class="num">RWA on-chain</th></tr></thead>
+      <tbody>${chainRows.map(c => `<tr>
+        <td><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${c.color};margin-right:8px;vertical-align:middle"></span>${escapeHtml(c.name)}</td>
+        <td class="num">${c.mcap ? fmt.usd(c.mcap) : '—'}</td>
+        <td class="num">${c.rwa ? fmt.usd(c.rwa) : '—'}</td>
+      </tr>`).join('')}</tbody>
+    </table>` : '';
+
+  const html = `
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2><span style="font-size:24px;margin-right:8px">${d.flag}</span>${escapeHtml(d.name)} — ${escapeHtml(d.product || '')}</h2>
+    <div class="modal-sub">${escapeHtml(d.category)} · ${escapeHtml(d.subcategory || '')} · ${escapeHtml(d.country || '')} · founded ${d.founded || '—'} · HQ ${escapeHtml(d.hq || '')}</div>
+    <div class="modal-body">${escapeHtml(d.description || '')}</div>
+    <div class="modal-metrics">
+      <div class="modal-metric"><div class="lbl">AUM</div><div class="val">${fmt.usd(d.aum_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">24h Vol</div><div class="val">${fmt.usd(d.volume_24h_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">Weekly Tx</div><div class="val">${fmt.num(d.weekly_tx_count)}</div></div>
+      <div class="modal-metric"><div class="lbl">7d Δ</div><div class="val" style="color:${(d.delta_7d_pct || 0) > 0 ? 'var(--green)' : 'var(--red)'}">${fmt.pct(d.delta_7d_pct)}</div></div>
+    </div>
+    <h3>Instruments</h3>
+    <div class="pill-row">${(d.instruments || []).map(i => `<span class="pill accent">${escapeHtml(i)}</span>`).join(' ')}</div>
+    <h3>Regulators (${escapeHtml(d.region || '')})</h3>
+    <div class="pill-row">${regBodies.map(r => `<span class="pill purplex">${escapeHtml(r)}</span>`).join(' ')}</div>
+    ${chainsHtml}
+    ${newsHtml}
+    <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+      ${d.website ? `<a class="source-link" href="${escapeHtml(d.website)}" target="_blank" rel="noopener">Website ↗</a>` : ''}
+      ${d.source ? `<a class="source-link" href="${escapeHtml(d.source)}" target="_blank" rel="noopener" style="background:var(--accent-2)">View source ↗</a>` : ''}
+    </div>`;
+  openModal(html);
+}
+
+function openAssetModal(d) {
+  // Find chain info
+  const ch = (CHAINS.chains || []).find(c => c.name === d.chain || (d.chain && d.chain.toLowerCase().includes((c.name || '').toLowerCase())));
+  const chColor = ch ? ch.color : '#5e72ff';
+  const chLogo = ch ? ch.logo : '◆';
+  const chTextColor = isLight(chColor) ? '#0c1018' : 'white';
+  // Similar issuances
+  const similar = (ASSETS.assets || []).filter(a => a.asset_type === d.asset_type && a.id !== d.id).slice(0, 5);
+  // Regulatory framework
+  const reg = REG_BY_COUNTRY[d.country] || { framework: 'Local securities regulator', body: '—' };
+
+  const html = `
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="ch-header" style="background:linear-gradient(135deg, ${chColor}33, ${chColor}11); border-color:${chColor}66">
+      <div class="ch-logo" style="background:${chColor}; color:${chTextColor}">${chLogo}</div>
+      <div class="ch-h-meta">
+        <div class="ch-h-name"><span style="margin-right:8px">${d.flag}</span>${escapeHtml(d.asset)}</div>
+        <div class="ch-h-sub">${escapeHtml(d.issuer)} · ${escapeHtml(d.asset_type)} · ${escapeHtml(d.chain)}</div>
+      </div>
+    </div>
+    <div class="modal-body">${escapeHtml(d.description || '')}</div>
+    <div class="modal-metrics">
+      <div class="modal-metric"><div class="lbl">Size</div><div class="val">${d.size_usd ? fmt.usd(d.size_usd) : '—'}</div></div>
+      <div class="modal-metric"><div class="lbl">Issuance Date</div><div class="val">${fmt.date(d.date)}</div></div>
+      <div class="modal-metric"><div class="lbl">Country</div><div class="val" style="font-size:13px">${d.flag} ${escapeHtml(d.country || '')}</div></div>
+      <div class="modal-metric"><div class="lbl">Region</div><div class="val" style="font-size:13px">${escapeHtml(d.region || '')}</div></div>
+    </div>
+    <h3>Regulatory framework</h3>
+    <div class="pill-row">
+      <span class="pill purplex">${escapeHtml(reg.framework)}</span>
+      <span class="pill">${escapeHtml(reg.body)}</span>
+    </div>
+    ${similar.length ? `<h3>Similar ${escapeHtml(d.asset_type)} issuances</h3>
+      <table class="modal-table">
+        <thead><tr><th>Asset</th><th>Issuer</th><th>Chain</th><th class="num">Size</th></tr></thead>
+        <tbody>${similar.map(s => `<tr data-id="${s.id}" style="cursor:pointer" onclick="(function(){const a=ASSETS.assets.find(x=>x.id==='${s.id}');if(a)openAssetModal(a);})()">
+          <td><span style="margin-right:5px">${s.flag}</span>${escapeHtml(s.asset)}</td>
+          <td>${escapeHtml(s.issuer)}</td>
+          <td>${escapeHtml(s.chain)}</td>
+          <td class="num">${s.size_usd ? fmt.usd(s.size_usd) : '—'}</td>
+        </tr>`).join('')}</tbody>
+      </table>` : ''}
+    ${d.url ? `<a class="source-link" href="${escapeHtml(d.url)}" target="_blank" rel="noopener">View source ↗</a>` : ''}`;
+  openModal(html);
+}
+
+function openChainModal(ch) {
+  const textColor = isLight(ch.color) ? '#0c1018' : 'white';
+  // Entities on this chain (substring match on chain name or symbol within entity.blockchains[])
+  const entOnChain = (ENTITIES.entities || []).filter(e =>
+    (e.blockchains || []).some(b => {
+      const bl = b.toLowerCase();
+      return bl.includes((ch.name || '').toLowerCase()) || bl === (ch.symbol || '').toLowerCase();
+    })
+  );
+  // Assets on this chain
+  const assetsOnChain = (ASSETS.assets || []).filter(a =>
+    a.chain && (a.chain.toLowerCase().includes((ch.name || '').toLowerCase()) || (a.chain.toLowerCase() === (ch.symbol || '').toLowerCase()))
+  );
+
+  // Big sparkline
+  const sparkColor = (ch.delta_30d_pct || 0) >= 0 ? '#2ecc71' : '#ff5470';
+  const bigSpark = sparkSVG(ch.sparkline_30d, ch.color || sparkColor, 300, 60);
+
+  const html = `
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="ch-header" style="background:linear-gradient(135deg, ${ch.color}33, ${ch.color}11); border-color:${ch.color}66">
+      <div class="ch-logo" style="background:${ch.color}; color:${textColor}">${ch.logo || ch.symbol[0]}</div>
+      <div class="ch-h-meta">
+        <div class="ch-h-name">${escapeHtml(ch.name)} <span class="ch-type-pill ${ch.type}" style="font-size:11px;padding:2px 8px">${ch.type}</span></div>
+        <div class="ch-h-sub">${escapeHtml(ch.symbol)} · ${escapeHtml(ch.consensus || '')}</div>
+      </div>
+    </div>
+    <div class="modal-body">${escapeHtml(ch.description || '')}</div>
+    <div class="modal-metrics" style="grid-template-columns:repeat(4,1fr)">
+      <div class="modal-metric"><div class="lbl">Mcap</div><div class="val">${fmt.usd(ch.mcap_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">TVL</div><div class="val">${fmt.usd(ch.tvl_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">24h Vol</div><div class="val">${fmt.usd(ch.vol_24h_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">RWA on-chain</div><div class="val">${fmt.usd(ch.rwa_onchain_usd)}</div></div>
+      <div class="modal-metric"><div class="lbl">Tx 24h</div><div class="val">${fmt.num(ch.tx_24h)}</div></div>
+      <div class="modal-metric"><div class="lbl">Active addr 24h</div><div class="val">${fmt.num(ch.active_addresses_24h)}</div></div>
+      <div class="modal-metric"><div class="lbl">Gas (gwei)</div><div class="val">${ch.gas_gwei == null ? '—' : ch.gas_gwei < 0.001 ? '<0.001' : ch.gas_gwei}</div></div>
+      <div class="modal-metric"><div class="lbl">Dominance</div><div class="val">${(ch.dominance_pct || 0).toFixed(2)}%</div></div>
+    </div>
+    <h3>30-day trend</h3>
+    <div style="background:var(--bg-3);padding:14px;border-radius:10px;margin-bottom:8px">
+      ${bigSpark}
+    </div>
+    <div style="font-size:11px;color:var(--text-2);font-family:JetBrains Mono">
+      30d Δ <span style="color:${(ch.delta_30d_pct || 0) >= 0 ? 'var(--green)' : 'var(--red)'}">${fmt.pct(ch.delta_30d_pct, 1)}</span>
+      · 7d Δ <span style="color:${(ch.delta_7d_pct || 0) >= 0 ? 'var(--green)' : 'var(--red)'}">${fmt.pct(ch.delta_7d_pct, 1)}</span>
+      · RWA share ${(ch.rwa_share_pct || 0).toFixed(1)}%
+    </div>
+    <h3>Top products hosted</h3>
+    <div class="pill-row">${(ch.top_products || []).map(p => `<span class="pill tealx">${escapeHtml(p)}</span>`).join(' ')}</div>
+    <h3>Regulators</h3>
+    <div class="pill-row">${(ch.regulators || []).map(r => `<span class="pill purplex">${escapeHtml(r)}</span>`).join(' ')}</div>
+    ${entOnChain.length ? `<h3>Entities on ${escapeHtml(ch.name)} (${entOnChain.length})</h3>
+      <table class="modal-table">
+        <thead><tr><th>Entity</th><th>Product</th><th>Region</th><th class="num">AUM</th></tr></thead>
+        <tbody>${entOnChain.slice(0, 12).map(e => `<tr style="cursor:pointer" onclick="openEntityModal(ENTITIES.entities.find(x=>x.id==='${e.id}'))">
+          <td><span style="margin-right:5px">${e.flag}</span>${escapeHtml(e.name)}</td>
+          <td>${escapeHtml(e.product || '')}</td>
+          <td>${escapeHtml(e.region || '')}</td>
+          <td class="num">${fmt.usd(e.aum_usd)}</td>
+        </tr>`).join('')}</tbody>
+      </table>` : ''}
+    ${assetsOnChain.length ? `<h3>Tokenized issuances on ${escapeHtml(ch.name)} (${assetsOnChain.length})</h3>
+      <table class="modal-table">
+        <thead><tr><th>Asset</th><th>Issuer</th><th>Type</th><th class="num">Size</th></tr></thead>
+        <tbody>${assetsOnChain.slice(0, 12).map(a => `<tr style="cursor:pointer" onclick="openAssetModal(ASSETS.assets.find(x=>x.id==='${a.id}'))">
+          <td><span style="margin-right:5px">${a.flag}</span>${escapeHtml(a.asset)}</td>
+          <td>${escapeHtml(a.issuer)}</td>
+          <td>${escapeHtml(a.asset_type)}</td>
+          <td class="num">${a.size_usd ? fmt.usd(a.size_usd) : '—'}</td>
+        </tr>`).join('')}</tbody>
+      </table>` : ''}
+    ${ch.url ? `<a class="source-link" href="${escapeHtml(ch.url)}" target="_blank" rel="noopener">View source ↗</a>` : ''}`;
+  openModal(html, true);
+}
+</script>
+
+<script>
+// ============================================================
+// NEWS LINEAGE MODAL — Sunburst by time depth
+// ============================================================
+function severityColor(sev) {
+  const s = (sev || 'info').toLowerCase();
+  if (s === 'critical') return '#ff5470';
+  if (s === 'warning') return '#ffb547';
+  return '#60a5fa';
+}
+
+function openNewsLineageModal(n) {
+  openLineageModal({
+    title: n.title || 'News item',
+    subtitle: `${fmt.date(n.date)} · ${n.source || ''}${n.severity ? ' · ' + n.severity : ''}`,
+    entities: n.entity_ids || [],
+    markets: n.markets || [],
+    body: n.body,
+    url: n.url,
+    seedNews: n
+  });
+}
+
+// opts: { title, subtitle?, markets?, entities?, body?, url?, seedNews? }
+function openLineageModal(opts) {
+  // Find related news matching entities OR markets
+  const allNews = (DATA.news || []).slice();
+  const entSet = new Set(opts.entities || []);
+  const mktSet = new Set(opts.markets || []);
+  const related = allNews.filter(n => {
+    if (opts.seedNews && n === opts.seedNews) return false;
+    const eMatch = (n.entity_ids || []).some(e => entSet.has(e));
+    const mMatch = (n.markets || []).some(m => mktSet.has(m)) || (n.tags || []).some(t => mktSet.has(t.replace(/^market:/, '')));
+    return eMatch || mMatch;
+  });
+
+  // Bucket by age relative to last_update
+  const now = new Date(DATA.last_update || Date.now()).getTime();
+  const day = 86400000;
+  const bucket7 = [], bucket30 = [], bucketOld = [];
+  related.forEach(n => {
+    const t = new Date(n.date || 0).getTime();
+    const age = (now - t) / day;
+    if (age <= 7) bucket7.push(n);
+    else if (age <= 30) bucket30.push(n);
+    else bucketOld.push(n);
+  });
+
+  // Add seed news to inner bucket
+  if (opts.seedNews) bucket7.unshift(opts.seedNews);
+
+  const totalNews = bucket7.length + bucket30.length + bucketOld.length;
+
+  const data = {
+    name: opts.title,
+    children: [
+      bucket7.length ? { name: 'Last 7 days', color: '#60a5fa', children: bucket7.map(n => newsLeaf(n)) } : null,
+      bucket30.length ? { name: '7–30 days', color: '#a78bfa', children: bucket30.map(n => newsLeaf(n)) } : null,
+      bucketOld.length ? { name: '30+ days', color: '#6b7691', children: bucketOld.map(n => newsLeaf(n)) } : null
+    ].filter(Boolean)
+  };
+
+  const html = `
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h2>News Lineage · ${escapeHtml(opts.title || '')}</h2>
+    <div class="modal-sub">${escapeHtml(opts.subtitle || '')} · ${totalNews} related news ${opts.seedNews ? '(plus seed)' : ''}</div>
+    ${opts.body ? `<div class="modal-body">${escapeHtml(opts.body)}</div>` : ''}
+    ${totalNews > 0 ? `
+      <div class="sunburst-wrap" id="lineageSunburst"></div>
+      <div style="font-size:11px;color:var(--text-2);text-align:center;margin-top:6px">
+        Inner ring = recent · outer ring = older · arc color by severity · click any arc to open its source
+      </div>` : `
+      <div style="padding:30px;text-align:center;color:var(--text-2);background:var(--bg-3);border-radius:10px">
+        No related news found for these entities or markets yet.
+      </div>`}
+    ${opts.url ? `<a class="source-link" href="${escapeHtml(opts.url)}" target="_blank" rel="noopener">Read full article ↗</a>` : ''}`;
+  openModal(html, true);
+  if (totalNews > 0) setTimeout(() => renderLineageSunburst(data), 60);
+}
+
+function newsLeaf(n) {
+  return {
+    name: (n.title || '').slice(0, 38),
+    fullTitle: n.title || '',
+    value: 1,
+    color: severityColor(n.severity),
+    url: n.url,
+    date: n.date,
+    severity: n.severity,
+    source: n.source
+  };
+}
+
+function renderLineageSunburst(data) {
+  const container = document.getElementById('lineageSunburst');
+  if (!container) return;
+  container.innerHTML = '';
+  const w = container.clientWidth, h = container.clientHeight;
+  const radius = Math.min(w, h) / 2 - 8;
+  const svg = d3.select(container).append('svg')
+    .attr('width', w).attr('height', h)
+    .append('g')
+    .attr('transform', `translate(${w / 2},${h / 2})`);
+
+  const root = d3.hierarchy(data).sum(d => d.value || 0).sort((a, b) => b.value - a.value);
+  d3.partition().size([2 * Math.PI, radius])(root);
+
+  const arc = d3.arc()
+    .startAngle(d => d.x0).endAngle(d => d.x1)
+    .innerRadius(d => d.y0).outerRadius(d => d.y1)
+    .padAngle(0.005).padRadius(radius / 3);
+
+  svg.selectAll('path')
+    .data(root.descendants().filter(d => d.depth))
+    .join('path')
+    .attr('class', 'sunburst-arc')
+    .attr('d', arc)
+    .attr('fill', d => d.data.color || (d.parent && d.parent.data.color) || '#5e72ff')
+    .attr('fill-opacity', d => d.depth === 1 ? 0.7 : 0.92)
+    .on('mouseover', (e, d) => {
+      const tip = document.getElementById('sbTip');
+      const isLeaf = !d.children;
+      if (isLeaf && d.data.fullTitle) {
+        tip.innerHTML = `<h6>${escapeHtml(d.data.fullTitle)}</h6>
+          <div>${escapeHtml(d.data.source || '')}</div>
+          <div class="date">${fmt.date(d.data.date)} · ${escapeHtml(d.data.severity || 'info')}</div>`;
+      } else {
+        tip.innerHTML = `<h6>${escapeHtml(d.data.name)}</h6>
+          <div>${(d.children || []).length} items</div>`;
+      }
+      tip.style.opacity = 1;
+      tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 300) + 'px';
+      tip.style.top = (e.clientY + 14) + 'px';
+    })
+    .on('mousemove', (e) => {
+      const tip = document.getElementById('sbTip');
+      tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 300) + 'px';
+      tip.style.top = (e.clientY + 14) + 'px';
+    })
+    .on('mouseout', () => { document.getElementById('sbTip').style.opacity = 0; })
+    .on('click', (e, d) => { if (d.data.url) window.open(d.data.url, '_blank'); });
+
+  svg.selectAll('text.sunburst-label')
+    .data(root.descendants().filter(d => d.depth && (d.x1 - d.x0) > 0.14))
+    .join('text')
+    .attr('class', 'sunburst-label')
+    .attr('transform', d => {
+      const a = (d.x0 + d.x1) / 2;
+      const r = (d.y0 + d.y1) / 2;
+      const x = Math.sin(a) * r;
+      const y = -Math.cos(a) * r;
+      const rot = (a * 180 / Math.PI) - 90 + (a > Math.PI ? 180 : 0);
+      return `translate(${x},${y}) rotate(${rot})`;
+    })
+    .text(d => d.data.name.length > 14 ? d.data.name.slice(0, 12) + '…' : d.data.name);
+
+  svg.append('text').attr('class', 'sunburst-center').attr('y', -4).text('Lineage');
+  svg.append('text').attr('class', 'sunburst-center').attr('y', 12).text(`${root.leaves().length} news`);
+}
+
+// ============================================================
+// RESIZE
+// ============================================================
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    if (!DATA) return;
+    renderSankey();
+    renderWorldMap();
+    renderTreemap(TREEMAP_REGION);
+  }, 220);
+});
+
+// ============================================================
+// ESC to close modal
+// ============================================================
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+
+</body>
+</html>
