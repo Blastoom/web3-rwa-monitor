@@ -8,25 +8,49 @@
       "category": "onchain",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": -48.696,
+    "tokenized_credit": {
+      "value": 2839899857.0,
+      "delta_pct": -84.39615463186814,
       "unit": "USD",
-      "label": "DeFi TVL (total)",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 537807655.0,
+      "delta_pct": -55.182695416666675,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 11273046209.0,
+      "delta_pct": 317.52022996296296,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
     "fear_greed": {
       "value": 28.0,
-      "delta_pct": 3.7037037037037033,
+      "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
       "source_url": ""
     },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "crypto_mcap": {
       "value": 3750000000000.0,
-      "delta_pct": -11.76470588235294,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
@@ -34,10 +58,26 @@
     },
     "btc_dom": {
       "value": 59.8,
-      "delta_pct": 12.406015037593972,
+      "delta_pct": 0.0,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 265627000000.0,
+      "delta_pct": -17.759992569429393,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 4.79,
+      "delta_pct": -91.84542049710589,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
       "source_url": ""
     },
     "rwa_total": {
@@ -56,14 +96,6 @@
       "category": "onchain",
       "source_url": ""
     },
-    "tokenized_credit": {
-      "value": 18200000000.0,
-      "delta_pct": null,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_bonds": {
       "value": 6500000000.0,
       "delta_pct": null,
@@ -72,35 +104,11 @@
       "category": "onchain",
       "source_url": ""
     },
-    "tokenized_equities": {
-      "value": 1200000000.0,
-      "delta_pct": null,
-      "unit": "USD",
-      "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_real_estate": {
       "value": 580000000.0,
       "delta_pct": null,
       "unit": "USD",
       "label": "Tokenized Real Estate",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "stablecoin_mcap": {
-      "value": 322990000000.0,
-      "delta_pct": 21.595319752886567,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 58.74,
-      "delta_pct": null,
-      "unit": "%",
-      "label": "USDT Dominance",
       "category": "onchain",
       "source_url": ""
     },
@@ -117,14 +125,6 @@
       "delta_pct": null,
       "unit": "USD",
       "label": "USDe Market Cap",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 2700000000.0,
-      "delta_pct": -60.526315789473685,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,19 +372,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-23 01:15:54"
+      "captured_at": "2026-05-23 07:13:42"
     },
     {
       "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 2839899857.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -91305000000.0,
-      "delta_pct": -48.696,
-      "captured_at": "2026-05-23 01:15:54"
+      "delta_num": -15360100143.0,
+      "delta_pct": -84.39615463186814,
+      "captured_at": "2026-05-23 07:13:42"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 537807655.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -662192345.0,
+      "delta_pct": -55.182695416666675,
+      "captured_at": "2026-05-23 07:13:42"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 11273046209.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 8573046209.0,
+      "delta_pct": 317.52022996296296,
+      "captured_at": "2026-05-23 07:13:42"
     },
     {
       "category": "risk",
@@ -394,9 +418,21 @@
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 1.0,
-      "delta_pct": 3.7037037037037033,
-      "captured_at": "2026-05-23 01:15:54"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 07:13:42"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 07:13:42"
     },
     {
       "category": "market",
@@ -406,9 +442,9 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -500000000000.0,
-      "delta_pct": -11.76470588235294,
-      "captured_at": "2026-05-23 01:15:54"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 07:13:42"
     },
     {
       "category": "risk",
@@ -418,9 +454,33 @@
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 6.599999999999994,
-      "delta_pct": 12.406015037593972,
-      "captured_at": "2026-05-23 01:15:54"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 07:13:42"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 265627000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -57363000000.0,
+      "delta_pct": -17.759992569429393,
+      "captured_at": "2026-05-23 07:13:42"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 4.79,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -53.95,
+      "delta_pct": -91.84542049710589,
+      "captured_at": "2026-05-23 07:13:42"
     },
     {
       "category": "onchain",
@@ -448,33 +508,9 @@
     },
     {
       "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 18200000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
       "metric_key": "tokenized_bonds",
       "metric_label": "Tokenized Bonds",
       "value_num": 6500000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 1200000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
@@ -488,30 +524,6 @@
       "metric_label": "Tokenized Real Estate",
       "value_num": 580000000.0,
       "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 322990000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 57363000000.0,
-      "delta_pct": 21.595319752886567,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 58.74,
-      "unit": "%",
       "source_url": "",
       "source_name": "",
       "delta_num": null,
@@ -540,18 +552,6 @@
       "source_name": "",
       "delta_num": null,
       "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 2700000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -4140000000.0,
-      "delta_pct": -60.526315789473685,
       "captured_at": "2026-05-22 20:09:49"
     },
     {
@@ -1755,6 +1755,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-23 01:15:54",
-  "server_time_utc": "2026-05-23T01:15:54.449248Z"
+  "last_update": "2026-05-23 07:13:42",
+  "server_time_utc": "2026-05-23T07:13:42.777079Z"
 }
