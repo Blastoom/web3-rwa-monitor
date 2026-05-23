@@ -1,16 +1,8 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 19002080109.0,
-      "delta_pct": 61.03457719491525,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2511778553.0,
-      "delta_pct": -0.8297969596847224,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
@@ -30,6 +22,22 @@
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 3750000000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 19002080109.0,
+      "delta_pct": 61.03457719491525,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
       "source_url": ""
     },
     "tokenized_credit": {
@@ -54,14 +62,6 @@
       "unit": "USD",
       "label": "Tokenized Commodities",
       "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 3750000000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
       "source_url": ""
     },
     "btc_dom": {
@@ -364,27 +364,15 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 19002080109.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 7202080109.0,
-      "delta_pct": 61.03457719491525,
-      "captured_at": "2026-05-23 13:13:34"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2511778553.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -21017061.0,
-      "delta_pct": -0.8297969596847224,
-      "captured_at": "2026-05-23 13:13:34"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 19:10:16"
     },
     {
       "category": "onchain",
@@ -396,7 +384,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-23 13:13:34"
+      "captured_at": "2026-05-23 19:10:16"
     },
     {
       "category": "risk",
@@ -408,6 +396,30 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-05-23 19:10:16"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 3750000000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 19:10:16"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 19002080109.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 7202080109.0,
+      "delta_pct": 61.03457719491525,
       "captured_at": "2026-05-23 13:13:34"
     },
     {
@@ -444,18 +456,6 @@
       "source_name": "",
       "delta_num": 8573046209.0,
       "delta_pct": 317.52022996296296,
-      "captured_at": "2026-05-23 07:13:42"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 3750000000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-23 07:13:42"
     },
     {
@@ -1755,6 +1755,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-23 13:13:34",
-  "server_time_utc": "2026-05-23T13:13:34.440600Z"
+  "last_update": "2026-05-23 19:10:16",
+  "server_time_utc": "2026-05-23T19:10:16.065433Z"
 }
