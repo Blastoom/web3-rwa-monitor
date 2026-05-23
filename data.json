@@ -1,5 +1,45 @@
 {
   "metrics": {
+    "buidl_aum": {
+      "value": 2532795614.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": -48.696,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 28.0,
+      "delta_pct": 3.7037037037037033,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 3750000000000.0,
+      "delta_pct": -11.76470588235294,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.8,
+      "delta_pct": 12.406015037593972,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 33500000000.0,
       "delta_pct": -1.0924121641570712,
@@ -45,14 +85,6 @@
       "delta_pct": null,
       "unit": "USD",
       "label": "Tokenized Real Estate",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "buidl_aum": {
-      "value": 2532795614.0,
-      "delta_pct": -0.18776688685852996,
-      "unit": "USD",
-      "label": "BlackRock BUIDL AUM",
       "category": "onchain",
       "source_url": ""
     },
@@ -104,44 +136,12 @@
       "category": "onchain",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 187500000000.0,
-      "delta_pct": null,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 4250000000000.0,
-      "delta_pct": null,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
     "eth_btc_ratio": {
       "value": 0.0245,
       "delta_pct": null,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 53.2,
-      "delta_pct": -20.603769530054908,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 27.0,
-      "delta_pct": -3.571428571428571,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
       "source_url": ""
     },
     "buidl_aum_usd": {
@@ -364,6 +364,66 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2532795614.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 01:15:54"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -91305000000.0,
+      "delta_pct": -48.696,
+      "captured_at": "2026-05-23 01:15:54"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 28.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1.0,
+      "delta_pct": 3.7037037037037033,
+      "captured_at": "2026-05-23 01:15:54"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 3750000000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -500000000000.0,
+      "delta_pct": -11.76470588235294,
+      "captured_at": "2026-05-23 01:15:54"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.8,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 6.599999999999994,
+      "delta_pct": 12.406015037593972,
+      "captured_at": "2026-05-23 01:15:54"
+    },
+    {
+      "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
       "value_num": 33500000000.0,
@@ -432,18 +492,6 @@
       "source_name": "",
       "delta_num": null,
       "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2532795614.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -4764698.0,
-      "delta_pct": -0.18776688685852996,
       "captured_at": "2026-05-22 20:09:49"
     },
     {
@@ -519,30 +567,6 @@
       "captured_at": "2026-05-22 20:09:49"
     },
     {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 187500000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 4250000000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
       "category": "market",
       "metric_key": "eth_btc_ratio",
       "metric_label": "ETH/BTC Ratio",
@@ -553,30 +577,6 @@
       "delta_num": null,
       "delta_pct": null,
       "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 53.2,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -13.805700000000002,
-      "delta_pct": -20.603769530054908,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 27.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1.0,
-      "delta_pct": -3.571428571428571,
-      "captured_at": "2026-05-22 19:27:28"
     },
     {
       "category": "onchain",
@@ -893,6 +893,34 @@
     }
   ],
   "news": [
+    {
+      "title": "UAE reports a large dirham-backed stablecoin transaction involving FAB",
+      "url": "https://www.thenationalnews.com/business/money/2026/05/22/ihc-digital-dirham-stablecoin-transaction/",
+      "body": "Local media reported a Dh110m transaction using a UAE dirham-backed stablecoin, with First Abu Dhabi Bank mentioned as part of the initiative. If confirmed by official releases, it could signal accelerating real-world usage for AED-linked settlement rails.",
+      "source": "The National",
+      "date": "2026-05-22",
+      "captured_at": "2026-05-23 01:15:54",
+      "entity_ids": [
+        "adq_uae",
+        "fab_uae",
+        "ihc_uae"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East",
+        "North America"
+      ],
+      "tags": [
+        "entity:adq_uae",
+        "entity:fab_uae",
+        "entity:ihc_uae",
+        "market:stablecoins",
+        "region:Middle East",
+        "region:North America"
+      ]
+    },
     {
       "title": "Mercado Bitcoin announces $200M RWA issuance on Stellar Network",
       "url": "https://stellar.org/press/mercado-bitcoin-announces-usd200-million-rwa-issuance-on-stellar-network",
@@ -1717,7 +1745,16 @@
       "tags": []
     }
   ],
-  "alerts": [],
-  "last_update": "2026-05-22 20:09:49",
-  "server_time_utc": "2026-05-22T20:09:49.391215Z"
+  "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 28 \u2014 risk sentiment remains depressed.",
+      "category": "risk",
+      "created_at": "2026-05-23 01:15:54",
+      "acknowledged": 0
+    }
+  ],
+  "last_update": "2026-05-23 01:15:54",
+  "server_time_utc": "2026-05-23T01:15:54.449248Z"
 }
