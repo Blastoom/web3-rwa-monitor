@@ -1,11 +1,35 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 19002080109.0,
+      "delta_pct": 61.03457719491525,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
-      "value": 2532795614.0,
-      "delta_pct": 0.0,
+      "value": 2511778553.0,
+      "delta_pct": -0.8297969596847224,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 28.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
       "source_url": ""
     },
     "tokenized_credit": {
@@ -29,22 +53,6 @@
       "delta_pct": 317.52022996296296,
       "unit": "USD",
       "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 28.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
@@ -85,14 +93,6 @@
       "delta_pct": -1.0924121641570712,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_treas": {
-      "value": 11800000000.0,
-      "delta_pct": 9.25925925925926,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -364,15 +364,51 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 19002080109.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 7202080109.0,
+      "delta_pct": 61.03457719491525,
+      "captured_at": "2026-05-23 13:13:34"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2532795614.0,
+      "value_num": 2511778553.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -21017061.0,
+      "delta_pct": -0.8297969596847224,
+      "captured_at": "2026-05-23 13:13:34"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-23 07:13:42"
+      "captured_at": "2026-05-23 13:13:34"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 28.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-23 13:13:34"
     },
     {
       "category": "onchain",
@@ -408,30 +444,6 @@
       "source_name": "",
       "delta_num": 8573046209.0,
       "delta_pct": 317.52022996296296,
-      "captured_at": "2026-05-23 07:13:42"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 28.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-23 07:13:42"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-23 07:13:42"
     },
     {
@@ -492,18 +504,6 @@
       "source_name": "",
       "delta_num": -370000000.0,
       "delta_pct": -1.0924121641570712,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 11800000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 1000000000.0,
-      "delta_pct": 9.25925925925926,
       "captured_at": "2026-05-22 20:09:49"
     },
     {
@@ -1755,6 +1755,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-23 07:13:42",
-  "server_time_utc": "2026-05-23T07:13:42.777079Z"
+  "last_update": "2026-05-23 13:13:34",
+  "server_time_utc": "2026-05-23T13:13:34.440600Z"
 }
