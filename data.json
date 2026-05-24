@@ -1,19 +1,19 @@
 {
   "metrics": {
-    "defi_tvl": {
-      "value": 7000.0,
-      "delta_pct": -99.9999927231145,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "fear_greed": {
-      "value": 28.0,
-      "delta_pct": 0.0,
+      "value": 25.0,
+      "delta_pct": -10.714285714285714,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96.195,
+      "delta_pct": -98.62578571428571,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
       "source_url": ""
     },
     "btc_dom": {
@@ -363,28 +363,28 @@
   },
   "metrics_list": [
     {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 7000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -96194993000.0,
-      "delta_pct": -99.9999927231145,
-      "captured_at": "2026-05-24 13:12:22"
-    },
-    {
       "category": "risk",
       "metric_key": "fear_greed",
       "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 28.0,
+      "value_num": 25.0,
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-24 13:12:22"
+      "delta_num": -3.0,
+      "delta_pct": -10.714285714285714,
+      "captured_at": "2026-05-24 19:14:02"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96.195,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -6903.805,
+      "delta_pct": -98.62578571428571,
+      "captured_at": "2026-05-24 19:14:02"
     },
     {
       "category": "risk",
@@ -396,7 +396,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-24 07:11:16"
+      "captured_at": "2026-05-24 19:14:02"
     },
     {
       "category": "onchain",
@@ -1755,6 +1755,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-24 13:12:22",
-  "server_time_utc": "2026-05-24T13:12:22.258800Z"
+  "last_update": "2026-05-24 19:14:02",
+  "server_time_utc": "2026-05-24T19:14:02.395635Z"
 }
