@@ -1,8 +1,8 @@
 {
   "metrics": {
     "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
+      "value": 7000.0,
+      "delta_pct": -99.9999927231145,
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
@@ -366,13 +366,13 @@
       "category": "onchain",
       "metric_key": "defi_tvl",
       "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
+      "value_num": 7000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-24 07:11:16"
+      "delta_num": -96194993000.0,
+      "delta_pct": -99.9999927231145,
+      "captured_at": "2026-05-24 13:12:22"
     },
     {
       "category": "risk",
@@ -384,7 +384,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-24 07:11:16"
+      "captured_at": "2026-05-24 13:12:22"
     },
     {
       "category": "risk",
@@ -1755,6 +1755,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-24 07:11:16",
-  "server_time_utc": "2026-05-24T07:11:16.247601Z"
+  "last_update": "2026-05-24 13:12:22",
+  "server_time_utc": "2026-05-24T13:12:22.258800Z"
 }
