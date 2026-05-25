@@ -1,13 +1,5 @@
 {
   "metrics": {
-    "rwa_total": {
-      "value": 33990000000.000004,
-      "delta_pct": 1.4626865671641904,
-      "unit": "USD",
-      "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2511778553.0,
       "delta_pct": 0.0,
@@ -18,7 +10,7 @@
     },
     "defi_tvl": {
       "value": 96195000000.0,
-      "delta_pct": 99999999900.0,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
@@ -33,11 +25,19 @@
       "source_url": ""
     },
     "btc_dom": {
-      "value": 59.9,
-      "delta_pct": 0.0,
+      "value": 60.1,
+      "delta_pct": 0.3338898163606057,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
+      "source_url": ""
+    },
+    "rwa_total": {
+      "value": 33990000000.000004,
+      "delta_pct": 1.4626865671641904,
+      "unit": "USD",
+      "label": "RWA on-chain (excl. stablecoins)",
+      "category": "onchain",
       "source_url": ""
     },
     "tokenized_treas": {
@@ -364,18 +364,6 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "rwa_total",
-      "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 33990000000.000004,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 490000000.0000038,
-      "delta_pct": 1.4626865671641904,
-      "captured_at": "2026-05-25 01:01:40"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2511778553.0,
@@ -384,7 +372,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-25 01:01:40"
+      "captured_at": "2026-05-25 07:14:57"
     },
     {
       "category": "onchain",
@@ -394,9 +382,9 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 96194999903.805,
-      "delta_pct": 99999999900.0,
-      "captured_at": "2026-05-25 01:01:40"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-25 07:14:57"
     },
     {
       "category": "risk",
@@ -408,19 +396,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-25 01:01:40"
+      "captured_at": "2026-05-25 07:14:57"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 59.9,
+      "value_num": 60.1,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-24 19:14:02"
+      "delta_num": 0.20000000000000284,
+      "delta_pct": 0.3338898163606057,
+      "captured_at": "2026-05-25 07:14:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 33990000000.000004,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 490000000.0000038,
+      "delta_pct": 1.4626865671641904,
+      "captured_at": "2026-05-25 01:01:40"
     },
     {
       "category": "onchain",
@@ -1745,16 +1745,7 @@
       "tags": []
     }
   ],
-  "alerts": [
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Fear & Greed Index at 28 \u2014 risk sentiment remains depressed.",
-      "category": "risk",
-      "created_at": "2026-05-23 01:15:54",
-      "acknowledged": 0
-    }
-  ],
-  "last_update": "2026-05-25 01:01:40",
-  "server_time_utc": "2026-05-25T01:01:40.026776Z"
+  "alerts": [],
+  "last_update": "2026-05-25 07:14:57",
+  "server_time_utc": "2026-05-25T07:14:57.440654Z"
 }
