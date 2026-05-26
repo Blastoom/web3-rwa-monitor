@@ -10,7 +10,7 @@
     },
     "fear_greed": {
       "value": 34.0,
-      "delta_pct": 13.333333333333334,
+      "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
@@ -26,7 +26,7 @@
     },
     "btc_dom": {
       "value": 60.0,
-      "delta_pct": -0.16638935108153316,
+      "delta_pct": 0.0,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
@@ -372,7 +372,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 13:20:49"
+      "captured_at": "2026-05-26 19:11:51"
     },
     {
       "category": "risk",
@@ -382,9 +382,9 @@
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 4.0,
-      "delta_pct": 13.333333333333334,
-      "captured_at": "2026-05-26 13:20:49"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-26 19:11:51"
     },
     {
       "category": "onchain",
@@ -396,7 +396,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 13:20:49"
+      "captured_at": "2026-05-26 19:11:51"
     },
     {
       "category": "risk",
@@ -406,9 +406,9 @@
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -0.10000000000000142,
-      "delta_pct": -0.16638935108153316,
-      "captured_at": "2026-05-26 13:20:49"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-26 19:11:51"
     },
     {
       "category": "onchain",
@@ -1746,6 +1746,6 @@
     }
   ],
   "alerts": [],
-  "last_update": "2026-05-26 13:20:49",
-  "server_time_utc": "2026-05-26T13:20:49.760666Z"
+  "last_update": "2026-05-26 19:11:51",
+  "server_time_utc": "2026-05-26T19:11:51.048359Z"
 }
