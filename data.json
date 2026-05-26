@@ -16,6 +16,38 @@
       "category": "onchain",
       "source_url": ""
     },
+    "stablecoin_mcap": {
+      "value": 301820000000.0,
+      "delta_pct": 13.625497408019516,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 0.6275926048638262,
+      "delta_pct": -86.89785793603703,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 0.253064740573852,
+      "delta_pct": -98.87526781967178,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 7554760139.0,
+      "delta_pct": -32.54678447321429,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
     "fear_greed": {
       "value": 30.0,
       "delta_pct": 0.0,
@@ -80,22 +112,6 @@
       "category": "market",
       "source_url": ""
     },
-    "stablecoin_mcap": {
-      "value": 265627000000.0,
-      "delta_pct": -17.759992569429393,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 4.79,
-      "delta_pct": -91.84542049710589,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_bonds": {
       "value": 6500000000.0,
       "delta_pct": null,
@@ -109,22 +125,6 @@
       "delta_pct": null,
       "unit": "USD",
       "label": "Tokenized Real Estate",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdc_share": {
-      "value": 22.5,
-      "delta_pct": null,
-      "unit": "%",
-      "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 11200000000.0,
-      "delta_pct": null,
-      "unit": "USD",
-      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,7 +372,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 01:01:16"
+      "captured_at": "2026-05-26 07:17:57"
     },
     {
       "category": "onchain",
@@ -384,7 +384,55 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 01:01:16"
+      "captured_at": "2026-05-26 07:17:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 301820000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 36193000000.0,
+      "delta_pct": 13.625497408019516,
+      "captured_at": "2026-05-26 07:17:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 0.6275926048638262,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4.1624073951361735,
+      "delta_pct": -86.89785793603703,
+      "captured_at": "2026-05-26 07:17:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 0.253064740573852,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -22.24693525942615,
+      "delta_pct": -98.87526781967178,
+      "captured_at": "2026-05-26 07:17:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 7554760139.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3645239861.0,
+      "delta_pct": -32.54678447321429,
+      "captured_at": "2026-05-26 07:17:57"
     },
     {
       "category": "risk",
@@ -396,7 +444,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 01:01:16"
+      "captured_at": "2026-05-26 07:17:57"
     },
     {
       "category": "risk",
@@ -484,30 +532,6 @@
     },
     {
       "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 265627000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -57363000000.0,
-      "delta_pct": -17.759992569429393,
-      "captured_at": "2026-05-23 07:13:42"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 4.79,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -53.95,
-      "delta_pct": -91.84542049710589,
-      "captured_at": "2026-05-23 07:13:42"
-    },
-    {
-      "category": "onchain",
       "metric_key": "tokenized_bonds",
       "metric_label": "Tokenized Bonds",
       "value_num": 6500000000.0,
@@ -523,30 +547,6 @@
       "metric_key": "tokenized_real_estate",
       "metric_label": "Tokenized Real Estate",
       "value_num": 580000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 22.5,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": null,
-      "delta_pct": null,
-      "captured_at": "2026-05-22 20:09:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 11200000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
@@ -1746,6 +1746,6 @@
     }
   ],
   "alerts": [],
-  "last_update": "2026-05-26 01:01:16",
-  "server_time_utc": "2026-05-26T01:01:16.922196Z"
+  "last_update": "2026-05-26 07:17:57",
+  "server_time_utc": "2026-05-26T07:17:57.033213Z"
 }
