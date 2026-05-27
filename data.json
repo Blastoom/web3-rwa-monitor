@@ -1,5 +1,53 @@
 {
   "metrics": {
+    "buidl_aum": {
+      "value": 2487654577.0,
+      "delta_pct": -0.9604340307463403,
+      "unit": "USD",
+      "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 25.0,
+      "delta_pct": -26.47058823529412,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 2530000000000.0,
+      "delta_pct": -6.296296296296296,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.8,
+      "delta_pct": 3.2993608567973682,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4440000000.0,
+      "delta_pct": -41.22910696953366,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 34110000000.0,
       "delta_pct": 0.35304501323917675,
@@ -13,14 +61,6 @@
       "delta_pct": 11.814259802310895,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "buidl_aum": {
-      "value": 2511778553.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "BlackRock BUIDL AUM",
       "category": "onchain",
       "source_url": ""
     },
@@ -46,38 +86,6 @@
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2700000000000.0,
-      "delta_pct": -28.000000000000004,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 57.89,
-      "delta_pct": -3.5166666666666657,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 34.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
       "source_url": ""
     },
     "liq_24h": {
@@ -109,14 +117,6 @@
       "delta_pct": -4.614126776048366,
       "unit": "%",
       "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 7554760139.0,
-      "delta_pct": -32.54678447321429,
-      "unit": "USD",
-      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -364,6 +364,78 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2487654577.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -24123976.0,
+      "delta_pct": -0.9604340307463403,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 25.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -9.0,
+      "delta_pct": -26.47058823529412,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2530000000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -170000000000.0,
+      "delta_pct": -6.296296296296296,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.8,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1.9099999999999966,
+      "delta_pct": 3.2993608567973682,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 4440000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3114760139.0,
+      "delta_pct": -41.22910696953366,
+      "captured_at": "2026-05-27 13:24:50"
+    },
+    {
+      "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
       "value_num": 34110000000.0,
@@ -384,18 +456,6 @@
       "source_name": "",
       "delta_num": 1406330447.0,
       "delta_pct": 11.814259802310895,
-      "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2511778553.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-27 07:00:16"
     },
     {
@@ -432,54 +492,6 @@
       "source_name": "",
       "delta_num": 136616327.0,
       "delta_pct": 83.93539202079815,
-      "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2700000000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1050000000000.0,
-      "delta_pct": -28.000000000000004,
-      "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 57.89,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -2.1099999999999994,
-      "delta_pct": -3.5166666666666657,
-      "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 34.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-27 07:00:16"
     },
     {
@@ -529,18 +541,6 @@
       "delta_num": -0.011676727955555438,
       "delta_pct": -4.614126776048366,
       "captured_at": "2026-05-27 07:00:16"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 7554760139.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -3645239861.0,
-      "delta_pct": -32.54678447321429,
-      "captured_at": "2026-05-26 07:17:57"
     },
     {
       "category": "onchain",
@@ -893,6 +893,30 @@
     }
   ],
   "news": [
+    {
+      "title": "Crypto \u2018Extreme Fear\u2019 Returns With Bitcoin At $75K \u2013 Retail Traders Say BTC Bulls Missed The Tech Rally",
+      "url": "https://finance.yahoo.com/news/crypto-extreme-fear-returns-bitcoin-105554222.html",
+      "body": "The overall cryptocurrency market experienced a downturn of 1.5%, bringing its total valuation to around $2.62 trillion.",
+      "source": "finance.yahoo.com",
+      "date": "2026-05-27",
+      "captured_at": "2026-05-27 13:24:50",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
+    {
+      "title": "Trump pledges to protect the crypto industry and ensure prediction markets \u2018thrive\u2019",
+      "url": "https://www.nbcnews.com/business/markets/trump-crypto-prediction-markets-thrive-rcna347014",
+      "body": "Notable update; see source for details.",
+      "source": "www.nbcnews.com",
+      "date": "2026-05-27",
+      "captured_at": "2026-05-27 13:24:50",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "UAE reports a large dirham-backed stablecoin transaction involving FAB",
       "url": "https://www.thenationalnews.com/business/money/2026/05/22/ihc-digital-dirham-stablecoin-transaction/",
@@ -1746,6 +1770,6 @@
     }
   ],
   "alerts": [],
-  "last_update": "2026-05-27 07:00:16",
-  "server_time_utc": "2026-05-27T07:00:16.717205Z"
+  "last_update": "2026-05-27 13:24:50",
+  "server_time_utc": "2026-05-27T13:24:50.953247Z"
 }

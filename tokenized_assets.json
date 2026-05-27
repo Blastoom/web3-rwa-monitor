@@ -1,6 +1,21 @@
 {
-  "last_update": "2026-05-26 13:20:49",
+  "last_update": "2026-05-27 13:24:50",
   "assets": [
+    {
+      "id": "dz_bank_and_kfw_crypto_security_digital_bond_2026_03_25",
+      "asset": "Crypto security / digital bond",
+      "issuer": "DZ BANK and KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "public blockchain",
+      "region": null,
+      "country": "Germany",
+      "flag": null,
+      "size_usd": null,
+      "date": "2026-03-25",
+      "url": "https://www.dzbank.com/content/dzbank/en/home/press-center/press-releases/2026/premiere-dz-bank-and-kfw-fully-map-the-lifecycle-of-a-crypto-security-on-a-public-blockchain.html",
+      "description": "DZ BANK and KfW issuance listed in ICMA tracker: Crypto security / digital bond."
+    },
     {
       "id": "hsbc_tokenised_deposit_service_tds_2026_04_13",
       "asset": "Tokenised Deposit Service (TDS)",
