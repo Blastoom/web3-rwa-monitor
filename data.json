@@ -8,12 +8,12 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 34.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
+    "tokenized_equities": {
+      "value": 162763673.0,
+      "delta_pct": -77.18944256879088,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
       "source_url": ""
     },
     "defi_tvl": {
@@ -22,6 +22,14 @@
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 34.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
       "source_url": ""
     },
     "btc_dom": {
@@ -85,14 +93,6 @@
       "delta_pct": -79.97445549659962,
       "unit": "USD",
       "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 713545355.0,
-      "delta_pct": 142.46709913614004,
-      "unit": "USD",
-      "label": "Tokenized Equities",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,19 +372,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 19:11:51"
+      "captured_at": "2026-05-27 01:00:10"
     },
     {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 34.0,
-      "unit": "",
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 162763673.0,
+      "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-26 19:11:51"
+      "delta_num": -550781682.0,
+      "delta_pct": -77.18944256879088,
+      "captured_at": "2026-05-27 01:00:10"
     },
     {
       "category": "onchain",
@@ -396,7 +396,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-26 19:11:51"
+      "captured_at": "2026-05-27 01:00:10"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 34.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-27 01:00:10"
     },
     {
       "category": "risk",
@@ -492,18 +504,6 @@
       "source_name": "",
       "delta_num": -18025099949.0,
       "delta_pct": -79.97445549659962,
-      "captured_at": "2026-05-25 19:01:43"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 713545355.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 419259921.0,
-      "delta_pct": 142.46709913614004,
       "captured_at": "2026-05-25 19:01:43"
     },
     {
@@ -1746,6 +1746,6 @@
     }
   ],
   "alerts": [],
-  "last_update": "2026-05-26 19:11:51",
-  "server_time_utc": "2026-05-26T19:11:51.048359Z"
+  "last_update": "2026-05-27 01:00:10",
+  "server_time_utc": "2026-05-27T01:00:10.965194Z"
 }
