@@ -1,18 +1,50 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 12313486577.0,
-      "delta_pct": 4.646428761707126,
+    "rwa_total": {
+      "value": 33650000000.0,
+      "delta_pct": -1.3485781295807682,
       "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
+      "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
     "buidl_aum": {
       "value": 2440830549.0,
-      "delta_pct": -1.8822560186980493,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 22.0,
+      "delta_pct": -12.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.8,
+      "delta_pct": 0.0,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 12313486577.0,
+      "delta_pct": 4.646428761707126,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -40,36 +72,12 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 25.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "crypto_mcap": {
       "value": 3750000000000.0,
       "delta_pct": 57.93250206730427,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 59.8,
-      "delta_pct": -10.753861238670751,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "liq_24h": {
@@ -85,14 +93,6 @@
       "delta_pct": -41.22910696953366,
       "unit": "USD",
       "label": "USDe Market Cap",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_total": {
-      "value": 34110000000.0,
-      "delta_pct": 0.35304501323917675,
-      "unit": "USD",
-      "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
@@ -364,15 +364,15 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 12313486577.0,
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 33650000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 546733786.0,
-      "delta_pct": 4.646428761707126,
-      "captured_at": "2026-05-28 13:22:05"
+      "delta_num": -460000000.0,
+      "delta_pct": -1.3485781295807682,
+      "captured_at": "2026-05-28 19:07:38"
     },
     {
       "category": "onchain",
@@ -382,8 +382,56 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -46824028.0,
-      "delta_pct": -1.8822560186980493,
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 19:07:38"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 19:07:38"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 22.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3.0,
+      "delta_pct": -12.0,
+      "captured_at": "2026-05-28 19:07:38"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.8,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 19:07:38"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 12313486577.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 546733786.0,
+      "delta_pct": 4.646428761707126,
       "captured_at": "2026-05-28 13:22:05"
     },
     {
@@ -423,30 +471,6 @@
       "captured_at": "2026-05-28 13:22:05"
     },
     {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 25.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-28 13:22:05"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-28 13:22:05"
-    },
-    {
       "category": "market",
       "metric_key": "crypto_mcap",
       "metric_label": "Total Crypto Market Cap",
@@ -456,18 +480,6 @@
       "source_name": "",
       "delta_num": 1375567916095.0,
       "delta_pct": 57.93250206730427,
-      "captured_at": "2026-05-28 13:22:05"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 59.8,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -7.205700000000007,
-      "delta_pct": -10.753861238670751,
       "captured_at": "2026-05-28 13:22:05"
     },
     {
@@ -493,18 +505,6 @@
       "delta_num": -3114760139.0,
       "delta_pct": -41.22910696953366,
       "captured_at": "2026-05-27 13:24:50"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_total",
-      "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 34110000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 119999999.99999619,
-      "delta_pct": 0.35304501323917675,
-      "captured_at": "2026-05-27 07:00:16"
     },
     {
       "category": "onchain",
@@ -893,6 +893,25 @@
     }
   ],
   "news": [
+    {
+      "title": "SEC pauses tokenized stock plans, report says",
+      "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
+      "body": "A report says the SEC has paused plans related to tokenized stock trading, highlighting regulatory uncertainty around tokenized equities in the U.S.",
+      "source": "CoinGeek",
+      "date": "2026-05-27",
+      "captured_at": "2026-05-28 19:07:38",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
     {
       "title": "SEC pauses tokenized stock plans amid Trump crypto venture blowback",
       "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
@@ -1827,7 +1846,16 @@
       "tags": []
     }
   ],
-  "alerts": [],
-  "last_update": "2026-05-28 13:22:05",
-  "server_time_utc": "2026-05-28T13:22:05.351606Z"
+  "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 22 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-05-28 19:07:38",
+      "acknowledged": 0
+    }
+  ],
+  "last_update": "2026-05-28 19:07:38",
+  "server_time_utc": "2026-05-28T19:07:38.722290Z"
 }
