@@ -1,18 +1,42 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 13046152687.0,
-      "delta_pct": -1.9823239143501128,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2487654577.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.8,
+      "delta_pct": 0.0,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 25.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 13046152687.0,
+      "delta_pct": -1.9823239143501128,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -38,30 +62,6 @@
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 25.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 59.8,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "crypto_mcap": {
@@ -364,18 +364,6 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 13046152687.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -263847313.0,
-      "delta_pct": -1.9823239143501128,
-      "captured_at": "2026-05-27 19:06:16"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2487654577.0,
@@ -384,6 +372,54 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-05-28 01:00:07"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 01:00:07"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.8,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 01:00:07"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 25.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-28 01:00:07"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 13046152687.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -263847313.0,
+      "delta_pct": -1.9823239143501128,
       "captured_at": "2026-05-27 19:06:16"
     },
     {
@@ -420,42 +456,6 @@
       "source_name": "",
       "delta_num": 339458327.0,
       "delta_pct": 113.38710902531899,
-      "captured_at": "2026-05-27 19:06:16"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 25.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-27 19:06:16"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-27 19:06:16"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 59.8,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-27 19:06:16"
     },
     {
@@ -893,6 +893,25 @@
     }
   ],
   "news": [
+    {
+      "title": "SEC pauses tokenized stock plans amid pushback",
+      "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
+      "body": "Multiple reports say the SEC has paused/delayed plans that would allow broader exemptions for crypto firms to offer tokenized versions of U.S. stocks, after feedback from traditional market participants. The delay underscores continued regulatory uncertainty around tokenized equities in the U.S.",
+      "source": "CoinGeek",
+      "date": "2026-05-27",
+      "captured_at": "2026-05-28 01:00:07",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
     {
       "title": "SEC pauses tokenized stock plans, Trump crypto ventures sour",
       "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
@@ -1790,6 +1809,6 @@
     }
   ],
   "alerts": [],
-  "last_update": "2026-05-27 19:06:16",
-  "server_time_utc": "2026-05-27T19:06:16.743783Z"
+  "last_update": "2026-05-28 01:00:07",
+  "server_time_utc": "2026-05-28T01:00:07.374721Z"
 }
