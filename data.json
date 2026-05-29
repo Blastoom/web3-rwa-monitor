@@ -1,5 +1,13 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 13434486430.0,
+      "delta_pct": 9.103837860950632,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2440830549.0,
       "delta_pct": 0.0,
@@ -17,16 +25,16 @@
       "source_url": ""
     },
     "tokenized_credit": {
-      "value": 24349661543.0,
-      "delta_pct": -24.975860951221946,
+      "value": 4848232170.0,
+      "delta_pct": -80.08911885104308,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_equities": {
-      "value": 282810250.0,
-      "delta_pct": -30.798859863958768,
+      "value": 408678599.0,
+      "delta_pct": 44.50628964119935,
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
@@ -48,20 +56,20 @@
       "category": "risk",
       "source_url": ""
     },
+    "btc_dom": {
+      "value": 59.6,
+      "delta_pct": 2.953878044567284,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
     "crypto_mcap": {
       "value": 2700000000000.0,
       "delta_pct": -28.000000000000004,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 57.89,
-      "delta_pct": -3.193979933110362,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "eth_btc_ratio": {
@@ -77,14 +85,6 @@
       "delta_pct": -1.3485781295807682,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_treas": {
-      "value": 12313486577.0,
-      "delta_pct": 4.646428761707126,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -364,6 +364,18 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 13434486430.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1120999853.0,
+      "delta_pct": 9.103837860950632,
+      "captured_at": "2026-05-29 07:03:14"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2440830549.0,
@@ -372,7 +384,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-29 01:16:09"
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "onchain",
@@ -384,31 +396,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-29 01:16:09"
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_credit",
       "metric_label": "Tokenized Private Credit",
-      "value_num": 24349661543.0,
+      "value_num": 4848232170.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -8106107829.0,
-      "delta_pct": -24.975860951221946,
-      "captured_at": "2026-05-29 01:16:09"
+      "delta_num": -19501429373.0,
+      "delta_pct": -80.08911885104308,
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_equities",
       "metric_label": "Tokenized Equities",
-      "value_num": 282810250.0,
+      "value_num": 408678599.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -125868349.0,
-      "delta_pct": -30.798859863958768,
-      "captured_at": "2026-05-29 01:16:09"
+      "delta_num": 125868349.0,
+      "delta_pct": 44.50628964119935,
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "onchain",
@@ -420,7 +432,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-29 01:16:09"
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "risk",
@@ -432,7 +444,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-29 01:16:09"
+      "captured_at": "2026-05-29 07:03:14"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.6,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1.7100000000000009,
+      "delta_pct": 2.953878044567284,
+      "captured_at": "2026-05-29 07:03:14"
     },
     {
       "category": "market",
@@ -444,18 +468,6 @@
       "source_name": "",
       "delta_num": -1050000000000.0,
       "delta_pct": -28.000000000000004,
-      "captured_at": "2026-05-29 01:16:09"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 57.89,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1.9099999999999966,
-      "delta_pct": -3.193979933110362,
       "captured_at": "2026-05-29 01:16:09"
     },
     {
@@ -481,18 +493,6 @@
       "delta_num": -460000000.0,
       "delta_pct": -1.3485781295807682,
       "captured_at": "2026-05-28 19:07:38"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 12313486577.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 546733786.0,
-      "delta_pct": 4.646428761707126,
-      "captured_at": "2026-05-28 13:22:05"
     },
     {
       "category": "risk",
@@ -893,6 +893,25 @@
     }
   ],
   "news": [
+    {
+      "title": "SEC pauses tokenized stock plans as scrutiny around tokenized equities grows",
+      "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
+      "body": "Reports say the SEC has paused certain tokenized stock initiatives, adding near-term uncertainty for tokenized equity offerings in the U.S.",
+      "source": "CoinGeek",
+      "date": "2026-05-28",
+      "captured_at": "2026-05-29 07:03:14",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
     {
       "title": "SEC pauses tokenized stock plans, raising issuer-consent concerns",
       "url": "https://coingeek.com/sec-pauses-tokenized-stock-plans-trump-crypto-ventures-sour/",
@@ -1871,6 +1890,14 @@
       "title": "Extreme fear in market",
       "body": "Index at 22 \u2014 extreme fear",
       "category": "risk",
+      "created_at": "2026-05-29 07:03:14",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 22 \u2014 extreme fear",
+      "category": "risk",
       "created_at": "2026-05-29 01:16:09",
       "acknowledged": 0
     },
@@ -1883,6 +1910,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-29 01:16:09",
-  "server_time_utc": "2026-05-29T01:16:09.248219Z"
+  "last_update": "2026-05-29 07:03:14",
+  "server_time_utc": "2026-05-29T07:03:14.468133Z"
 }
