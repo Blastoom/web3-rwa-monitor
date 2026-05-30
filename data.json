@@ -1,18 +1,50 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 13446314446.0,
-      "delta_pct": 6.886442337042925,
+    "rwa_total": {
+      "value": 31590000000.0,
+      "delta_pct": -6.121842496285289,
       "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
+      "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
     "buidl_aum": {
       "value": 2424107852.0,
-      "delta_pct": -0.6851232260613598,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 23.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.4,
+      "delta_pct": -0.3355704697986625,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 13446314446.0,
+      "delta_pct": 6.886442337042925,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -37,38 +69,6 @@
       "delta_pct": 2.0406263064438077,
       "unit": "USD",
       "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 1374214185.7142856,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 59.6,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 23.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "rwa_total": {
-      "value": 33650000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,15 +372,15 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 13446314446.0,
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 31590000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 866314446.0,
-      "delta_pct": 6.886442337042925,
-      "captured_at": "2026-05-30 01:01:50"
+      "delta_num": -2060000000.0,
+      "delta_pct": -6.121842496285289,
+      "captured_at": "2026-05-30 07:13:21"
     },
     {
       "category": "onchain",
@@ -390,8 +390,56 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -16722697.0,
-      "delta_pct": -0.6851232260613598,
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-30 07:13:21"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-30 07:13:21"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 23.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-30 07:13:21"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.4,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.20000000000000284,
+      "delta_pct": -0.3355704697986625,
+      "captured_at": "2026-05-30 07:13:21"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 13446314446.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 866314446.0,
+      "delta_pct": 6.886442337042925,
       "captured_at": "2026-05-30 01:01:50"
     },
     {
@@ -429,54 +477,6 @@
       "delta_num": 8339603.0,
       "delta_pct": 2.0406263064438077,
       "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 96194993000.0,
-      "delta_pct": 1374214185.7142856,
-      "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 59.6,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 23.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_total",
-      "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 33650000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-29 13:24:22"
     },
     {
       "category": "market",
@@ -913,6 +913,54 @@
     }
   ],
   "news": [
+    {
+      "title": "CBUAE approves UAE dirham-backed stablecoin DDSC for operational launch",
+      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
+      "body": "The Central Bank of the UAE approved the dirham-pegged stablecoin DDSC to go live; the announcement says DDSC will operate on ADI Chain (an institutional Layer-2).",
+      "source": "The Asian Banker",
+      "date": "2026-05-30",
+      "captured_at": "2026-05-30 07:13:21",
+      "entity_ids": [
+        "adq_uae",
+        "fab_uae",
+        "ihc_uae"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:adq_uae",
+        "entity:fab_uae",
+        "entity:ihc_uae",
+        "market:stablecoins",
+        "region:Middle East"
+      ]
+    },
+    {
+      "title": "SAMA says e-payments accounted for 85% of Saudi retail payments in 2025",
+      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
+      "body": "Saudi Central Bank (SAMA) reported that e-payments represented 85% of total retail payments in 2025, highlighting continued digital payments adoption supporting future tokenized settlement use cases.",
+      "source": "SAMA",
+      "date": "2026-05-30",
+      "captured_at": "2026-05-30 07:13:21",
+      "entity_ids": [
+        "sama_saudi"
+      ],
+      "markets": [
+        "cbdc"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:sama_saudi",
+        "market:cbdc",
+        "region:Middle East"
+      ]
+    },
     {
       "title": "J.P. Morgan publishes Kinexys 2026 milestones update",
       "url": "https://www.jpmorgan.com/payments/newsroom/kinexys-milestones-2026",
@@ -1967,6 +2015,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-30 01:01:50",
-  "server_time_utc": "2026-05-30T01:01:50.012360Z"
+  "last_update": "2026-05-30 07:13:21",
+  "server_time_utc": "2026-05-30T07:13:21.991123Z"
 }
