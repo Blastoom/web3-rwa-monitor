@@ -1,5 +1,29 @@
 {
   "metrics": {
+    "defi_tvl": {
+      "value": 7000.0,
+      "delta_pct": -99.9999927231145,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 23.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 2.0,
+      "delta_pct": -99.99999762583096,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 31590000000.0,
       "delta_pct": 0.0,
@@ -16,14 +40,6 @@
       "category": "onchain",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "crypto_mcap": {
       "value": 2480000000000.0,
       "delta_pct": 4.446028033813778,
@@ -37,22 +53,6 @@
       "delta_pct": 0.0,
       "unit": "%",
       "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 23.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 84240000.0,
-      "delta_pct": -90.99210847109647,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
       "category": "risk",
       "source_url": ""
     },
@@ -372,6 +372,42 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 7000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -96194993000.0,
+      "delta_pct": -99.9999927231145,
+      "captured_at": "2026-05-31 01:18:40"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 23.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 01:18:40"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 2.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -84239998.0,
+      "delta_pct": -99.99999762583096,
+      "captured_at": "2026-05-31 01:18:40"
+    },
+    {
+      "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
       "value_num": 31590000000.0,
@@ -387,18 +423,6 @@
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2424107852.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 19:07:01"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
@@ -428,30 +452,6 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-30 19:07:01"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 23.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 19:07:01"
-    },
-    {
-      "category": "risk",
-      "metric_key": "liq_24h",
-      "metric_label": "Liquidations (24h)",
-      "value_num": 84240000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -850940000.0,
-      "delta_pct": -90.99210847109647,
       "captured_at": "2026-05-30 19:07:01"
     },
     {
@@ -2013,6 +2013,14 @@
     {
       "severity": "warning",
       "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 23 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-05-31 01:18:40",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
       "body": "Index at 23 \u2014 extreme fear",
       "category": "risk",
       "created_at": "2026-05-30 13:11:16",
@@ -2041,24 +2049,8 @@
       "category": "risk",
       "created_at": "2026-05-29 07:03:14",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 22 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-29 01:16:09",
-      "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 22 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-28 19:07:38",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-30 19:07:01",
-  "server_time_utc": "2026-05-30T19:07:01.583483Z"
+  "last_update": "2026-05-31 01:18:40",
+  "server_time_utc": "2026-05-31T01:18:40.203148Z"
 }
