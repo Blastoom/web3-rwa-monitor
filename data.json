@@ -1,32 +1,16 @@
 {
   "metrics": {
-    "rwa_total": {
-      "value": 31790000000.0,
-      "delta_pct": 0.6331117442228553,
-      "unit": "USD",
-      "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_treas": {
-      "value": 14880000000.0,
-      "delta_pct": 10.662293818560013,
+      "value": 14042818082.0,
+      "delta_pct": -5.626222567204301,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
-    "tokenized_credit": {
-      "value": 22680000000.0,
-      "delta_pct": 10.312918169466693,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2424337314.0,
-      "delta_pct": 0.00946583295832664,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
@@ -41,50 +25,66 @@
       "source_url": ""
     },
     "fear_greed": {
-      "value": 23.0,
-      "delta_pct": 0.0,
+      "value": 28.0,
+      "delta_pct": 21.73913043478261,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
       "source_url": ""
     },
-    "btc_dom": {
-      "value": 59.3,
-      "delta_pct": -0.16835016835017075,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
     "stablecoin_mcap": {
-      "value": 282489876648.0,
-      "delta_pct": -11.42562096832532,
+      "value": 265627000000.0,
+      "delta_pct": -5.9693737871577595,
       "unit": "USD",
       "label": "Stablecoin Market Cap (total)",
       "category": "onchain",
       "source_url": ""
     },
     "usdt_share": {
-      "value": 0.6661873621492566,
-      "delta_pct": 12.629275432547315,
+      "value": 61.91,
+      "delta_pct": 9193.181395736132,
       "unit": "%",
       "label": "USDT Dominance",
       "category": "onchain",
       "source_url": ""
     },
     "usdc_share": {
-      "value": 0.26849975311685914,
-      "delta_pct": 12.482623707976751,
+      "value": 28.551314437161885,
+      "delta_pct": 10533.646439419814,
       "unit": "%",
       "label": "USDC Dominance",
       "category": "onchain",
       "source_url": ""
     },
     "usde_mcap": {
-      "value": 4500000000.0,
-      "delta_pct": 0.22280051067955722,
+      "value": 7500000000.0,
+      "delta_pct": 66.66666666666666,
       "unit": "USD",
       "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.3,
+      "delta_pct": 0.0,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "rwa_total": {
+      "value": 31790000000.0,
+      "delta_pct": 0.6331117442228553,
+      "unit": "USD",
+      "label": "RWA on-chain (excl. stablecoins)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 22680000000.0,
+      "delta_pct": 10.312918169466693,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,6 +372,114 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 14042818082.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -837181918.0,
+      "delta_pct": -5.626222567204301,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2424337314.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 28.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 5.0,
+      "delta_pct": 21.73913043478261,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 265627000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -16862876648.0,
+      "delta_pct": -5.9693737871577595,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 61.91,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 61.24381263785074,
+      "delta_pct": 9193.181395736132,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 28.551314437161885,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 28.282814684045025,
+      "delta_pct": 10533.646439419814,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 7500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 3000000000.0,
+      "delta_pct": 66.66666666666666,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.3,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 19:03:03"
+    },
+    {
+      "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
       "value_num": 31790000000.0,
@@ -380,18 +488,6 @@
       "source_name": "",
       "delta_num": 200000000.0,
       "delta_pct": 0.6331117442228553,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 14880000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 1433685554.0,
-      "delta_pct": 10.662293818560013,
       "captured_at": "2026-05-31 13:01:27"
     },
     {
@@ -405,102 +501,6 @@
       "delta_num": 2120304566.0,
       "delta_pct": 10.312918169466693,
       "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2424337314.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 229462.0,
-      "delta_pct": 0.00946583295832664,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 23.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 59.3,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.10000000000000142,
-      "delta_pct": -0.16835016835017075,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 282489876648.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -36439682595.06293,
-      "delta_pct": -11.42562096832532,
-      "captured_at": "2026-05-31 07:06:37"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 0.6661873621492566,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.07470050441107434,
-      "delta_pct": 12.629275432547315,
-      "captured_at": "2026-05-31 07:06:37"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 0.26849975311685914,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.02979643675936705,
-      "delta_pct": 12.482623707976751,
-      "captured_at": "2026-05-31 07:06:37"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 4500000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 10003734.608784676,
-      "delta_pct": 0.22280051067955722,
-      "captured_at": "2026-05-31 07:06:37"
     },
     {
       "category": "risk",
@@ -2059,6 +2059,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-31 13:01:27",
-  "server_time_utc": "2026-05-31T13:01:27.796801Z"
+  "last_update": "2026-05-31 19:03:03",
+  "server_time_utc": "2026-05-31T19:03:03.173507Z"
 }
