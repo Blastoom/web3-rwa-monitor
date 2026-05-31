@@ -1,29 +1,5 @@
 {
   "metrics": {
-    "defi_tvl": {
-      "value": 7000.0,
-      "delta_pct": -99.9999927231145,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 23.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 2.0,
-      "delta_pct": -99.99999762583096,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
-      "category": "risk",
-      "source_url": ""
-    },
     "rwa_total": {
       "value": 31590000000.0,
       "delta_pct": 0.0,
@@ -38,6 +14,62 @@
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 1374214185.7142856,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 23.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 282489876648.0,
+      "delta_pct": -11.42562096832532,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 0.6661873621492566,
+      "delta_pct": 12.629275432547315,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 0.26849975311685914,
+      "delta_pct": 12.482623707976751,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4500000000.0,
+      "delta_pct": 0.22280051067955722,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 2.0,
+      "delta_pct": -99.99999762583096,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
       "source_url": ""
     },
     "crypto_mcap": {
@@ -85,38 +117,6 @@
       "delta_pct": 2.0406263064438077,
       "unit": "USD",
       "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "stablecoin_mcap": {
-      "value": 318929559243.0629,
-      "delta_pct": 0.6086937675277373,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 0.5914868577381822,
-      "delta_pct": -1.0024636203781678,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdc_share": {
-      "value": 0.2387033163574921,
-      "delta_pct": -1.1121912110232748,
-      "unit": "%",
-      "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 4489996265.391215,
-      "delta_pct": 1.1260420133156603,
-      "unit": "USD",
-      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,15 +372,39 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 7000.0,
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 31590000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -96194993000.0,
-      "delta_pct": -99.9999927231145,
-      "captured_at": "2026-05-31 01:18:40"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2424107852.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 96194993000.0,
+      "delta_pct": 1374214185.7142856,
+      "captured_at": "2026-05-31 07:06:37"
     },
     {
       "category": "risk",
@@ -392,7 +416,55 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-31 01:18:40"
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 282489876648.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -36439682595.06293,
+      "delta_pct": -11.42562096832532,
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 0.6661873621492566,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.07470050441107434,
+      "delta_pct": 12.629275432547315,
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 0.26849975311685914,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.02979643675936705,
+      "delta_pct": 12.482623707976751,
+      "captured_at": "2026-05-31 07:06:37"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 4500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 10003734.608784676,
+      "delta_pct": 0.22280051067955722,
+      "captured_at": "2026-05-31 07:06:37"
     },
     {
       "category": "risk",
@@ -405,30 +477,6 @@
       "delta_num": -84239998.0,
       "delta_pct": -99.99999762583096,
       "captured_at": "2026-05-31 01:18:40"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_total",
-      "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 31590000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 19:07:01"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2424107852.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-30 19:07:01"
     },
     {
       "category": "market",
@@ -501,54 +549,6 @@
       "delta_num": 8339603.0,
       "delta_pct": 2.0406263064438077,
       "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 318929559243.0629,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 1929559243.0629272,
-      "delta_pct": 0.6086937675277373,
-      "captured_at": "2026-05-29 13:24:22"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 0.5914868577381822,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.0059894829558241325,
-      "delta_pct": -1.0024636203781678,
-      "captured_at": "2026-05-29 13:24:22"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 0.2387033163574921,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.002684696260804448,
-      "delta_pct": -1.1121912110232748,
-      "captured_at": "2026-05-29 13:24:22"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 4489996265.391215,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 49996265.391215324,
-      "delta_pct": 1.1260420133156603,
-      "captured_at": "2026-05-29 13:24:22"
     },
     {
       "category": "onchain",
@@ -914,6 +914,32 @@
   ],
   "news": [
     {
+      "title": "CBUAE approves UAE dirham-backed stablecoin DDSC for operational launch",
+      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
+      "body": "The Central Bank of the UAE approved the dirham-backed stablecoin DDSC to go live, with IHC, Sirius International Holding, and First Abu Dhabi Bank stating it will operate on ADI Chain and target regulated institutional use cases.",
+      "source": "The Asian Banker (re-disseminated press release)",
+      "date": "2026-05-30",
+      "captured_at": "2026-05-31 07:06:37",
+      "entity_ids": [
+        "adq_uae",
+        "fab_uae",
+        "ihc_uae"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:adq_uae",
+        "entity:fab_uae",
+        "entity:ihc_uae",
+        "market:stablecoins",
+        "region:Middle East"
+      ]
+    },
+    {
       "title": "UAE central bank approves dirham-backed stablecoin DDSC for operational launch",
       "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
       "body": "The Central Bank of the UAE approved the dirham-pegged stablecoin DDSC to go live on ADI Chain, advancing regulated onchain settlement in the region.",
@@ -958,32 +984,6 @@
       "tags": [
         "entity:sama_saudi",
         "market:cbdc",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "CBUAE approves UAE dirham-backed stablecoin DDSC for operational launch",
-      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
-      "body": "The Central Bank of the UAE approved the UAE dirham-backed stablecoin DDSC to go live on ADI Chain, moving the initiative from announcement to operational phase.",
-      "source": "The Asian Banker",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-30 13:11:16",
-      "entity_ids": [
-        "adq_uae",
-        "fab_uae",
-        "ihc_uae"
-      ],
-      "markets": [
-        "stablecoins"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:adq_uae",
-        "entity:fab_uae",
-        "entity:ihc_uae",
-        "market:stablecoins",
         "region:Middle East"
       ]
     },
@@ -2013,6 +2013,14 @@
     {
       "severity": "warning",
       "title": "Extreme fear in market",
+      "body": "Index at 23 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-05-31 07:06:37",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
       "body": "Fear & Greed Index at 23 \u2014 extreme fear",
       "category": "risk",
       "created_at": "2026-05-31 01:18:40",
@@ -2041,16 +2049,8 @@
       "category": "risk",
       "created_at": "2026-05-29 19:11:38",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 22 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-29 07:03:14",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-31 01:18:40",
-  "server_time_utc": "2026-05-31T01:18:40.203148Z"
+  "last_update": "2026-05-31 07:06:37",
+  "server_time_utc": "2026-05-31T07:06:37.908955Z"
 }
