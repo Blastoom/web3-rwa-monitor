@@ -1,5 +1,13 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 10405116068.0,
+      "delta_pct": -25.904359030775915,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2424337314.0,
       "delta_pct": 0.0,
@@ -8,44 +16,68 @@
       "category": "onchain",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 1374214185.7142856,
+    "rwa_commodities": {
+      "value": 5039415919.0,
+      "delta_pct": -6.514177497501454,
       "unit": "USD",
-      "label": "DeFi TVL (total)",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 5288140583.0,
+      "delta_pct": -76.68368349647267,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 295588035.0,
+      "delta_pct": -29.118673098110953,
+      "unit": "USD",
+      "label": "Tokenized Equities",
       "category": "onchain",
       "source_url": ""
     },
     "fear_greed": {
-      "value": 28.0,
-      "delta_pct": 0.0,
+      "value": 29.0,
+      "delta_pct": 3.571428571428571,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
       "source_url": ""
     },
-    "tokenized_treas": {
-      "value": 14042818082.0,
-      "delta_pct": -5.626222567204301,
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
       "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
+      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
     "stablecoin_mcap": {
       "value": 265627000000.0,
-      "delta_pct": -5.9693737871577595,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "Stablecoin Market Cap (total)",
       "category": "onchain",
       "source_url": ""
     },
     "usdt_share": {
-      "value": 61.91,
-      "delta_pct": 9193.181395736132,
+      "value": 0.6191,
+      "delta_pct": -99.0,
       "unit": "%",
       "label": "USDT Dominance",
       "category": "onchain",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 0.592,
+      "delta_pct": -99.00168634064082,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
       "source_url": ""
     },
     "usdc_share": {
@@ -64,27 +96,11 @@
       "category": "onchain",
       "source_url": ""
     },
-    "btc_dom": {
-      "value": 59.3,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
     "rwa_total": {
       "value": 31790000000.0,
       "delta_pct": 0.6331117442228553,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_credit": {
-      "value": 22680000000.0,
-      "delta_pct": 10.312918169466693,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
@@ -102,22 +118,6 @@
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 5390567023.0,
-      "delta_pct": -42.46196977353029,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 417018202.0,
-      "delta_pct": 2.0406263064438077,
-      "unit": "USD",
-      "label": "Tokenized Equities",
-      "category": "onchain",
       "source_url": ""
     },
     "usde_share": {
@@ -372,6 +372,18 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 10405116068.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3637702014.0,
+      "delta_pct": -25.904359030775915,
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2424337314.0,
@@ -380,7 +392,55 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-01 07:15:49"
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 5039415919.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -351151104.0,
+      "delta_pct": -6.514177497501454,
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 5288140583.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -17391859417.0,
+      "delta_pct": -76.68368349647267,
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 295588035.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -121430167.0,
+      "delta_pct": -29.118673098110953,
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 29.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1.0,
+      "delta_pct": 3.571428571428571,
+      "captured_at": "2026-06-01 13:39:32"
     },
     {
       "category": "onchain",
@@ -390,33 +450,9 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 96194993000.0,
-      "delta_pct": 1374214185.7142856,
-      "captured_at": "2026-06-01 07:15:49"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 28.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-01 07:15:49"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 14042818082.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -837181918.0,
-      "delta_pct": -5.626222567204301,
-      "captured_at": "2026-05-31 19:03:03"
+      "captured_at": "2026-06-01 13:39:32"
     },
     {
       "category": "onchain",
@@ -426,21 +462,33 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -16862876648.0,
-      "delta_pct": -5.9693737871577595,
-      "captured_at": "2026-05-31 19:03:03"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 13:39:32"
     },
     {
       "category": "onchain",
       "metric_key": "usdt_share",
       "metric_label": "USDT Dominance",
-      "value_num": 61.91,
+      "value_num": 0.6191,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 61.24381263785074,
-      "delta_pct": 9193.181395736132,
-      "captured_at": "2026-05-31 19:03:03"
+      "delta_num": -61.29089999999999,
+      "delta_pct": -99.0,
+      "captured_at": "2026-06-01 13:39:32"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 0.592,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -58.708,
+      "delta_pct": -99.00168634064082,
+      "captured_at": "2026-06-01 13:39:32"
     },
     {
       "category": "onchain",
@@ -467,18 +515,6 @@
       "captured_at": "2026-05-31 19:03:03"
     },
     {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 59.3,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-31 19:03:03"
-    },
-    {
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
@@ -488,18 +524,6 @@
       "source_name": "",
       "delta_num": 200000000.0,
       "delta_pct": 0.6331117442228553,
-      "captured_at": "2026-05-31 13:01:27"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 22680000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 2120304566.0,
-      "delta_pct": 10.312918169466693,
       "captured_at": "2026-05-31 13:01:27"
     },
     {
@@ -525,30 +549,6 @@
       "delta_num": 105567916094.31543,
       "delta_pct": 4.446028033813778,
       "captured_at": "2026-05-30 19:07:01"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 5390567023.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -3978135732.0,
-      "delta_pct": -42.46196977353029,
-      "captured_at": "2026-05-30 01:01:50"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 417018202.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 8339603.0,
-      "delta_pct": 2.0406263064438077,
-      "captured_at": "2026-05-30 01:01:50"
     },
     {
       "category": "onchain",
@@ -914,6 +914,32 @@
   ],
   "news": [
     {
+      "title": "UAE central bank approves dirham-backed stablecoin DDSC for operational launch",
+      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
+      "body": "The Central Bank of the UAE approved a dirham-backed stablecoin (DDSC) to move into operational launch, signaling continued regulatory support for tokenized money and payments infrastructure in the region.",
+      "source": "The Asian Banker",
+      "date": "2026-05-30",
+      "captured_at": "2026-06-01 13:39:32",
+      "entity_ids": [
+        "adq_uae",
+        "fab_uae",
+        "ihc_uae"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:adq_uae",
+        "entity:fab_uae",
+        "entity:ihc_uae",
+        "market:stablecoins",
+        "region:Middle East"
+      ]
+    },
+    {
       "title": "Saudi Central Bank says e-payments reached 85% of retail payments in 2025",
       "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
       "body": "SAMA reported that electronic payments represented 85% of total retail payments in 2025, highlighting continued digitization of the payments ecosystem. This is relevant for regional stablecoin and tokenized settlement adoption monitoring.",
@@ -944,32 +970,6 @@
       "source": "The Asian Banker (re-disseminated press release)",
       "date": "2026-05-30",
       "captured_at": "2026-05-31 07:06:37",
-      "entity_ids": [
-        "adq_uae",
-        "fab_uae",
-        "ihc_uae"
-      ],
-      "markets": [
-        "stablecoins"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:adq_uae",
-        "entity:fab_uae",
-        "entity:ihc_uae",
-        "market:stablecoins",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "UAE central bank approves dirham-backed stablecoin DDSC for operational launch",
-      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
-      "body": "The Central Bank of the UAE approved the dirham-pegged stablecoin DDSC to go live on ADI Chain, advancing regulated onchain settlement in the region.",
-      "source": "The Asian Banker",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-30 19:07:01",
       "entity_ids": [
         "adq_uae",
         "fab_uae",
@@ -2036,16 +2036,8 @@
       "category": "risk",
       "created_at": "2026-05-31 01:18:40",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 23 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-30 13:11:16",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-01 07:15:49",
-  "server_time_utc": "2026-06-01T07:15:49.773190Z"
+  "last_update": "2026-06-01 13:39:32",
+  "server_time_utc": "2026-06-01T13:39:32.479771Z"
 }
