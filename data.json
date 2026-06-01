@@ -1,5 +1,21 @@
 {
   "metrics": {
+    "defi_tvl": {
+      "value": 7000.0,
+      "delta_pct": -99.9999927231145,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 28.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
     "tokenized_treas": {
       "value": 14042818082.0,
       "delta_pct": -5.626222567204301,
@@ -14,22 +30,6 @@
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 28.0,
-      "delta_pct": 21.73913043478261,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -372,6 +372,30 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 7000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -96194993000.0,
+      "delta_pct": -99.9999927231145,
+      "captured_at": "2026-06-01 01:09:20"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 28.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 01:09:20"
+    },
+    {
+      "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
       "value_num": 14042818082.0,
@@ -392,30 +416,6 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-05-31 19:03:03"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-05-31 19:03:03"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 28.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 5.0,
-      "delta_pct": 21.73913043478261,
       "captured_at": "2026-05-31 19:03:03"
     },
     {
@@ -2041,24 +2041,8 @@
       "category": "risk",
       "created_at": "2026-05-30 13:11:16",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Fear & Greed Index at 23 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-30 01:01:50",
-      "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 23 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-05-29 19:11:38",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-05-31 19:03:03",
-  "server_time_utc": "2026-05-31T19:03:03.173507Z"
+  "last_update": "2026-06-01 01:09:20",
+  "server_time_utc": "2026-06-01T01:09:20.161359Z"
 }
