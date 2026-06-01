@@ -1,18 +1,58 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 10405116068.0,
-      "delta_pct": -25.904359030775915,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2424337314.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 265627000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 0.6191,
+      "delta_pct": 0.0,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 29.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 59.2,
+      "delta_pct": 9900.000000000002,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 10405116068.0,
+      "delta_pct": -25.904359030775915,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -38,46 +78,6 @@
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 29.0,
-      "delta_pct": 3.571428571428571,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "stablecoin_mcap": {
-      "value": 265627000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 0.6191,
-      "delta_pct": -99.0,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 0.592,
-      "delta_pct": -99.00168634064082,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "usdc_share": {
@@ -372,18 +372,6 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 10405116068.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -3637702014.0,
-      "delta_pct": -25.904359030775915,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2424337314.0,
@@ -392,6 +380,78 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 265627000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 0.6191,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 29.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 59.2,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 58.608000000000004,
+      "delta_pct": 9900.000000000002,
+      "captured_at": "2026-06-01 19:00:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 10405116068.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3637702014.0,
+      "delta_pct": -25.904359030775915,
       "captured_at": "2026-06-01 13:39:32"
     },
     {
@@ -428,66 +488,6 @@
       "source_name": "",
       "delta_num": -121430167.0,
       "delta_pct": -29.118673098110953,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 29.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 1.0,
-      "delta_pct": 3.571428571428571,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 265627000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 0.6191,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -61.29089999999999,
-      "delta_pct": -99.0,
-      "captured_at": "2026-06-01 13:39:32"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 0.592,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -58.708,
-      "delta_pct": -99.00168634064082,
       "captured_at": "2026-06-01 13:39:32"
     },
     {
@@ -913,6 +913,28 @@
     }
   ],
   "news": [
+    {
+      "title": "Saudi Arabia: e-payments reach 85% of retail transactions",
+      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
+      "body": "SAMA reported e-payments represented 85% of total retail payment transactions in Saudi Arabia in 2025, highlighting ongoing digitization of consumer payments and settlement rails.",
+      "source": "SAMA",
+      "date": "2026-06-01",
+      "captured_at": "2026-06-01 19:00:05",
+      "entity_ids": [
+        "sama_saudi"
+      ],
+      "markets": [
+        "cbdc"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:sama_saudi",
+        "market:cbdc",
+        "region:Middle East"
+      ]
+    },
     {
       "title": "UAE central bank approves dirham-backed stablecoin DDSC for operational launch",
       "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
@@ -1991,25 +2013,6 @@
         "market:cross_border_payments",
         "region:Asia-Pacific"
       ]
-    },
-    {
-      "id": 7,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "risk",
-      "title": "October 10, 2025: $19.13B crypto liquidation \u2014 largest in history",
-      "summary": "Trump's 100% tariff threat on China imports triggered cascade. 1.63M positions liquidated in 24h; $3.21B vanished in 60 seconds at 21:15 UTC.",
-      "url": "https://www.cnn.com/2025/10/11/business/trump-tariffs-crypto-selloff",
-      "source": "CNN",
-      "published_date": "2025-10-11",
-      "severity": "critical",
-      "entity_ids": [],
-      "markets": [
-        "risk"
-      ],
-      "regions": [],
-      "tags": [
-        "market:risk"
-      ]
     }
   ],
   "alerts": [
@@ -2038,6 +2041,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-01 13:39:32",
-  "server_time_utc": "2026-06-01T13:39:32.479771Z"
+  "last_update": "2026-06-01 19:00:05",
+  "server_time_utc": "2026-06-01T19:00:05.190853Z"
 }
