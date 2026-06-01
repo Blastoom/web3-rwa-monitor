@@ -1,8 +1,16 @@
 {
   "metrics": {
+    "buidl_aum": {
+      "value": 2424337314.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
     "defi_tvl": {
-      "value": 7000.0,
-      "delta_pct": -99.9999927231145,
+      "value": 96195000000.0,
+      "delta_pct": 1374214185.7142856,
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
@@ -21,14 +29,6 @@
       "delta_pct": -5.626222567204301,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "buidl_aum": {
-      "value": 2424337314.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "BlackRock BUIDL AUM",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,15 +372,27 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 7000.0,
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2424337314.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -96194993000.0,
-      "delta_pct": -99.9999927231145,
-      "captured_at": "2026-06-01 01:09:20"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-01 07:15:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 96194993000.0,
+      "delta_pct": 1374214185.7142856,
+      "captured_at": "2026-06-01 07:15:49"
     },
     {
       "category": "risk",
@@ -392,7 +404,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-01 01:09:20"
+      "captured_at": "2026-06-01 07:15:49"
     },
     {
       "category": "onchain",
@@ -404,18 +416,6 @@
       "source_name": "",
       "delta_num": -837181918.0,
       "delta_pct": -5.626222567204301,
-      "captured_at": "2026-05-31 19:03:03"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2424337314.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-05-31 19:03:03"
     },
     {
@@ -913,6 +913,30 @@
     }
   ],
   "news": [
+    {
+      "title": "Saudi Central Bank says e-payments reached 85% of retail payments in 2025",
+      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
+      "body": "SAMA reported that electronic payments represented 85% of total retail payments in 2025, highlighting continued digitization of the payments ecosystem. This is relevant for regional stablecoin and tokenized settlement adoption monitoring.",
+      "source": "SAMA",
+      "date": "2026-05-31",
+      "captured_at": "2026-06-01 07:15:49",
+      "entity_ids": [
+        "sama_saudi"
+      ],
+      "markets": [
+        "cbdc",
+        "stablecoins"
+      ],
+      "regions": [
+        "Middle East"
+      ],
+      "tags": [
+        "entity:sama_saudi",
+        "market:cbdc",
+        "market:stablecoins",
+        "region:Middle East"
+      ]
+    },
     {
       "title": "CBUAE approves UAE dirham-backed stablecoin DDSC for operational launch",
       "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
@@ -1986,27 +2010,6 @@
       "tags": [
         "market:risk"
       ]
-    },
-    {
-      "id": 8,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "regulation",
-      "title": "GENIUS Act signed into US federal stablecoin law",
-      "summary": "President Trump signed the GENIUS Act establishing federal framework for USD stablecoin issuance, routing institutional capital toward bank-issued tokenized deposits.",
-      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
-      "source": "White House",
-      "published_date": "2025-07-18",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation",
-        "stablecoins"
-      ],
-      "regions": [],
-      "tags": [
-        "market:regulation",
-        "market:stablecoins"
-      ]
     }
   ],
   "alerts": [
@@ -2043,6 +2046,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-01 01:09:20",
-  "server_time_utc": "2026-06-01T01:09:20.161359Z"
+  "last_update": "2026-06-01 07:15:49",
+  "server_time_utc": "2026-06-01T07:15:49.773190Z"
 }
