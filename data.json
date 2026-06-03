@@ -1,18 +1,34 @@
 {
   "metrics": {
+    "buidl_aum": {
+      "value": 2407286651.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 11.0,
+      "delta_pct": -52.17391304347826,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "tokenized_treas": {
       "value": 11827912472.0,
       "delta_pct": -17.83309481916681,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "buidl_aum": {
-      "value": 2407286651.0,
-      "delta_pct": -0.32050697821996715,
-      "unit": "USD",
-      "label": "BlackRock BUIDL AUM",
       "category": "onchain",
       "source_url": ""
     },
@@ -37,22 +53,6 @@
       "delta_pct": -90.37571394002757,
       "unit": "USD",
       "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 23.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,6 +372,42 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2407286651.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-03 19:06:23"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 11.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -12.0,
+      "delta_pct": -52.17391304347826,
+      "captured_at": "2026-06-03 19:06:23"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-03 19:06:23"
+    },
+    {
+      "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
       "value_num": 11827912472.0,
@@ -380,18 +416,6 @@
       "source_name": "",
       "delta_num": -2567071063.0,
       "delta_pct": -17.83309481916681,
-      "captured_at": "2026-06-03 13:31:41"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2407286651.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -7740330.0,
-      "delta_pct": -0.32050697821996715,
       "captured_at": "2026-06-03 13:31:41"
     },
     {
@@ -428,30 +452,6 @@
       "source_name": "",
       "delta_num": -2544861913.0,
       "delta_pct": -90.37571394002757,
-      "captured_at": "2026-06-03 13:31:41"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 23.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-03 13:31:41"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-03 13:31:41"
     },
     {
@@ -913,6 +913,49 @@
     }
   ],
   "news": [
+    {
+      "title": "Brazil's B3 prepares tokenized stocks initiative for H2 2026",
+      "url": "https://cryptonews.net/news/finance/32952205/",
+      "body": "Brazil's main exchange B3 said it is building a blockchain-based digital twin of its depository database as a first step toward tokenized equities later in 2026.",
+      "source": "CryptoNews",
+      "date": "2026-06-02",
+      "captured_at": "2026-06-03 19:06:23",
+      "entity_ids": [
+        "b3_exchange"
+      ],
+      "markets": [
+        "defi",
+        "tokenized_securities"
+      ],
+      "regions": [
+        "Latin America"
+      ],
+      "tags": [
+        "entity:b3_exchange",
+        "market:defi",
+        "market:tokenized_securities",
+        "region:Latin America"
+      ]
+    },
+    {
+      "title": "BlackRock BUIDL fund value shown around $2.41B on RWA.xyz",
+      "url": "https://app.rwa.xyz/assets/BUIDL",
+      "body": "RWA.xyz lists BlackRock's BUIDL tokenized money market fund value at about $2.41B, indicating continued growth in tokenized Treasury/money-market products.",
+      "source": "RWA.xyz",
+      "date": "2026-06-02",
+      "captured_at": "2026-06-03 19:06:23",
+      "entity_ids": [
+        "blackrock_buidl"
+      ],
+      "markets": [
+        "tokenized_treasuries"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:blackrock_buidl",
+        "market:tokenized_treasuries"
+      ]
+    },
     {
       "title": "European Commission opens MiCA review consultation, including tokenised financial instruments",
       "url": "https://www.jdsupra.com/legalnews/mica-review-european-commission-1706716/",
@@ -1971,43 +2014,6 @@
         "market:regulation",
         "region:North America"
       ]
-    },
-    {
-      "id": 4,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "onchain",
-      "title": "Tokenized RWA market hits $29B in Q1 2026 (+263% YoY)",
-      "summary": "Total tokenized RWA value on-chain (excl. stablecoins) reaches ~$29B, up from $7.9B in 2024. Tokenized Treasuries lead growth at $13.4B.",
-      "url": "https://investax.io/blog/q1-2026-real-world-asset-tokenization-market-report",
-      "source": "InvestaX",
-      "published_date": "2026-04-16",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [],
-      "regions": [],
-      "tags": []
-    },
-    {
-      "id": 5,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "institutional",
-      "title": "Broadridge DLR processes nearly $9T in December repo volume",
-      "summary": "DLR platform on Canton Network processed $384B average daily volume in December 2025, scaling to ~$9T monthly aggregate.",
-      "url": "https://www.broadridge.com/press-release/2026/broadridge-distributed-ledger-repo-platform-december",
-      "source": "Broadridge",
-      "published_date": "2026-01-08",
-      "severity": "info",
-      "entity_ids": [
-        "broadridge_dlr"
-      ],
-      "markets": [
-        "repo"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:broadridge_dlr",
-        "market:repo"
-      ]
     }
   ],
   "alerts": [
@@ -2028,6 +2034,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-03 13:31:41",
-  "server_time_utc": "2026-06-03T13:31:41.011466Z"
+  "last_update": "2026-06-03 19:06:23",
+  "server_time_utc": "2026-06-03T19:06:23.478045Z"
 }
