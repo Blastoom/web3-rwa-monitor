@@ -1,8 +1,8 @@
 {
   "metrics": {
     "buidl_aum": {
-      "value": 2403041981.0,
-      "delta_pct": 0.0,
+      "value": 2393269199.0,
+      "delta_pct": -0.40668378152649515,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
@@ -26,7 +26,7 @@
     },
     "btc_dom": {
       "value": 58.1,
-      "delta_pct": 0.3454231433506094,
+      "delta_pct": 0.0,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
@@ -34,23 +34,23 @@
     },
     "stablecoin_mcap": {
       "value": 267510000000.0,
-      "delta_pct": 1.5296554651264835,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "Stablecoin Market Cap (total)",
       "category": "onchain",
       "source_url": ""
     },
     "usdt_share": {
-      "value": 0.7007588501364435,
-      "delta_pct": -99.01827003343172,
+      "value": 0.7007485701463497,
+      "delta_pct": -0.0014669797023226397,
       "unit": "%",
       "label": "USDT Dominance",
       "category": "onchain",
       "source_url": ""
     },
     "usdc_share": {
-      "value": 0.2824193488093903,
-      "delta_pct": -99.01320982246894,
+      "value": 0.2824058913670984,
+      "delta_pct": -0.004765056767037219,
       "unit": "%",
       "label": "USDC Dominance",
       "category": "onchain",
@@ -58,7 +58,7 @@
     },
     "usde_mcap": {
       "value": 4500000000.0,
-      "delta_pct": 0.22271714922048996,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "USDe Market Cap",
       "category": "onchain",
@@ -374,13 +374,13 @@
       "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2403041981.0,
+      "value_num": 2393269199.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": -9772782.0,
+      "delta_pct": -0.40668378152649515,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "onchain",
@@ -392,7 +392,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 07:06:56"
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "risk",
@@ -404,7 +404,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 07:06:56"
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "risk",
@@ -414,9 +414,9 @@
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.20000000000000284,
-      "delta_pct": 0.3454231433506094,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "onchain",
@@ -426,33 +426,33 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 4030331154.0,
-      "delta_pct": 1.5296554651264835,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "onchain",
       "metric_key": "usdt_share",
       "metric_label": "USDT Dominance",
-      "value_num": 0.7007588501364435,
+      "value_num": 0.7007485701463497,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -70.67924114986356,
-      "delta_pct": -99.01827003343172,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": -1.027999009373115e-05,
+      "delta_pct": -0.0014669797023226397,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "onchain",
       "metric_key": "usdc_share",
       "metric_label": "USDC Dominance",
-      "value_num": 0.2824193488093903,
+      "value_num": 0.2824058913670984,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -28.33758065119061,
-      "delta_pct": -99.01320982246894,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": -1.3457442291864297e-05,
+      "delta_pct": -0.004765056767037219,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "onchain",
@@ -462,9 +462,9 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 10000000.0,
-      "delta_pct": 0.22271714922048996,
-      "captured_at": "2026-06-06 07:06:56"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 13:07:10"
     },
     {
       "category": "risk",
@@ -913,6 +913,46 @@
     }
   ],
   "news": [
+    {
+      "title": "Goldman Sachs launches tokenized real estate fund with Apex and Archax",
+      "url": "https://cryptorank.io/news/feed/ed5e9-goldman-sachs-launches-tokenized-real-estate-fund-with-apex-and-archax",
+      "body": "Reports say Goldman Sachs has launched a tokenized real estate fund in partnership with Apex and Archax, built on its GS DAP platform. The move highlights renewed momentum in institutional tokenization beyond cash-like products.",
+      "source": "CryptoRank",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-06 13:07:10",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
+    {
+      "title": "Largest U.S. banks plan a tokenized deposit network to compete with crypto",
+      "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
+      "body": "The Wall Street Journal reports a group of major U.S. banks are planning a shared tokenized deposit system aimed at improving settlement and countering stablecoin-based payment rails. The initiative would extend bank-issued deposit tokens beyond single-bank pilots.",
+      "source": "The Wall Street Journal",
+      "date": "2026-06-04",
+      "captured_at": "2026-06-06 13:07:10",
+      "entity_ids": [],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:stablecoins",
+        "region:North America"
+      ]
+    },
     {
       "title": "Crypto liquidations near $1B over 24 hours as BTC and ETH lead sell-off",
       "url": "https://www.kucoin.com/news/flash/over-980m-in-crypto-liquidations-in-24-hours-btc-and-eth-hit-hardest",
@@ -1957,60 +1997,17 @@
       "tags": [
         "market:risk"
       ]
-    },
-    {
-      "id": 1,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "institutional",
-      "title": "JPMorgan Kinexys + Mastercard + Ripple complete first cross-border tokenized Treasury redemption",
-      "summary": "First near real-time cross-border, cross-bank redemption of a tokenized U.S. Treasury fund via XRP Ledger and bank rails. Asset leg cleared in ~3 seconds.",
-      "url": "https://www.prnewswire.com/news-releases/ondo-kinexys-by-jp-morgan-mastercard-and-ripple-complete-first-cross-border-cross-bank-redemption-of-tokenized-us-treasuries-302764324.html",
-      "source": "PR Newswire",
-      "published_date": "2026-05-06",
-      "severity": "info",
-      "entity_ids": [
-        "jpmorgan_kinexys"
-      ],
-      "markets": [
-        "repo",
-        "tokenized_deposits",
-        "tokenized_treasuries"
-      ],
-      "regions": [
-        "Asia-Pacific"
-      ],
-      "tags": [
-        "entity:jpmorgan_kinexys",
-        "market:repo",
-        "market:tokenized_deposits",
-        "market:tokenized_treasuries",
-        "region:Asia-Pacific"
-      ]
-    },
-    {
-      "id": 2,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "institutional",
-      "title": "BlackRock BUIDL goes live on Uniswap via UniswapX",
-      "summary": "$2.4B BUIDL fund becomes accessible to eligible investors through UniswapX \u2014 BlackRock's first direct DeFi protocol engagement.",
-      "url": "https://coinmarketcap.com/academy/article/uniswap-jumps-20percent-as-blackrock-brings-buidl-to-uniswap",
-      "source": "CoinMarketCap",
-      "published_date": "2026-04-28",
-      "severity": "info",
-      "entity_ids": [
-        "blackrock_buidl"
-      ],
-      "markets": [
-        "tokenized_treasuries"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:blackrock_buidl",
-        "market:tokenized_treasuries"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 12 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-06 13:07:10",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -2050,16 +2047,8 @@
       "category": "risk",
       "created_at": "2026-06-04 13:30:56",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 11 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-04 07:14:18",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-06 07:06:56",
-  "server_time_utc": "2026-06-06T07:06:56.548309Z"
+  "last_update": "2026-06-06 13:07:10",
+  "server_time_utc": "2026-06-06T13:07:10.122184Z"
 }
