@@ -1,10 +1,42 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 2826060131.0,
+      "delta_pct": -0.7401282354691681,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2393269199.0,
-      "delta_pct": -0.40668378152649515,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 23644495962.0,
+      "delta_pct": 0.24230726681318066,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 737207727.0,
+      "delta_pct": 190.06092651736384,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 7394820376.0,
+      "delta_pct": 36.19031556785847,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -16,12 +48,12 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 12.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
+    "crypto_mcap": {
+      "value": 3750000000000.0,
+      "delta_pct": 70.45454545454545,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
       "source_url": ""
     },
     "btc_dom": {
@@ -29,6 +61,22 @@
       "delta_pct": 0.0,
       "unit": "%",
       "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02567,
+      "delta_pct": -8.58262108262109,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 12.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
       "category": "risk",
       "source_url": ""
     },
@@ -72,60 +120,12 @@
       "category": "risk",
       "source_url": ""
     },
-    "tokenized_treas": {
-      "value": 2847132563.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 5429769617.0,
-      "delta_pct": 66.09119743723929,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_credit": {
-      "value": 23587342118.0,
-      "delta_pct": 3.6342905639383805,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 254156165.0,
-      "delta_pct": -1.0229929830825957e-05,
-      "unit": "USD",
-      "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
     "rwa_total": {
       "value": 31260000000.0,
       "delta_pct": -0.8563273073263558,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2200000000000.0,
-      "delta_pct": -41.333333333333336,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02808,
-      "delta_pct": -14.049586776859496,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
       "source_url": ""
     },
     "usde_share": {
@@ -372,15 +372,63 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 2826060131.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -21072432.0,
+      "delta_pct": -0.7401282354691681,
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2393269199.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -9772782.0,
-      "delta_pct": -0.40668378152649515,
-      "captured_at": "2026-06-06 13:07:10"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 23644495962.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 57153844.0,
+      "delta_pct": 0.24230726681318066,
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 737207727.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 483051562.0,
+      "delta_pct": 190.06092651736384,
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 7394820376.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 1965050759.0,
+      "delta_pct": 36.19031556785847,
+      "captured_at": "2026-06-06 18:59:39"
     },
     {
       "category": "onchain",
@@ -392,19 +440,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 13:07:10"
+      "captured_at": "2026-06-06 18:59:39"
     },
     {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 3750000000000.0,
+      "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 13:07:10"
+      "delta_num": 1550000000000.0,
+      "delta_pct": 70.45454545454545,
+      "captured_at": "2026-06-06 18:59:39"
     },
     {
       "category": "risk",
@@ -416,7 +464,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 13:07:10"
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02567,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.0024100000000000024,
+      "delta_pct": -8.58262108262109,
+      "captured_at": "2026-06-06 18:59:39"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 18:59:39"
     },
     {
       "category": "onchain",
@@ -480,54 +552,6 @@
     },
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 2847132563.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 01:09:13"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 5429769617.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 2160620077.0,
-      "delta_pct": 66.09119743723929,
-      "captured_at": "2026-06-05 19:10:07"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 23587342118.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 827170760.0,
-      "delta_pct": 3.6342905639383805,
-      "captured_at": "2026-06-05 19:10:07"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 254156165.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -26.0,
-      "delta_pct": -1.0229929830825957e-05,
-      "captured_at": "2026-06-05 19:10:07"
-    },
-    {
-      "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
       "value_num": 31260000000.0,
@@ -537,30 +561,6 @@
       "delta_num": -270000000.0,
       "delta_pct": -0.8563273073263558,
       "captured_at": "2026-06-05 07:13:14"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2200000000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1550000000000.0,
-      "delta_pct": -41.333333333333336,
-      "captured_at": "2026-06-04 19:05:16"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02808,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.004589999999999997,
-      "delta_pct": -14.049586776859496,
-      "captured_at": "2026-06-04 13:30:56"
     },
     {
       "category": "onchain",
@@ -913,6 +913,53 @@
     }
   ],
   "news": [
+    {
+      "title": "Major U.S. banks reportedly plan tokenized deposit network via The Clearing House",
+      "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
+      "body": "A Wall Street Journal report says large U.S. banks are exploring a shared tokenized-deposit network operated by The Clearing House, with an initial rollout targeted for 2027. The initiative is positioned as a bank-led alternative to stablecoin-based payment rails.",
+      "source": "The Wall Street Journal",
+      "date": "2026-06-06T18:59:35Z",
+      "captured_at": "2026-06-06 18:59:39",
+      "entity_ids": [],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:stablecoins",
+        "region:North America"
+      ]
+    },
+    {
+      "title": "Brazil's B3 prepares tokenized securities infrastructure for H2 2026",
+      "url": "https://news.bitcoin.com/brazil-b3-tokenization-trading/",
+      "body": "Brazil's stock exchange B3 said it is building a blockchain-based replica of its depository database as a first step toward tokenized securities. Executives framed the near-term phase as infrastructure work rather than immediate on-chain trading.",
+      "source": "Bitcoin.com News",
+      "date": "2026-06-02T18:59:02Z",
+      "captured_at": "2026-06-06 18:59:39",
+      "entity_ids": [
+        "b3_exchange"
+      ],
+      "markets": [
+        "defi",
+        "regulation",
+        "tokenized_securities"
+      ],
+      "regions": [
+        "Latin America",
+        "North America"
+      ],
+      "tags": [
+        "entity:b3_exchange",
+        "market:defi",
+        "market:regulation",
+        "market:tokenized_securities",
+        "region:Latin America",
+        "region:North America"
+      ]
+    },
     {
       "title": "Goldman Sachs launches tokenized real estate fund with Apex and Archax",
       "url": "https://cryptorank.io/news/feed/ed5e9-goldman-sachs-launches-tokenized-real-estate-fund-with-apex-and-archax",
@@ -1956,47 +2003,6 @@
         "market:cross_border_payments",
         "region:Asia-Pacific"
       ]
-    },
-    {
-      "id": 11,
-      "captured_at": "2026-05-13 13:21:39",
-      "category": "institutional",
-      "title": "Broadridge DLR platform reaches US$368B ADV in April",
-      "summary": "Securities Finance Times reports Broadridge's Distributed Ledger Repo (DLR) processed US$368B average daily volumes in April (nearly US$8T total for the month).",
-      "url": "https://www.securitiesfinancetimes.com/securitieslendingnews/industryarticle.php?article_id=228646",
-      "source": "Securities Finance Times",
-      "published_date": "2026-05-05",
-      "severity": "info",
-      "entity_ids": [
-        "broadridge_dlr"
-      ],
-      "markets": [
-        "repo"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:broadridge_dlr",
-        "market:repo"
-      ]
-    },
-    {
-      "id": 12,
-      "captured_at": "2026-05-13 13:21:39",
-      "category": "risk",
-      "title": "Crypto liquidations hit ~US$1.45B in 24 hours",
-      "summary": "CoinSpeaker (via Yahoo Finance) reports ~US$1.45B liquidations over the last 24 hours in a sharp market downturn.",
-      "url": "https://finance.yahoo.com/news/crypto-liquidations-hit-1-4-183507624.html",
-      "source": "CoinSpeaker via Yahoo Finance",
-      "published_date": "2026-02-05",
-      "severity": "critical",
-      "entity_ids": [],
-      "markets": [
-        "risk"
-      ],
-      "regions": [],
-      "tags": [
-        "market:risk"
-      ]
     }
   ],
   "alerts": [
@@ -2039,16 +2045,8 @@
       "category": "risk",
       "created_at": "2026-06-04 19:05:16",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 11 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-04 13:30:56",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-06 13:07:10",
-  "server_time_utc": "2026-06-06T13:07:10.122184Z"
+  "last_update": "2026-06-06 18:59:39",
+  "server_time_utc": "2026-06-06T18:59:39.103574Z"
 }
