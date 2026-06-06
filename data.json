@@ -1,18 +1,18 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 2847132563.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2403041981.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
@@ -24,20 +24,60 @@
       "category": "risk",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "btc_dom": {
-      "value": 57.9,
-      "delta_pct": 0.0,
+      "value": 58.1,
+      "delta_pct": 0.3454231433506094,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 267510000000.0,
+      "delta_pct": 1.5296554651264835,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 0.7007588501364435,
+      "delta_pct": -99.01827003343172,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 0.2824193488093903,
+      "delta_pct": -99.01320982246894,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4500000000.0,
+      "delta_pct": 0.22271714922048996,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 980000000.0,
+      "delta_pct": 48999999900.0,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 2847132563.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
       "source_url": ""
     },
     "rwa_commodities": {
@@ -86,46 +126,6 @@
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 4490000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "USDe Market Cap",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "stablecoin_mcap": {
-      "value": 263479668846.0,
-      "delta_pct": -0.8084009358988355,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 71.38,
-      "delta_pct": 11429.639799709254,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdc_share": {
-      "value": 28.62,
-      "delta_pct": 0.24056882911392719,
-      "unit": "%",
-      "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 2.0,
-      "delta_pct": -99.99999762583096,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
-      "category": "risk",
       "source_url": ""
     },
     "usde_share": {
@@ -372,18 +372,6 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 2847132563.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 01:09:13"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2403041981.0,
@@ -392,19 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 01:09:13"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 01:09:13"
+      "captured_at": "2026-06-06 07:06:56"
     },
     {
       "category": "onchain",
@@ -416,14 +392,98 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 01:09:13"
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-06 07:06:56"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 57.9,
+      "value_num": 58.1,
       "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.20000000000000284,
+      "delta_pct": 0.3454231433506094,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 267510000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 4030331154.0,
+      "delta_pct": 1.5296554651264835,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 0.7007588501364435,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -70.67924114986356,
+      "delta_pct": -99.01827003343172,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 0.2824193488093903,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -28.33758065119061,
+      "delta_pct": -99.01320982246894,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 4500000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 10000000.0,
+      "delta_pct": 0.22271714922048996,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 980000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 979999998.0,
+      "delta_pct": 48999999900.0,
+      "captured_at": "2026-06-06 07:06:56"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 2847132563.0,
+      "unit": "USD",
       "source_url": "",
       "source_name": "",
       "delta_num": 0.0,
@@ -501,66 +561,6 @@
       "delta_num": -0.004589999999999997,
       "delta_pct": -14.049586776859496,
       "captured_at": "2026-06-04 13:30:56"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 4490000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-02 13:25:55"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 263479668846.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -2147331154.0,
-      "delta_pct": -0.8084009358988355,
-      "captured_at": "2026-06-02 07:12:54"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 71.38,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 70.76089999999999,
-      "delta_pct": 11429.639799709254,
-      "captured_at": "2026-06-02 07:12:54"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 28.62,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.068685562838116,
-      "delta_pct": 0.24056882911392719,
-      "captured_at": "2026-06-02 07:12:54"
-    },
-    {
-      "category": "risk",
-      "metric_key": "liq_24h",
-      "metric_label": "Liquidations (24h)",
-      "value_num": 2.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -84239998.0,
-      "delta_pct": -99.99999762583096,
-      "captured_at": "2026-05-31 01:18:40"
     },
     {
       "category": "onchain",
@@ -913,6 +913,22 @@
     }
   ],
   "news": [
+    {
+      "title": "Crypto liquidations near $1B over 24 hours as BTC and ETH lead sell-off",
+      "url": "https://www.kucoin.com/news/flash/over-980m-in-crypto-liquidations-in-24-hours-btc-and-eth-hit-hardest",
+      "body": "KuCoin reported more than $980M in crypto liquidations over the last 24 hours, with Bitcoin and Ethereum accounting for the largest share.",
+      "source": "KuCoin",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-06 07:06:56",
+      "entity_ids": [],
+      "markets": [
+        "risk"
+      ],
+      "regions": [],
+      "tags": [
+        "market:risk"
+      ]
+    },
     {
       "title": "Brazil's B3 prepares tokenized stocks initiative for H2 2026",
       "url": "https://cryptonews.net/news/finance/32952205/",
@@ -1992,28 +2008,6 @@
         "entity:blackrock_buidl",
         "market:tokenized_treasuries"
       ]
-    },
-    {
-      "id": 3,
-      "captured_at": "2026-05-11 15:34:30",
-      "category": "regulation",
-      "title": "SEC approves Nasdaq tokenized stock trading for Russell 1000",
-      "summary": "Nasdaq can now support trading of eligible securities in either conventional format or as blockchain-based digital tokens. Initial scope: Russell 1000 + major ETFs.",
-      "url": "https://www.wellesleyhillsfinancial.com/2026/03/22/sec-approves-nasdaq-plan-to-enable-tokenized-stock-trading/",
-      "source": "Wellesley Hills Financial",
-      "published_date": "2026-03-22",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "market:regulation",
-        "region:North America"
-      ]
     }
   ],
   "alerts": [
@@ -2066,6 +2060,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-06 01:09:13",
-  "server_time_utc": "2026-06-06T01:09:13.996481Z"
+  "last_update": "2026-06-06 07:06:56",
+  "server_time_utc": "2026-06-06T07:06:56.548309Z"
 }

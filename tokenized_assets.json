@@ -1,6 +1,21 @@
 {
-  "last_update": "2026-05-30 19:07:01",
+  "last_update": "2026-06-06 07:06:56",
   "assets": [
+    {
+      "id": "edc_samara_dlt_bond_mar2026",
+      "asset": "Tokenized bond issuance experiment",
+      "issuer": "Export Development Canada (EDC)",
+      "issuer_id": null,
+      "asset_type": "bond",
+      "chain": "Samara Platform",
+      "region": "NA",
+      "country": "Canada",
+      "flag": null,
+      "size_usd": 100000000,
+      "date": "2026-03-05",
+      "url": "https://www.bankofcanada.ca/2026/03/bank-of-canada-export-development-canada-rbc-and-td-successfully-complete-bond-issuance-experiment-using-distributed-ledger-technology/",
+      "description": "ICMA tracker lists a $100M tokenized bond issuance experiment completed by Bank of Canada, Export Development Canada, RBC and TD using distributed ledger technology."
+    },
     {
       "id": "edc_tokenized_bond_mar2026",
       "asset": "Tokenized bond (Project Samara experiment)",
