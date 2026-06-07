@@ -1,8 +1,8 @@
 {
   "metrics": {
     "tokenized_treas": {
-      "value": 2826060131.0,
-      "delta_pct": -0.7401282354691681,
+      "value": 10288670198.0,
+      "delta_pct": 264.06409351096715,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
@@ -16,27 +16,27 @@
       "category": "onchain",
       "source_url": ""
     },
+    "rwa_commodities": {
+      "value": 6927240376.0,
+      "delta_pct": -6.3230744795037594,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
     "tokenized_credit": {
-      "value": 23644495962.0,
-      "delta_pct": 0.24230726681318066,
+      "value": 3883716249.0,
+      "delta_pct": -83.57454413390045,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_equities": {
-      "value": 737207727.0,
-      "delta_pct": 190.06092651736384,
+      "value": 257110671.0,
+      "delta_pct": -65.12371458092436,
       "unit": "USD",
       "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 7394820376.0,
-      "delta_pct": 36.19031556785847,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -50,23 +50,23 @@
     },
     "crypto_mcap": {
       "value": 3750000000000.0,
-      "delta_pct": 70.45454545454545,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
       "source_url": ""
     },
     "btc_dom": {
-      "value": 58.1,
-      "delta_pct": 0.0,
+      "value": 58.3,
+      "delta_pct": 0.34423407917383086,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
     "eth_btc_ratio": {
-      "value": 0.02567,
-      "delta_pct": -8.58262108262109,
+      "value": 0.02568,
+      "delta_pct": 0.03895597974290246,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
@@ -374,13 +374,13 @@
       "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 2826060131.0,
+      "value_num": 10288670198.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -21072432.0,
-      "delta_pct": -0.7401282354691681,
-      "captured_at": "2026-06-06 18:59:39"
+      "delta_num": 7462610067.0,
+      "delta_pct": 264.06409351096715,
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "onchain",
@@ -392,43 +392,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 18:59:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 23644495962.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 57153844.0,
-      "delta_pct": 0.24230726681318066,
-      "captured_at": "2026-06-06 18:59:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 737207727.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 483051562.0,
-      "delta_pct": 190.06092651736384,
-      "captured_at": "2026-06-06 18:59:39"
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "onchain",
       "metric_key": "rwa_commodities",
       "metric_label": "Tokenized Commodities",
-      "value_num": 7394820376.0,
+      "value_num": 6927240376.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 1965050759.0,
-      "delta_pct": 36.19031556785847,
-      "captured_at": "2026-06-06 18:59:39"
+      "delta_num": -467580000.0,
+      "delta_pct": -6.3230744795037594,
+      "captured_at": "2026-06-07 01:18:53"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 3883716249.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -19760779713.0,
+      "delta_pct": -83.57454413390045,
+      "captured_at": "2026-06-07 01:18:53"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 257110671.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -480097056.0,
+      "delta_pct": -65.12371458092436,
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "onchain",
@@ -440,7 +440,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 18:59:39"
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "market",
@@ -450,33 +450,33 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 1550000000000.0,
-      "delta_pct": 70.45454545454545,
-      "captured_at": "2026-06-06 18:59:39"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 58.1,
+      "value_num": 58.3,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-06 18:59:39"
+      "delta_num": 0.19999999999999574,
+      "delta_pct": 0.34423407917383086,
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "market",
       "metric_key": "eth_btc_ratio",
       "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02567,
+      "value_num": 0.02568,
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": -0.0024100000000000024,
-      "delta_pct": -8.58262108262109,
-      "captured_at": "2026-06-06 18:59:39"
+      "delta_num": 1.0000000000003062e-05,
+      "delta_pct": 0.03895597974290246,
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "risk",
@@ -488,7 +488,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-06 18:59:39"
+      "captured_at": "2026-06-07 01:18:53"
     },
     {
       "category": "onchain",
@@ -913,6 +913,27 @@
     }
   ],
   "news": [
+    {
+      "title": "Goldman Sachs GS DAP used for tokenized real estate fund issuance",
+      "url": "https://www.ledgerinsights.com/tokenized-real-estate-fund-issued-on-goldman-sachs-distributed-ledger/",
+      "body": "A tokenized real estate fund was issued using Goldman Sachs' GS DAP distributed ledger, with Archax and Apex cited as partners.",
+      "source": "Ledger Insights",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-07 01:18:53",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
     {
       "title": "Major U.S. banks reportedly plan tokenized deposit network via The Clearing House",
       "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
@@ -1979,30 +2000,6 @@
         "entity:broadridge_dlr",
         "market:repo"
       ]
-    },
-    {
-      "id": 18,
-      "captured_at": "2026-05-13 13:21:40",
-      "category": "onchain",
-      "title": "Report: Project mBridge surpassed $55B in cross-border payments",
-      "summary": "A news report says the China-led multi-CBDC project mBridge topped $55B in cross-border payments.",
-      "url": "https://www.fastbull.com/news-detail/chinaled-cbdc-project-mbridge-tops-55b-in-crossborder-news_6100_0_2026_1_2550_3",
-      "source": "FastBull",
-      "published_date": "2026-01-17",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "cbdc",
-        "cross_border_payments"
-      ],
-      "regions": [
-        "Asia-Pacific"
-      ],
-      "tags": [
-        "market:cbdc",
-        "market:cross_border_payments",
-        "region:Asia-Pacific"
-      ]
     }
   ],
   "alerts": [
@@ -2029,24 +2026,8 @@
       "category": "risk",
       "created_at": "2026-06-05 07:13:14",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 12 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-05 01:01:05",
-      "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 12 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-04 19:05:16",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-06 18:59:39",
-  "server_time_utc": "2026-06-06T18:59:39.103574Z"
+  "last_update": "2026-06-07 01:18:53",
+  "server_time_utc": "2026-06-07T01:18:53.130203Z"
 }
