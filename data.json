@@ -1,8 +1,8 @@
 {
   "metrics": {
     "tokenized_treas": {
-      "value": 11307172454.0,
-      "delta_pct": 9.899260413634263,
+      "value": 16706732668.0,
+      "delta_pct": 47.753408166069526,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
@@ -17,24 +17,24 @@
       "source_url": ""
     },
     "rwa_commodities": {
-      "value": 6926027376.0,
-      "delta_pct": -0.017510580464372788,
+      "value": 5436971496.0,
+      "delta_pct": -21.499422384033036,
       "unit": "USD",
       "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_credit": {
-      "value": 4840602555.0,
-      "delta_pct": 24.638419612822748,
+      "value": 22442503228.0,
+      "delta_pct": 363.6303636376526,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_equities": {
-      "value": 387167098.0,
-      "delta_pct": 50.583830882694095,
+      "value": 367270628.0,
+      "delta_pct": -5.13898781760634,
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
@@ -45,6 +45,22 @@
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 58.3,
+      "delta_pct": 0.17182130584191463,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4500000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -62,22 +78,6 @@
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 58.2,
-      "delta_pct": -0.1715265866209165,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 4500000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "USDe Market Cap",
-      "category": "onchain",
       "source_url": ""
     },
     "eth_btc_ratio": {
@@ -374,13 +374,13 @@
       "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 11307172454.0,
+      "value_num": 16706732668.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 1018502256.0,
-      "delta_pct": 9.899260413634263,
-      "captured_at": "2026-06-07 07:16:55"
+      "delta_num": 5399560214.0,
+      "delta_pct": 47.753408166069526,
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
@@ -392,43 +392,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-07 07:16:55"
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
       "metric_key": "rwa_commodities",
       "metric_label": "Tokenized Commodities",
-      "value_num": 6926027376.0,
+      "value_num": 5436971496.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -1213000.0,
-      "delta_pct": -0.017510580464372788,
-      "captured_at": "2026-06-07 07:16:55"
+      "delta_num": -1489055880.0,
+      "delta_pct": -21.499422384033036,
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_credit",
       "metric_label": "Tokenized Private Credit",
-      "value_num": 4840602555.0,
+      "value_num": 22442503228.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 956886306.0,
-      "delta_pct": 24.638419612822748,
-      "captured_at": "2026-06-07 07:16:55"
+      "delta_num": 17601900673.0,
+      "delta_pct": 363.6303636376526,
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_equities",
       "metric_label": "Tokenized Equities",
-      "value_num": 387167098.0,
+      "value_num": 367270628.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 130056427.0,
-      "delta_pct": 50.583830882694095,
-      "captured_at": "2026-06-07 07:16:55"
+      "delta_num": -19896470.0,
+      "delta_pct": -5.13898781760634,
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
@@ -440,43 +440,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-07 07:16:55"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-07 07:16:55"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2109999999999.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1640000000001.0,
-      "delta_pct": -43.73333333336,
-      "captured_at": "2026-06-07 07:16:55"
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 58.2,
+      "value_num": 58.3,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -0.09999999999999432,
-      "delta_pct": -0.1715265866209165,
-      "captured_at": "2026-06-07 07:16:55"
+      "delta_num": 0.09999999999999432,
+      "delta_pct": 0.17182130584191463,
+      "captured_at": "2026-06-07 13:15:36"
     },
     {
       "category": "onchain",
@@ -488,6 +464,30 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-06-07 13:15:36"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-07 13:15:36"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2109999999999.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -1640000000001.0,
+      "delta_pct": -43.73333333336,
       "captured_at": "2026-06-07 07:16:55"
     },
     {
@@ -913,6 +913,27 @@
     }
   ],
   "news": [
+    {
+      "title": "Goldman Sachs launches tokenized real estate fund via GS DAP with Apex Group and Archax",
+      "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
+      "body": "Multiple outlets report Goldman Sachs launched a tokenized real estate fund using its GS DAP platform in partnership with Apex Group and Archax.",
+      "source": "KuCoin News",
+      "date": "2026-06-06",
+      "captured_at": "2026-06-07 13:15:36",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
     {
       "title": "Goldman Sachs reportedly launches tokenized real estate fund with Apex and Archax",
       "url": "https://cryptorank.io/news/feed/ed5e9-goldman-sachs-launches-tokenized-real-estate-fund-with-apex-and-archax",
@@ -1981,33 +2002,6 @@
         "entity:broadridge_dlr",
         "market:repo"
       ]
-    },
-    {
-      "id": 15,
-      "captured_at": "2026-05-13 13:21:40",
-      "category": "institutional",
-      "title": "HSBC launches Tokenized Deposit Service in the United States",
-      "summary": "HSBC announced the launch of its Tokenized Deposit Service (TDS) in the U.S., expanding its digital money capabilities for 24/7 on-chain domestic and cross-border funds movement for eligible corporate/institutional clients.",
-      "url": "https://www.about.us.hsbc.com/newsroom/press-releases/hsbc-expands-tokenized-deposit-service-to-the-united-states",
-      "source": "HSBC",
-      "published_date": "2026-04-13",
-      "severity": "info",
-      "entity_ids": [
-        "hsbc_orion"
-      ],
-      "markets": [
-        "tokenized_bonds",
-        "tokenized_deposits"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "entity:hsbc_orion",
-        "market:tokenized_bonds",
-        "market:tokenized_deposits",
-        "region:North America"
-      ]
     }
   ],
   "alerts": [
@@ -2036,6 +2030,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-07 07:16:55",
-  "server_time_utc": "2026-06-07T07:16:55.555221Z"
+  "last_update": "2026-06-07 13:15:36",
+  "server_time_utc": "2026-06-07T13:15:36.823188Z"
 }
