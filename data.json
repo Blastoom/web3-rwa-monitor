@@ -1,34 +1,10 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 8263456300.0,
-      "delta_pct": -26.677406388642417,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2393269199.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 5363271648.0,
-      "delta_pct": -27.26062439299061,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 126783927.0,
-      "delta_pct": -74.40006787830433,
-      "unit": "USD",
-      "label": "Tokenized Equities",
       "category": "onchain",
       "source_url": ""
     },
@@ -46,6 +22,38 @@
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 0.582,
+      "delta_pct": -99.00171526586621,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 8263456300.0,
+      "delta_pct": -26.677406388642417,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 5363271648.0,
+      "delta_pct": -27.26062439299061,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 126783927.0,
+      "delta_pct": -74.40006787830433,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -86,14 +94,6 @@
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 58.3,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "crypto_mcap": {
@@ -372,18 +372,6 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 8263456300.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -3006543700.0,
-      "delta_pct": -26.677406388642417,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2393269199.0,
@@ -392,6 +380,54 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-06-08 07:18:53"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-08 07:18:53"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-08 07:18:53"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 0.582,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -57.717999999999996,
+      "delta_pct": -99.00171526586621,
+      "captured_at": "2026-06-08 07:18:53"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 8263456300.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -3006543700.0,
+      "delta_pct": -26.677406388642417,
       "captured_at": "2026-06-08 01:10:39"
     },
     {
@@ -416,30 +452,6 @@
       "source_name": "",
       "delta_num": -368467101.0,
       "delta_pct": -74.40006787830433,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-08 01:10:39"
     },
     {
@@ -500,18 +512,6 @@
       "source_name": "",
       "delta_num": 636331198.0,
       "delta_pct": 2.835384232923235,
-      "captured_at": "2026-06-07 19:08:37"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 58.3,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-07 19:08:37"
     },
     {
@@ -913,6 +913,46 @@
     }
   ],
   "news": [
+    {
+      "title": "Goldman Sachs launches tokenized real estate fund project via GS DAP with Apex Group and Archax",
+      "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
+      "body": "Multiple market feeds report Goldman Sachs is working with Apex Group and Archax on a tokenized real estate fund initiative using GS DAP. Primary-source confirmation on goldmansachs.com was not found in this run.",
+      "source": "KuCoin News",
+      "date": "2026-06-07",
+      "captured_at": "2026-06-08 07:18:53",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
+    {
+      "title": "Major U.S. banks reportedly plan a tokenized deposit network",
+      "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
+      "body": "The Wall Street Journal reports a group of large U.S. banks are exploring a shared tokenized-deposit system as a response to stablecoins and onchain settlement demand. Details remain unconfirmed by the banks in official press releases in this run.",
+      "source": "The Wall Street Journal",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-08 07:18:53",
+      "entity_ids": [],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:stablecoins",
+        "region:North America"
+      ]
+    },
     {
       "title": "U.S. banks reportedly plan tokenized deposit network",
       "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
@@ -1949,59 +1989,17 @@
         "market:cross_border_payments",
         "region:Asia-Pacific"
       ]
-    },
-    {
-      "id": 26,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "institutional",
-      "title": "HSBC expands tokenized deposit service to the United States",
-      "summary": "HSBC announced an expansion of its tokenized deposit service to the U.S., extending availability of its tokenized deposit capability for eligible clients.",
-      "url": "https://www.about.us.hsbc.com/newsroom/press-releases/hsbc-expands-tokenized-deposit-service-to-the-united-states",
-      "source": "HSBC",
-      "published_date": "2026-04-13",
-      "severity": "info",
-      "entity_ids": [
-        "hsbc_orion"
-      ],
-      "markets": [
-        "tokenized_bonds",
-        "tokenized_deposits"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "entity:hsbc_orion",
-        "market:tokenized_bonds",
-        "market:tokenized_deposits",
-        "region:North America"
-      ]
-    },
-    {
-      "id": 13,
-      "captured_at": "2026-05-13 13:21:40",
-      "category": "regulation",
-      "title": "Treasury (FinCEN/OFAC) proposes rule to implement GENIUS Act stablecoin AML/sanctions requirements",
-      "summary": "FinCEN and OFAC issued a joint proposed rule to implement GENIUS Act requirements for payment stablecoins, including anti-money laundering and sanctions compliance obligations, treating permitted payment stablecoin issuers as financial institutions under the Bank Secrecy Act.",
-      "url": "https://home.treasury.gov/news/press-releases/sb0435",
-      "source": "U.S. Department of the Treasury",
-      "published_date": "2026-04-09",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation",
-        "stablecoins",
-        "tokenized_treasuries"
-      ],
-      "regions": [],
-      "tags": [
-        "market:regulation",
-        "market:stablecoins",
-        "market:tokenized_treasuries"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 12 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-08 07:18:53",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -2035,6 +2033,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-08 01:10:39",
-  "server_time_utc": "2026-06-08T01:10:39.226642Z"
+  "last_update": "2026-06-08 07:18:53",
+  "server_time_utc": "2026-06-08T07:18:53.018471Z"
 }
