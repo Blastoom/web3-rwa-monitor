@@ -8,6 +8,14 @@
       "category": "onchain",
       "source_url": ""
     },
+    "fear_greed": {
+      "value": 8.0,
+      "delta_pct": -33.33333333333333,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
     "defi_tvl": {
       "value": 96195000000.0,
       "delta_pct": 0.0,
@@ -16,11 +24,11 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 12.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
+    "btc_dom": {
+      "value": 58.2,
+      "delta_pct": 4.002859185132241,
+      "unit": "%",
+      "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
@@ -30,14 +38,6 @@
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 55.96,
-      "delta_pct": 9515.120274914088,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "tokenized_treas": {
@@ -380,7 +380,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 13:41:29"
+      "captured_at": "2026-06-08 19:13:32"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 8.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -4.0,
+      "delta_pct": -33.33333333333333,
+      "captured_at": "2026-06-08 19:13:32"
     },
     {
       "category": "onchain",
@@ -392,19 +404,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 13:41:29"
+      "captured_at": "2026-06-08 19:13:32"
     },
     {
       "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 58.2,
+      "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-08 13:41:29"
+      "delta_num": 2.240000000000002,
+      "delta_pct": 4.002859185132241,
+      "captured_at": "2026-06-08 19:13:32"
     },
     {
       "category": "market",
@@ -416,18 +428,6 @@
       "source_name": "",
       "delta_num": 90000000001.0,
       "delta_pct": 4.2654028436513105,
-      "captured_at": "2026-06-08 13:41:29"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 55.96,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 55.378,
-      "delta_pct": 9515.120274914088,
       "captured_at": "2026-06-08 13:41:29"
     },
     {
@@ -913,6 +913,46 @@
     }
   ],
   "news": [
+    {
+      "title": "Goldman Sachs-backed GS DAP used for new tokenized real estate fund project (Apex Group, Archax)",
+      "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
+      "body": "Multiple crypto newswires report that Goldman Sachs is involved in a tokenized real-estate fund initiative via GS DAP alongside Apex Group and Archax. Details are still limited; treat as early-stage reporting until confirmed by a first-party release.",
+      "source": "KuCoin News",
+      "date": "2026-06-06",
+      "captured_at": "2026-06-08 19:13:32",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
+    {
+      "title": "SEC still evaluating path for tokenized stocks, analysts say",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/why-sec-taking-long-tokenized-010822437.html",
+      "body": "TD Cowen commentary highlighted that US regulators are still moving slowly on frameworks for tokenized equities, keeping timelines uncertain for broader market adoption.",
+      "source": "Yahoo Finance",
+      "date": "2026-06-06",
+      "captured_at": "2026-06-08 19:13:32",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:North America"
+      ]
+    },
     {
       "title": "Goldman Sachs launches tokenized real estate fund via GS DAP with Apex Group and Archax",
       "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
@@ -1944,51 +1984,6 @@
         "market:regulation",
         "region:North America"
       ]
-    },
-    {
-      "id": 24,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "regulation",
-      "title": "White House fact sheet: GENIUS Act signed into law (stablecoin framework)",
-      "summary": "The White House says the GENIUS Act creates a federal regulatory system for stablecoins, including 100% reserve backing and monthly public reserve disclosures, and applies Bank Secrecy Act obligations to issuers.",
-      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
-      "source": "The White House",
-      "published_date": "2025-07-18",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation",
-        "stablecoins"
-      ],
-      "regions": [],
-      "tags": [
-        "market:regulation",
-        "market:stablecoins"
-      ]
-    },
-    {
-      "id": 25,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "institutional",
-      "title": "Atlantic Council: mBridge processed ~4,000 cross-border transactions cumulatively worth ~$55.49B",
-      "summary": "Atlantic Council reports mBridge has processed more than 4,000 cross-border transactions with cumulative value around $55.49B and that the digital yuan represents ~95.3% of total settlement volume.",
-      "url": "https://www.atlanticcouncil.org/blogs/econographics/what-to-watch-as-china-prepares-its-digital-yuan-for-prime-time/",
-      "source": "Atlantic Council",
-      "published_date": "2026-01-16",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "cbdc",
-        "cross_border_payments"
-      ],
-      "regions": [
-        "Asia-Pacific"
-      ],
-      "tags": [
-        "market:cbdc",
-        "market:cross_border_payments",
-        "region:Asia-Pacific"
-      ]
     }
   ],
   "alerts": [
@@ -2033,6 +2028,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-08 13:41:29",
-  "server_time_utc": "2026-06-08T13:41:29.242544Z"
+  "last_update": "2026-06-08 19:13:32",
+  "server_time_utc": "2026-06-08T19:13:32.911563Z"
 }
