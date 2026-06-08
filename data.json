@@ -24,9 +24,17 @@
       "category": "risk",
       "source_url": ""
     },
+    "crypto_mcap": {
+      "value": 2200000000000.0,
+      "delta_pct": 4.2654028436513105,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
     "btc_dom": {
-      "value": 0.582,
-      "delta_pct": -99.00171526586621,
+      "value": 55.96,
+      "delta_pct": 9515.120274914088,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
@@ -94,14 +102,6 @@
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2109999999999.0,
-      "delta_pct": -43.73333333336,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
       "source_url": ""
     },
     "eth_btc_ratio": {
@@ -380,7 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 07:18:53"
+      "captured_at": "2026-06-08 13:41:29"
     },
     {
       "category": "onchain",
@@ -392,7 +392,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 07:18:53"
+      "captured_at": "2026-06-08 13:41:29"
     },
     {
       "category": "risk",
@@ -404,19 +404,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 07:18:53"
+      "captured_at": "2026-06-08 13:41:29"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2200000000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 90000000001.0,
+      "delta_pct": 4.2654028436513105,
+      "captured_at": "2026-06-08 13:41:29"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 0.582,
+      "value_num": 55.96,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -57.717999999999996,
-      "delta_pct": -99.00171526586621,
-      "captured_at": "2026-06-08 07:18:53"
+      "delta_num": 55.378,
+      "delta_pct": 9515.120274914088,
+      "captured_at": "2026-06-08 13:41:29"
     },
     {
       "category": "onchain",
@@ -513,18 +525,6 @@
       "delta_num": 636331198.0,
       "delta_pct": 2.835384232923235,
       "captured_at": "2026-06-07 19:08:37"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2109999999999.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1640000000001.0,
-      "delta_pct": -43.73333333336,
-      "captured_at": "2026-06-07 07:16:55"
     },
     {
       "category": "market",
@@ -914,6 +914,27 @@
   ],
   "news": [
     {
+      "title": "Goldman Sachs launches tokenized real estate fund via GS DAP with Apex Group and Archax",
+      "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
+      "body": "KuCoin reports that Goldman Sachs launched a tokenized real estate fund using its GS DAP platform with Apex Group and Archax.",
+      "source": "KuCoin",
+      "date": "2026-06-07",
+      "captured_at": "2026-06-08 13:41:29",
+      "entity_ids": [
+        "goldman_dap"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_bonds"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:goldman_dap",
+        "market:repo",
+        "market:tokenized_bonds"
+      ]
+    },
+    {
       "title": "Goldman Sachs launches tokenized real estate fund project via GS DAP with Apex Group and Archax",
       "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
       "body": "Multiple market feeds report Goldman Sachs is working with Apex Group and Archax on a tokenized real estate fund initiative using GS DAP. Primary-source confirmation on goldmansachs.com was not found in this run.",
@@ -970,27 +991,6 @@
       "tags": [
         "market:stablecoins",
         "region:North America"
-      ]
-    },
-    {
-      "title": "Goldman Sachs launches tokenized real estate fund via GS DAP with Apex Group and Archax",
-      "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
-      "body": "Multiple outlets report Goldman Sachs launched a tokenized real estate fund using its GS DAP platform in partnership with Apex Group and Archax.",
-      "source": "KuCoin News",
-      "date": "2026-06-06",
-      "captured_at": "2026-06-07 13:15:36",
-      "entity_ids": [
-        "goldman_dap"
-      ],
-      "markets": [
-        "repo",
-        "tokenized_bonds"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:goldman_dap",
-        "market:repo",
-        "market:tokenized_bonds"
       ]
     },
     {
@@ -1997,6 +1997,14 @@
       "title": "Extreme fear in market",
       "body": "Index at 12 \u2014 extreme fear",
       "category": "risk",
+      "created_at": "2026-06-08 13:41:29",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 12 \u2014 extreme fear",
+      "category": "risk",
       "created_at": "2026-06-08 07:18:53",
       "acknowledged": 0
     },
@@ -2023,16 +2031,8 @@
       "category": "risk",
       "created_at": "2026-06-07 07:16:55",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Fear & Greed Index at 12 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-06 13:07:10",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-08 07:18:53",
-  "server_time_utc": "2026-06-08T07:18:53.018471Z"
+  "last_update": "2026-06-08 13:41:29",
+  "server_time_utc": "2026-06-08T13:41:29.242544Z"
 }
