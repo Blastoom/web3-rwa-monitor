@@ -1,10 +1,42 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 9155702355.0,
+      "delta_pct": 10.797492267248995,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2393269199.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 7383719679.0,
+      "delta_pct": 37.671931679116774,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 22885437250.0,
+      "delta_pct": -0.8379850231176489,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 245214601.0,
+      "delta_pct": 93.41142588208362,
+      "unit": "USD",
+      "label": "Tokenized Equities",
       "category": "onchain",
       "source_url": ""
     },
@@ -16,19 +48,19 @@
       "category": "onchain",
       "source_url": ""
     },
+    "btc_dom": {
+      "value": 58.2,
+      "delta_pct": 0.0,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
     "fear_greed": {
       "value": 8.0,
       "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 58.2,
-      "delta_pct": 4.002859185132241,
-      "unit": "%",
-      "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
@@ -38,30 +70,6 @@
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "tokenized_treas": {
-      "value": 8263456300.0,
-      "delta_pct": -26.677406388642417,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 5363271648.0,
-      "delta_pct": -27.26062439299061,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 126783927.0,
-      "delta_pct": -74.40006787830433,
-      "unit": "USD",
-      "label": "Tokenized Equities",
-      "category": "onchain",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -93,14 +101,6 @@
       "delta_pct": 0.31912600108875766,
       "unit": "%",
       "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_credit": {
-      "value": 23078834426.0,
-      "delta_pct": 2.835384232923235,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,6 +372,18 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 9155702355.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 892246055.0,
+      "delta_pct": 10.797492267248995,
+      "captured_at": "2026-06-09 07:11:11"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2393269199.0,
@@ -380,7 +392,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-09 01:11:39"
+      "captured_at": "2026-06-09 07:11:11"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 7383719679.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 2020448031.0,
+      "delta_pct": 37.671931679116774,
+      "captured_at": "2026-06-09 07:11:11"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 22885437250.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -193397176.0,
+      "delta_pct": -0.8379850231176489,
+      "captured_at": "2026-06-09 07:11:11"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 245214601.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 118430674.0,
+      "delta_pct": 93.41142588208362,
+      "captured_at": "2026-06-09 07:11:11"
     },
     {
       "category": "onchain",
@@ -392,7 +440,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-09 01:11:39"
+      "captured_at": "2026-06-09 07:11:11"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 58.2,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-09 07:11:11"
     },
     {
       "category": "risk",
@@ -404,19 +464,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-09 01:11:39"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 58.2,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 2.240000000000002,
-      "delta_pct": 4.002859185132241,
-      "captured_at": "2026-06-08 19:13:32"
+      "captured_at": "2026-06-09 07:11:11"
     },
     {
       "category": "market",
@@ -429,42 +477,6 @@
       "delta_num": 90000000001.0,
       "delta_pct": 4.2654028436513105,
       "captured_at": "2026-06-08 13:41:29"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 8263456300.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -3006543700.0,
-      "delta_pct": -26.677406388642417,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 5363271648.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -2009999848.0,
-      "delta_pct": -27.26062439299061,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 126783927.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -368467101.0,
-      "delta_pct": -74.40006787830433,
-      "captured_at": "2026-06-08 01:10:39"
     },
     {
       "category": "onchain",
@@ -513,18 +525,6 @@
       "delta_num": 0.0009012306279588822,
       "delta_pct": 0.31912600108875766,
       "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 23078834426.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 636331198.0,
-      "delta_pct": 2.835384232923235,
-      "captured_at": "2026-06-07 19:08:37"
     },
     {
       "category": "market",
@@ -913,6 +913,30 @@
     }
   ],
   "news": [
+    {
+      "title": "Binance Research: tokenized RWA market reached $31.8B in May",
+      "url": "https://www.mitrade.com/au/insights/news/live-news/article-3-1793736-20260609",
+      "body": "A report highlighted that the tokenized RWA market climbed to $31.8B in May, up 589% since early 2025. The analysis suggests RWAs continued to expand even as broader crypto markets pulled back.",
+      "source": "Mitrade",
+      "date": "2026-06-09T02:10:16",
+      "captured_at": "2026-06-09 07:11:11",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
+    {
+      "title": "Datavault AI links RWA tokenization to 24/7 regulated commodity trading",
+      "url": "https://finance.yahoo.com/markets/commodities/articles/datavault-ai-ties-rwa-tokenization-132003215.html",
+      "body": "Datavault AI announced an initiative tying its RWA tokenization efforts to always-on regulated commodity trading. The effort targets tokenized physical commodities such as copper and minerals via a regulated international trading venue.",
+      "source": "Yahoo Finance",
+      "date": "2026-06-08T07:10:16",
+      "captured_at": "2026-06-09 07:11:11",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "Largest US banks reportedly plan a shared tokenized-deposit network via The Clearing House",
       "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
@@ -1942,54 +1966,17 @@
         "market:regulation",
         "region:North America"
       ]
-    },
-    {
-      "id": 21,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "institutional",
-      "title": "JPM Coin: Bank-Backed USD Deposit Token from Kinexys ...",
-      "summary": "Discover how JPM Coin, a 1:1 bank-backed deposit token from Kinexys by J.P. Morgan, helps institutions unlock trapped capital and settle around the clock.",
-      "url": "https://www.jpmorgan.com/kinexys/jpm-coin",
-      "source": "www.jpmorgan.com",
-      "published_date": "",
-      "severity": "info",
-      "entity_ids": [
-        "jpmorgan_kinexys"
-      ],
-      "markets": [
-        "repo",
-        "tokenized_deposits"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:jpmorgan_kinexys",
-        "market:repo",
-        "market:tokenized_deposits"
-      ]
-    },
-    {
-      "id": 22,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "regulation",
-      "title": "Fact Sheet: President Donald J. Trump Signs GENIUS Act ...",
-      "summary": "- Stablecoin issuers must comply with strict marketing rules to protect consumers from deceptive practices.\nCrucially, they are forbidden from making misleading claims that their stablecoins are backed by the U.S. government, federally insured, or legal tender.\n- The GENIUS Act aligns State and Federal stablecoin frameworks, ensuring fair and consistent regulation throughout the country.\n- In the event of insolvency of a stablecoin issuer, the GENIUS Act prioritizes stablecoin holders\u2019 claims over all other creditors, ensuring a final backstop of consumer protection.\n**ENSURING U.S. DOLLAR GLOBAL RESERVE CURRENCY STATUS: ** By driving demand for U.S. Treasuries, stablecoins will play a crucial role in ensuring the continued global dominance of the U.S. dollar as the world\u2019s reserve currency.\n\u2026\n- The GENIUS Act explicitly subjects stablecoin issuers to the Bank Secrecy Act, thereby clearly obligating them to establish effective anti-money laundering and sanctions compliance programs with risk assessments, sanctions list verification, and customer identification.\n- This legislation improves the Treasury Department\u2019s ability to combat illicit stablecoin activities by enhancing its sanctions evasion and money laundering enforcement capabilities.",
-      "url": "https://www.whitehouse.gov/fact-sheets/2025/07/fact-sheet-president-donald-j-trump-signs-genius-act-into-law/",
-      "source": "www.whitehouse.gov",
-      "published_date": "2025-07-18",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation",
-        "stablecoins"
-      ],
-      "regions": [],
-      "tags": [
-        "market:regulation",
-        "market:stablecoins"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 8 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-09 07:11:11",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -2039,6 +2026,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-09 01:11:39",
-  "server_time_utc": "2026-06-09T01:11:39.842910Z"
+  "last_update": "2026-06-09 07:11:11",
+  "server_time_utc": "2026-06-09T07:11:11.414644Z"
 }
