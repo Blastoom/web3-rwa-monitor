@@ -1,24 +1,16 @@
 {
   "metrics": {
-    "rwa_total": {
-      "value": 31020000000.0,
-      "delta_pct": -0.7677543186180422,
-      "unit": "USD",
-      "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2458949328.0,
-      "delta_pct": 2.7443686246178944,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
       "source_url": ""
     },
     "fear_greed": {
-      "value": 8.0,
-      "delta_pct": 0.0,
+      "value": 10.0,
+      "delta_pct": 25.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
@@ -38,6 +30,14 @@
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
+      "source_url": ""
+    },
+    "rwa_total": {
+      "value": 31020000000.0,
+      "delta_pct": -0.7677543186180422,
+      "unit": "USD",
+      "label": "RWA on-chain (excl. stablecoins)",
+      "category": "onchain",
       "source_url": ""
     },
     "tokenized_treas": {
@@ -372,39 +372,27 @@
   "metrics_list": [
     {
       "category": "onchain",
-      "metric_key": "rwa_total",
-      "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 31020000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -240000000.0,
-      "delta_pct": -0.7677543186180422,
-      "captured_at": "2026-06-09 13:28:26"
-    },
-    {
-      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2458949328.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 65680129.0,
-      "delta_pct": 2.7443686246178944,
-      "captured_at": "2026-06-09 13:28:26"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-09 19:05:35"
     },
     {
       "category": "risk",
       "metric_key": "fear_greed",
       "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 8.0,
+      "value_num": 10.0,
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-09 13:28:26"
+      "delta_num": 2.0,
+      "delta_pct": 25.0,
+      "captured_at": "2026-06-09 19:05:35"
     },
     {
       "category": "onchain",
@@ -416,7 +404,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-09 13:28:26"
+      "captured_at": "2026-06-09 19:05:35"
     },
     {
       "category": "risk",
@@ -428,6 +416,18 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-06-09 19:05:35"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_total",
+      "metric_label": "RWA on-chain (excl. stablecoins)",
+      "value_num": 31020000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -240000000.0,
+      "delta_pct": -0.7677543186180422,
       "captured_at": "2026-06-09 13:28:26"
     },
     {
@@ -2026,6 +2026,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-09 13:28:26",
-  "server_time_utc": "2026-06-09T13:28:26.247624Z"
+  "last_update": "2026-06-09 19:05:35",
+  "server_time_utc": "2026-06-09T19:05:35.206690Z"
 }
