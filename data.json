@@ -8,20 +8,20 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 8.0,
-      "delta_pct": -33.33333333333333,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
     "defi_tvl": {
       "value": 96195000000.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 8.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
       "source_url": ""
     },
     "btc_dom": {
@@ -380,19 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 19:13:32"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 8.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -4.0,
-      "delta_pct": -33.33333333333333,
-      "captured_at": "2026-06-08 19:13:32"
+      "captured_at": "2026-06-09 01:11:39"
     },
     {
       "category": "onchain",
@@ -404,7 +392,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-08 19:13:32"
+      "captured_at": "2026-06-09 01:11:39"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 8.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-09 01:11:39"
     },
     {
       "category": "risk",
@@ -913,6 +913,31 @@
     }
   ],
   "news": [
+    {
+      "title": "Largest US banks reportedly plan a shared tokenized-deposit network via The Clearing House",
+      "url": "https://www.wsj.com/finance/banking/jpmorgan-citi-and-big-banks-plan-new-tokenized-deposit-system-to-answer-crypto-6b2d696b",
+      "body": "A Wall Street Journal report says JPMorgan, Citi and other large US banks are planning a shared tokenized-deposit network, with an initial launch target in 1H 2027. If confirmed, this would be one of the most coordinated moves by incumbent banks toward tokenized deposit rails.",
+      "source": "The Wall Street Journal",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-09 01:11:39",
+      "entity_ids": [
+        "citi_token",
+        "jpmorgan_kinexys"
+      ],
+      "markets": [
+        "cross_border_payments",
+        "repo",
+        "tokenized_deposits"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:citi_token",
+        "entity:jpmorgan_kinexys",
+        "market:cross_border_payments",
+        "market:repo",
+        "market:tokenized_deposits"
+      ]
+    },
     {
       "title": "Goldman Sachs-backed GS DAP used for new tokenized real estate fund project (Apex Group, Archax)",
       "url": "https://www.kucoin.com/news/flash/goldman-sachs-launches-tokenized-real-estate-fund-via-gs-dap-with-apex-group-and-archax",
@@ -1962,31 +1987,17 @@
         "market:regulation",
         "market:stablecoins"
       ]
-    },
-    {
-      "id": 23,
-      "captured_at": "2026-05-13 13:21:42",
-      "category": "regulation",
-      "title": "SEC issues interpretation clarifying how federal securities laws apply to crypto assets",
-      "summary": "SEC published an interpretation clarifying how federal securities laws apply to certain crypto assets and transactions, including a taxonomy covering stablecoins and digital securities and guidance on airdrops, staking, and wrapped assets.",
-      "url": "https://www.sec.gov/newsroom/press-releases/2026-30-sec-clarifies-application-federal-securities-laws-crypto-assets",
-      "source": "SEC",
-      "published_date": "2026-03-17",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "market:regulation",
-        "region:North America"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 8 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-09 01:11:39",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -2028,6 +2039,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-08 19:13:32",
-  "server_time_utc": "2026-06-08T19:13:32.911563Z"
+  "last_update": "2026-06-09 01:11:39",
+  "server_time_utc": "2026-06-09T01:11:39.842910Z"
 }
