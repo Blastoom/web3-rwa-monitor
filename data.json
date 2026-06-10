@@ -25,11 +25,19 @@
       "source_url": ""
     },
     "btc_dom": {
-      "value": 58.2,
-      "delta_pct": 0.0,
+      "value": 58.1,
+      "delta_pct": -0.1718213058419268,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4480000000.0,
+      "delta_pct": -0.4444444444444444,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
       "source_url": ""
     },
     "rwa_total": {
@@ -85,14 +93,6 @@
       "delta_pct": -0.168218010541662,
       "unit": "USD",
       "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 4500000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -380,7 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-10 01:06:48"
+      "captured_at": "2026-06-10 07:11:05"
     },
     {
       "category": "onchain",
@@ -392,7 +392,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-10 01:06:48"
+      "captured_at": "2026-06-10 07:11:05"
     },
     {
       "category": "risk",
@@ -404,19 +404,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-10 01:06:48"
+      "captured_at": "2026-06-10 07:11:05"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 58.2,
+      "value_num": 58.1,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-10 01:06:48"
+      "delta_num": -0.10000000000000142,
+      "delta_pct": -0.1718213058419268,
+      "captured_at": "2026-06-10 07:11:05"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 4480000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -20000000.0,
+      "delta_pct": -0.4444444444444444,
+      "captured_at": "2026-06-10 07:11:05"
     },
     {
       "category": "onchain",
@@ -500,18 +512,6 @@
       "source_name": "",
       "delta_num": -450000000.0,
       "delta_pct": -0.168218010541662,
-      "captured_at": "2026-06-08 01:10:39"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 4500000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-08 01:10:39"
     },
     {
@@ -2008,16 +2008,8 @@
       "category": "risk",
       "created_at": "2026-06-08 07:18:53",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 12 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-08 01:10:39",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-10 01:06:48",
-  "server_time_utc": "2026-06-10T01:06:48.702678Z"
+  "last_update": "2026-06-10 07:11:05",
+  "server_time_utc": "2026-06-10T07:11:05.549724Z"
 }
