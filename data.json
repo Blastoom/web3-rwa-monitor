@@ -8,14 +8,6 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 9.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
     "defi_tvl": {
       "value": 96195000000.0,
       "delta_pct": 0.0,
@@ -24,20 +16,28 @@
       "category": "onchain",
       "source_url": ""
     },
+    "btc_dom": {
+      "value": 58.4,
+      "delta_pct": 0.5163511187607525,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 9.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
     "crypto_mcap": {
       "value": 3750000000000.0,
       "delta_pct": 70.45454545454545,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 58.1,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -380,19 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-11 01:04:30"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 9.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-11 01:04:30"
+      "captured_at": "2026-06-11 07:12:28"
     },
     {
       "category": "onchain",
@@ -404,7 +392,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-11 01:04:30"
+      "captured_at": "2026-06-11 07:12:28"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 58.4,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.29999999999999716,
+      "delta_pct": 0.5163511187607525,
+      "captured_at": "2026-06-11 07:12:28"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 9.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-11 07:12:28"
     },
     {
       "category": "market",
@@ -416,18 +428,6 @@
       "source_name": "",
       "delta_num": 1550000000000.0,
       "delta_pct": 70.45454545454545,
-      "captured_at": "2026-06-11 01:04:30"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 58.1,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-11 01:04:30"
     },
     {
@@ -1976,24 +1976,8 @@
       "category": "risk",
       "created_at": "2026-06-09 13:28:26",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 8 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-09 07:11:11",
-      "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Fear & Greed Index at 8 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-09 01:11:39",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-11 01:04:30",
-  "server_time_utc": "2026-06-11T01:04:30.013217Z"
+  "last_update": "2026-06-11 07:12:28",
+  "server_time_utc": "2026-06-11T07:12:28.500491Z"
 }
