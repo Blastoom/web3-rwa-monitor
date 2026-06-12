@@ -1,6 +1,23 @@
 {
-  "last_update": "2026-06-06 07:06:56",
+  "last_update": "2026-06-12 01:06:44",
   "assets": [
+    {
+      "id": "kfw_third_crypto_bond_2026-06-09",
+      "asset": "KfW third crypto bond (EUR 100m, 2.75%, matures 2027-12-07)",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "SWIAT/RL1 (planned migration from Polygon)",
+      "region": "EU",
+      "country": "Germany",
+      "flag": "DE",
+      "lat": null,
+      "lng": null,
+      "size_usd": null,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "KfW issued its third blockchain-based bond as a crypto security with value date 2026-06-09; ICMA tracker notes a planned change from Polygon to SWIAT/Regulated Layer One (RL1)."
+    },
     {
       "id": "edc_samara_dlt_bond_mar2026",
       "asset": "Tokenized bond issuance experiment",
