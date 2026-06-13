@@ -1,8 +1,8 @@
 {
   "metrics": {
     "tokenized_treas": {
-      "value": 10024786850.0,
-      "delta_pct": 232.8634759495963,
+      "value": 11446780154.0,
+      "delta_pct": 14.184773454809166,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
@@ -16,25 +16,25 @@
       "category": "onchain",
       "source_url": ""
     },
-    "rwa_commodities": {
-      "value": 7121633329.0,
-      "delta_pct": 0.1419608583222634,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_credit": {
-      "value": 23057505911.0,
-      "delta_pct": -0.9536900221018274,
+      "value": 23454118121.0,
+      "delta_pct": 1.720100220426655,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
+    "rwa_commodities": {
+      "value": 4839716925.0,
+      "delta_pct": -32.042037248784055,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
     "tokenized_equities": {
-      "value": 247976555.0,
-      "delta_pct": -7.12785732852001,
+      "value": 247920545.0,
+      "delta_pct": -0.02258681269283703,
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
@@ -53,6 +53,14 @@
       "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 88250000.0,
+      "delta_pct": -90.99489795918367,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
       "category": "risk",
       "source_url": ""
     },
@@ -118,14 +126,6 @@
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 980000000.0,
-      "delta_pct": 48999999900.0,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
-      "category": "risk",
       "source_url": ""
     },
     "usde_share": {
@@ -374,13 +374,13 @@
       "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 10024786850.0,
+      "value_num": 11446780154.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 7013105613.0,
-      "delta_pct": 232.8634759495963,
-      "captured_at": "2026-06-13 01:05:33"
+      "delta_num": 1421993304.0,
+      "delta_pct": 14.184773454809166,
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "onchain",
@@ -392,43 +392,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-13 01:05:33"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 7121633329.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 10095600.0,
-      "delta_pct": 0.1419608583222634,
-      "captured_at": "2026-06-13 01:05:33"
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_credit",
       "metric_label": "Tokenized Private Credit",
-      "value_num": 23057505911.0,
+      "value_num": 23454118121.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -222014463.0,
-      "delta_pct": -0.9536900221018274,
-      "captured_at": "2026-06-13 01:05:33"
+      "delta_num": 396612210.0,
+      "delta_pct": 1.720100220426655,
+      "captured_at": "2026-06-13 07:06:57"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 4839716925.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -2281916404.0,
+      "delta_pct": -32.042037248784055,
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_equities",
       "metric_label": "Tokenized Equities",
-      "value_num": 247976555.0,
+      "value_num": 247920545.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -19031988.0,
-      "delta_pct": -7.12785732852001,
-      "captured_at": "2026-06-13 01:05:33"
+      "delta_num": -56010.0,
+      "delta_pct": -0.02258681269283703,
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "onchain",
@@ -440,7 +440,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-13 01:05:33"
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "risk",
@@ -452,7 +452,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-13 01:05:33"
+      "captured_at": "2026-06-13 07:06:57"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 88250000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -891750000.0,
+      "delta_pct": -90.99489795918367,
+      "captured_at": "2026-06-13 07:06:57"
     },
     {
       "category": "risk",
@@ -549,18 +561,6 @@
       "delta_num": 1.0000000000003062e-05,
       "delta_pct": 0.03895597974290246,
       "captured_at": "2026-06-07 01:18:53"
-    },
-    {
-      "category": "risk",
-      "metric_key": "liq_24h",
-      "metric_label": "Liquidations (24h)",
-      "value_num": 980000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 979999998.0,
-      "delta_pct": 48999999900.0,
-      "captured_at": "2026-06-06 07:06:56"
     },
     {
       "category": "onchain",
@@ -2010,6 +2010,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-13 01:05:33",
-  "server_time_utc": "2026-06-13T01:05:33.621324Z"
+  "last_update": "2026-06-13 07:06:57",
+  "server_time_utc": "2026-06-13T07:06:57.199511Z"
 }
