@@ -1,10 +1,50 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 10024786850.0,
+      "delta_pct": 232.8634759495963,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2468669884.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 7121633329.0,
+      "delta_pct": 0.1419608583222634,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_credit": {
+      "value": 23057505911.0,
+      "delta_pct": -0.9536900221018274,
+      "unit": "USD",
+      "label": "Tokenized Private Credit",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_equities": {
+      "value": 247976555.0,
+      "delta_pct": -7.12785732852001,
+      "unit": "USD",
+      "label": "Tokenized Equities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
@@ -16,12 +56,12 @@
       "category": "risk",
       "source_url": ""
     },
-    "defi_tvl": {
-      "value": 96195000000.0,
+    "btc_dom": {
+      "value": 58.5,
       "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
-      "category": "onchain",
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -62,46 +102,6 @@
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_treas": {
-      "value": 3011681237.0,
-      "delta_pct": -75.00864339381916,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 7111537729.0,
-      "delta_pct": 5.187748220062792,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_credit": {
-      "value": 23279520374.0,
-      "delta_pct": -2.031560598788538,
-      "unit": "USD",
-      "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_equities": {
-      "value": 267008543.0,
-      "delta_pct": 104.01048476428916,
-      "unit": "USD",
-      "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 58.5,
-      "delta_pct": 0.1712328767123312,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
       "source_url": ""
     },
     "crypto_mcap": {
@@ -372,6 +372,18 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 10024786850.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 7013105613.0,
+      "delta_pct": 232.8634759495963,
+      "captured_at": "2026-06-13 01:05:33"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2468669884.0,
@@ -380,19 +392,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-12 19:13:01"
+      "captured_at": "2026-06-13 01:05:33"
     },
     {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 12.0,
-      "unit": "",
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 7121633329.0,
+      "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-12 19:13:01"
+      "delta_num": 10095600.0,
+      "delta_pct": 0.1419608583222634,
+      "captured_at": "2026-06-13 01:05:33"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_credit",
+      "metric_label": "Tokenized Private Credit",
+      "value_num": 23057505911.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -222014463.0,
+      "delta_pct": -0.9536900221018274,
+      "captured_at": "2026-06-13 01:05:33"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_equities",
+      "metric_label": "Tokenized Equities",
+      "value_num": 247976555.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -19031988.0,
+      "delta_pct": -7.12785732852001,
+      "captured_at": "2026-06-13 01:05:33"
     },
     {
       "category": "onchain",
@@ -404,7 +440,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-12 19:13:01"
+      "captured_at": "2026-06-13 01:05:33"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-13 01:05:33"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 58.5,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-13 01:05:33"
     },
     {
       "category": "onchain",
@@ -465,66 +525,6 @@
       "delta_num": 2250000000.0,
       "delta_pct": 7.260406582768635,
       "captured_at": "2026-06-12 13:28:48"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 3011681237.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -9039210135.0,
-      "delta_pct": -75.00864339381916,
-      "captured_at": "2026-06-12 13:28:48"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 7111537729.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 350733501.0,
-      "delta_pct": 5.187748220062792,
-      "captured_at": "2026-06-12 13:28:48"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_credit",
-      "metric_label": "Tokenized Private Credit",
-      "value_num": 23279520374.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -482744817.0,
-      "delta_pct": -2.031560598788538,
-      "captured_at": "2026-06-12 13:28:48"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_equities",
-      "metric_label": "Tokenized Equities",
-      "value_num": 267008543.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 136128729.0,
-      "delta_pct": 104.01048476428916,
-      "captured_at": "2026-06-12 13:28:48"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 58.5,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.10000000000000142,
-      "delta_pct": 0.1712328767123312,
-      "captured_at": "2026-06-12 07:11:57"
     },
     {
       "category": "market",
@@ -2010,6 +2010,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-12 19:13:01",
-  "server_time_utc": "2026-06-12T19:13:01.982351Z"
+  "last_update": "2026-06-13 01:05:33",
+  "server_time_utc": "2026-06-13T01:05:33.621324Z"
 }
