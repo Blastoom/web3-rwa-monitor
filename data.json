@@ -8,14 +8,6 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 13.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
     "defi_tvl": {
       "value": 96195000000.0,
       "delta_pct": 0.0,
@@ -24,9 +16,17 @@
       "category": "onchain",
       "source_url": ""
     },
+    "fear_greed": {
+      "value": 13.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
     "usdt_share": {
-      "value": 0.58,
-      "delta_pct": -99.01828029790116,
+      "value": 58.0,
+      "delta_pct": 9900.000000000002,
       "unit": "%",
       "label": "USDT Dominance",
       "category": "onchain",
@@ -380,19 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 01:09:04"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 13.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-14 01:09:04"
+      "captured_at": "2026-06-14 07:06:33"
     },
     {
       "category": "onchain",
@@ -404,19 +392,31 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 01:09:04"
+      "captured_at": "2026-06-14 07:06:33"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 13.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-14 07:06:33"
     },
     {
       "category": "onchain",
       "metric_key": "usdt_share",
       "metric_label": "USDT Dominance",
-      "value_num": 0.58,
+      "value_num": 58.0,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -58.5,
-      "delta_pct": -99.01828029790116,
-      "captured_at": "2026-06-14 01:09:04"
+      "delta_num": 57.42,
+      "delta_pct": 9900.000000000002,
+      "captured_at": "2026-06-14 07:06:33"
     },
     {
       "category": "onchain",
@@ -1972,6 +1972,14 @@
     {
       "severity": "warning",
       "title": "Extreme fear in market",
+      "body": "Index at 13 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-14 07:06:33",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
       "body": "Fear & Greed Index at 13 \u2014 extreme fear",
       "category": "risk",
       "created_at": "2026-06-13 19:01:44",
@@ -2002,6 +2010,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-14 01:09:04",
-  "server_time_utc": "2026-06-14T01:09:04.789239Z"
+  "last_update": "2026-06-14 07:06:33",
+  "server_time_utc": "2026-06-14T07:06:33.317581Z"
 }
