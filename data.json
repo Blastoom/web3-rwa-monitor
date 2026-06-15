@@ -1,10 +1,26 @@
 {
   "metrics": {
+    "tokenized_treas": {
+      "value": 3011968998.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "buidl_aum": {
       "value": 2368902942.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 6510227272.0,
+      "delta_pct": -12.96486759525319,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -14,14 +30,6 @@
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 18.0,
-      "delta_pct": 38.46153846153847,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
       "source_url": ""
     },
     "defi_tvl": {
@@ -40,12 +48,12 @@
       "category": "risk",
       "source_url": ""
     },
-    "tokenized_treas": {
-      "value": 3011968998.0,
-      "delta_pct": -79.75827286290323,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
+    "fear_greed": {
+      "value": 20.0,
+      "delta_pct": 11.11111111111111,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
       "source_url": ""
     },
     "tokenized_credit": {
@@ -53,14 +61,6 @@
       "delta_pct": -38.62154485309544,
       "unit": "USD",
       "label": "Tokenized Private Credit",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 7479999274.0,
-      "delta_pct": 61.54734234696348,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -372,6 +372,18 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 3011968998.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-15 01:07:06"
+    },
+    {
+      "category": "onchain",
       "metric_key": "buidl_aum",
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2368902942.0,
@@ -380,7 +392,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 19:14:15"
+      "captured_at": "2026-06-15 01:07:06"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 6510227272.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -969772002.0,
+      "delta_pct": -12.96486759525319,
+      "captured_at": "2026-06-15 01:07:06"
     },
     {
       "category": "onchain",
@@ -392,19 +416,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 19:14:15"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 18.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 5.0,
-      "delta_pct": 38.46153846153847,
-      "captured_at": "2026-06-14 19:14:15"
+      "captured_at": "2026-06-15 01:07:06"
     },
     {
       "category": "onchain",
@@ -416,7 +428,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 19:14:15"
+      "captured_at": "2026-06-15 01:07:06"
     },
     {
       "category": "risk",
@@ -428,19 +440,19 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-14 19:14:15"
+      "captured_at": "2026-06-15 01:07:06"
     },
     {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 3011968998.0,
-      "unit": "USD",
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 20.0,
+      "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": -11868031002.0,
-      "delta_pct": -79.75827286290323,
-      "captured_at": "2026-06-14 13:17:06"
+      "delta_num": 2.0,
+      "delta_pct": 11.11111111111111,
+      "captured_at": "2026-06-15 01:07:06"
     },
     {
       "category": "onchain",
@@ -452,18 +464,6 @@
       "source_name": "",
       "delta_num": -9058342750.0,
       "delta_pct": -38.62154485309544,
-      "captured_at": "2026-06-14 13:17:06"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 7479999274.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 2849778086.0,
-      "delta_pct": 61.54734234696348,
       "captured_at": "2026-06-14 13:17:06"
     },
     {
@@ -913,6 +913,18 @@
     }
   ],
   "news": [
+    {
+      "title": "KfW issues \u20ac100m crypto bond on Polygon (ICMA tracker)",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "body": "ICMA's bond-market FinTech tracker lists KfW's June 9, 2026 'crypto bond' issuance using blockchain-based infrastructure on Polygon, with a reported size of about $100m.",
+      "source": "ICMA Tracker of New FinTech Applications in Bond Markets",
+      "date": "2026-06-09",
+      "captured_at": "2026-06-15 01:07:06",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "Binance Research: tokenized RWA market reached $31.8B in May",
       "url": "https://www.mitrade.com/au/insights/news/live-news/article-3-1793736-20260609",
@@ -1944,28 +1956,6 @@
         "entity:broadridge_dlr",
         "market:repo"
       ]
-    },
-    {
-      "id": 29,
-      "captured_at": "2026-05-13 19:12:44",
-      "category": "regulation",
-      "title": "Statement on Tokenized Securities",
-      "summary": "Statement  # Statement on Tokenized Securities  Division of Corporation Finance, Division of Investment Management, Division of Trading and Markets  Washington D.C.  Jan. 28, 2026  ## Introduction  As part of an effort to provide greater clarity on the application of the federal",
-      "url": "https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities",
-      "source": "SEC",
-      "published_date": "2026-01-28",
-      "severity": "info",
-      "entity_ids": [],
-      "markets": [
-        "regulation"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "market:regulation",
-        "region:North America"
-      ]
     }
   ],
   "alerts": [
@@ -2002,6 +1992,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-14 19:14:15",
-  "server_time_utc": "2026-06-14T19:14:15.534726Z"
+  "last_update": "2026-06-15 01:07:06",
+  "server_time_utc": "2026-06-15T01:07:06.131868Z"
 }
