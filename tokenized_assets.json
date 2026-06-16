@@ -1,6 +1,17 @@
 {
-  "last_update": "2026-06-15 01:07:06",
+  "last_update": "2026-06-16 01:13:43",
   "assets": [
+    {
+      "id": "kfw_blockchain-based-bond-as-a-crypto-security_2026-06-09",
+      "asset": "blockchain-based bond as a crypto security",
+      "issuer": "KfW",
+      "asset_type": "bond",
+      "region": "EU",
+      "country": "Germany",
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "KfW issuance recorded by ICMA tracker as a blockchain-based bond / crypto security."
+    },
     {
       "id": "kfw_crypto_bond_polygon_2026-06-09",
       "asset": "Crypto bond",
