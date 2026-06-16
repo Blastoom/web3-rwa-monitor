@@ -10,7 +10,7 @@
     },
     "fear_greed": {
       "value": 23.0,
-      "delta_pct": 15.0,
+      "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
@@ -380,7 +380,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-16 01:13:43"
+      "captured_at": "2026-06-16 07:09:49"
     },
     {
       "category": "risk",
@@ -390,9 +390,9 @@
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 3.0,
-      "delta_pct": 15.0,
-      "captured_at": "2026-06-16 01:13:43"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-16 07:09:49"
     },
     {
       "category": "onchain",
@@ -404,7 +404,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-16 01:13:43"
+      "captured_at": "2026-06-16 07:09:49"
     },
     {
       "category": "risk",
@@ -416,7 +416,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-16 01:13:43"
+      "captured_at": "2026-06-16 07:09:49"
     },
     {
       "category": "onchain",
@@ -1982,16 +1982,8 @@
       "category": "risk",
       "created_at": "2026-06-14 13:17:06",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 13 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-14 07:06:33",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-16 01:13:43",
-  "server_time_utc": "2026-06-16T01:13:43.748545Z"
+  "last_update": "2026-06-16 07:09:49",
+  "server_time_utc": "2026-06-16T07:09:49.930267Z"
 }
