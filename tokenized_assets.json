@@ -1,6 +1,19 @@
 {
-  "last_update": "2026-06-16 07:09:49",
+  "last_update": "2026-06-16 13:25:20",
   "assets": [
+    {
+      "id": "kfw_crypto_bond_polygon_2026_06_09",
+      "asset": "Crypto bond",
+      "issuer": "KfW",
+      "asset_type": "tokenized_bond",
+      "chain": "Polygon (with SWIAT/RL1 and Pontes infrastructure)",
+      "region": "EU",
+      "country": "Germany",
+      "size_usd": 107000000,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "ICMA tracker entry for a KfW crypto bond issued using a blockchain-based digital capital market infrastructure, including Polygon and SWIAT's Regulated Layer One (RL1) via Pontes."
+    },
     {
       "id": "kfw_blockchain-based-bond-as-a-crypto-security_2026-06-09",
       "asset": "blockchain-based bond as a crypto security",
