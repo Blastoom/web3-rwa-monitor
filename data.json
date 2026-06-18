@@ -6,15 +6,7 @@
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
       "category": "onchain",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 22.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
+      "source_url": "https://app.rwa.xyz/"
     },
     "defi_tvl": {
       "value": 96195000000.0,
@@ -22,31 +14,39 @@
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
-      "source_url": ""
+      "source_url": "https://defillama.com"
+    },
+    "fear_greed": {
+      "value": 15.0,
+      "delta_pct": -31.818181818181817,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": "https://alternative.me/crypto/fear-and-greed-index/"
     },
     "crypto_mcap": {
-      "value": 2304397634372.0,
-      "delta_pct": -0.6557957688052918,
+      "value": 2287107705835.0,
+      "delta_pct": -0.7503014357898302,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
-      "source_url": ""
+      "source_url": "https://api.coingecko.com/api/v3/global"
     },
     "btc_dom": {
-      "value": 56.07,
-      "delta_pct": -0.33771773906860597,
+      "value": 56.13,
+      "delta_pct": 0.10700909577314477,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
-      "source_url": ""
+      "source_url": "https://api.coingecko.com/api/v3/global"
     },
     "eth_btc_ratio": {
-      "value": 0.02718,
-      "delta_pct": 0.33222591362126175,
+      "value": 0.02708,
+      "delta_pct": -0.3679175864606306,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
-      "source_url": ""
+      "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd"
     },
     "tokenized_treas": {
       "value": 12800000000.0,
@@ -376,23 +376,11 @@
       "metric_label": "BlackRock BUIDL AUM",
       "value_num": 2369806007.0,
       "unit": "USD",
-      "source_url": "",
-      "source_name": "",
+      "source_url": "https://app.rwa.xyz/",
+      "source_name": "RWA.xyz",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-18 01:11:34"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 22.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-18 01:11:34"
+      "captured_at": "2026-06-18 07:04:49"
     },
     {
       "category": "onchain",
@@ -400,47 +388,59 @@
       "metric_label": "DeFi TVL (total)",
       "value_num": 96195000000.0,
       "unit": "USD",
-      "source_url": "",
-      "source_name": "",
+      "source_url": "https://defillama.com",
+      "source_name": "DefiLlama",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-18 01:11:34"
+      "captured_at": "2026-06-18 07:04:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 15.0,
+      "unit": "",
+      "source_url": "https://alternative.me/crypto/fear-and-greed-index/",
+      "source_name": "Alternative.me",
+      "delta_num": -7.0,
+      "delta_pct": -31.818181818181817,
+      "captured_at": "2026-06-18 07:04:49"
     },
     {
       "category": "market",
       "metric_key": "crypto_mcap",
       "metric_label": "Total Crypto Market Cap",
-      "value_num": 2304397634372.0,
+      "value_num": 2287107705835.0,
       "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -15211901187.0,
-      "delta_pct": -0.6557957688052918,
-      "captured_at": "2026-06-18 01:11:34"
+      "source_url": "https://api.coingecko.com/api/v3/global",
+      "source_name": "CoinGecko",
+      "delta_num": -17289928537.0,
+      "delta_pct": -0.7503014357898302,
+      "captured_at": "2026-06-18 07:04:49"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 56.07,
+      "value_num": 56.13,
       "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.18999999999999773,
-      "delta_pct": -0.33771773906860597,
-      "captured_at": "2026-06-18 01:11:34"
+      "source_url": "https://api.coingecko.com/api/v3/global",
+      "source_name": "CoinGecko",
+      "delta_num": 0.060000000000002274,
+      "delta_pct": 0.10700909577314477,
+      "captured_at": "2026-06-18 07:04:49"
     },
     {
       "category": "market",
       "metric_key": "eth_btc_ratio",
       "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02718,
+      "value_num": 0.02708,
       "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 8.99999999999998e-05,
-      "delta_pct": 0.33222591362126175,
-      "captured_at": "2026-06-18 01:11:34"
+      "source_url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd",
+      "source_name": "CoinGecko",
+      "delta_num": -9.99999999999994e-05,
+      "delta_pct": -0.3679175864606306,
+      "captured_at": "2026-06-18 07:04:49"
     },
     {
       "category": "onchain",
@@ -913,6 +913,39 @@
     }
   ],
   "news": [
+    {
+      "title": "China\u2019s mBridge push highlights CBDC rails as a potential alternative to SWIFT",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/chinas-mbridge-threatens-swift-xrp-150215610.html",
+      "body": "The article says China is commercializing Project mBridge via a Hong Kong-based entity and claims the platform has processed roughly 470 billion yuan (~$69B), mostly using e-CNY. It argues mBridge could reduce reliance on intermediary networks for cross-border settlement by enabling direct CBDC transfers among participating central banks.",
+      "source": "Yahoo Finance (via CCN)",
+      "date": "2026-06-16",
+      "captured_at": "2026-06-18 07:04:49",
+      "entity_ids": [],
+      "markets": [
+        "cbdc",
+        "cross_border_payments"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "market:cbdc",
+        "market:cross_border_payments",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "title": "US banks tap The Clearing House for a tokenized deposit network",
+      "url": "https://www.ledgerinsights.com/us-banks-tap-the-clearing-house-for-tokenized-deposit-network/",
+      "body": "Ledger Insights reports that The Clearing House is expected to operate a tokenized deposit network for US banks, leveraging its existing CHIPS/EPN/RTP rails. The technology provider has not yet been selected, and the initiative is positioned as an interbank settlement network.",
+      "source": "Ledger Insights",
+      "date": "2026-06-05",
+      "captured_at": "2026-06-18 07:04:49",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "China's mBridge expansion renews debate on cross-border CBDC rails",
       "url": "https://finance.yahoo.com/markets/crypto/articles/chinas-mbridge-threatens-swift-xrp-150215610.html",
@@ -1894,51 +1927,6 @@
         "region:Asia-Pacific",
         "region:North America"
       ]
-    },
-    {
-      "title": "ADGM FSRA announces FRT rules effective January 1, 2026",
-      "url": "https://www.adgm.com/media/announcements/adgm-fsra-presents-key-enhancements-to-its-digital-assets-framework-at-abu-dhabi-finance-week-2025",
-      "body": "Abu Dhabi Global Market's FSRA presented enhancements to its Virtual Asset framework. Fiat-Referenced Token rules effective Jan 1, 2026 with 20+ regulated firms operating.",
-      "source": "ADGM",
-      "date": "2025-11-15T00:00:00Z",
-      "category": "regulation",
-      "severity": "info",
-      "captured_at": "2026-05-22 20:09:49",
-      "entity_ids": [
-        "adgm_fsra"
-      ],
-      "markets": [
-        "regulation"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:adgm_fsra",
-        "market:regulation",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "SEC is said to ready plan for trading tokenized stocks (innovation exemption)",
-      "url": "https://www.bloomberg.com/news/articles/2026-05-18/sec-is-said-to-ready-plan-for-trading-crypto-versions-of-stocks",
-      "source": "Bloomberg",
-      "published": "2026-05-19",
-      "severity": "warning",
-      "category": "regulation",
-      "summary": "Bloomberg reports the SEC may release an innovation exemption framework to enable trading digital versions of securities (tokenized stocks) as soon as this week.",
-      "captured_at": "2026-05-22 07:09:52",
-      "entity_ids": [],
-      "markets": [
-        "regulation"
-      ],
-      "regions": [
-        "North America"
-      ],
-      "tags": [
-        "market:regulation",
-        "region:North America"
-      ]
     }
   ],
   "alerts": [
@@ -1975,6 +1963,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-18 01:11:34",
-  "server_time_utc": "2026-06-18T01:11:34.510258Z"
+  "last_update": "2026-06-18 07:04:49",
+  "server_time_utc": "2026-06-18T07:04:49.385602Z"
 }
