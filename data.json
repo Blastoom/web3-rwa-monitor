@@ -1,34 +1,10 @@
 {
   "metrics": {
-    "tokenized_treas": {
-      "value": 12800000000.0,
-      "delta_pct": 316.18910849614065,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
     "buidl_aum": {
       "value": 2369806007.0,
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 7408856864.0,
-      "delta_pct": -4.164898572546085,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "defi_tvl": {
-      "value": 96195000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "DeFi TVL (total)",
       "category": "onchain",
       "source_url": ""
     },
@@ -40,28 +16,52 @@
       "category": "risk",
       "source_url": ""
     },
+    "defi_tvl": {
+      "value": 96195000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "DeFi TVL (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
     "crypto_mcap": {
-      "value": 2319609535559.0,
-      "delta_pct": 0.15601372393727414,
+      "value": 2304397634372.0,
+      "delta_pct": -0.6557957688052918,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
       "source_url": ""
     },
     "btc_dom": {
-      "value": 56.26,
-      "delta_pct": 0.24946543121881784,
+      "value": 56.07,
+      "delta_pct": -0.33771773906860597,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
     "eth_btc_ratio": {
-      "value": 0.02709,
-      "delta_pct": 0.11086474501108197,
+      "value": 0.02718,
+      "delta_pct": 0.33222591362126175,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 12800000000.0,
+      "delta_pct": 316.18910849614065,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 7408856864.0,
+      "delta_pct": -4.164898572546085,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
       "source_url": ""
     },
     "rwa_total": {
@@ -372,6 +372,78 @@
   "metrics_list": [
     {
       "category": "onchain",
+      "metric_key": "buidl_aum",
+      "metric_label": "BlackRock BUIDL AUM",
+      "value_num": 2369806007.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 22.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "defi_tvl",
+      "metric_label": "DeFi TVL (total)",
+      "value_num": 96195000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2304397634372.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -15211901187.0,
+      "delta_pct": -0.6557957688052918,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 56.07,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.18999999999999773,
+      "delta_pct": -0.33771773906860597,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02718,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 8.99999999999998e-05,
+      "delta_pct": 0.33222591362126175,
+      "captured_at": "2026-06-18 01:11:34"
+    },
+    {
+      "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
       "value_num": 12800000000.0,
@@ -384,18 +456,6 @@
     },
     {
       "category": "onchain",
-      "metric_key": "buidl_aum",
-      "metric_label": "BlackRock BUIDL AUM",
-      "value_num": 2369806007.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "onchain",
       "metric_key": "rwa_commodities",
       "metric_label": "Tokenized Commodities",
       "value_num": 7408856864.0,
@@ -404,66 +464,6 @@
       "source_name": "",
       "delta_num": -321981580.0,
       "delta_pct": -4.164898572546085,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "defi_tvl",
-      "metric_label": "DeFi TVL (total)",
-      "value_num": 96195000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 22.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2319609535559.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 3613272017.0,
-      "delta_pct": 0.15601372393727414,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 56.26,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.14000000000000057,
-      "delta_pct": 0.24946543121881784,
-      "captured_at": "2026-06-17 19:16:08"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02709,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 2.9999999999998778e-05,
-      "delta_pct": 0.11086474501108197,
       "captured_at": "2026-06-17 19:16:08"
     },
     {
@@ -913,6 +913,49 @@
     }
   ],
   "news": [
+    {
+      "title": "China's mBridge expansion renews debate on cross-border CBDC rails",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/chinas-mbridge-threatens-swift-xrp-150215610.html",
+      "body": "A report highlighted renewed attention on mBridge-style CBDC rails for cross-border payments and their potential impact on incumbent messaging/payment networks. It underscores that wholesale CBDC experiments remain a live policy topic in Asia.",
+      "source": "Yahoo Finance",
+      "date": "2026-06-17",
+      "captured_at": "2026-06-18 01:11:34",
+      "entity_ids": [],
+      "markets": [
+        "cbdc",
+        "cross_border_payments"
+      ],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "market:cbdc",
+        "market:cross_border_payments",
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "title": "Bitso launches a peso-denominated money market product",
+      "url": "https://www.valuethemarkets.com/cryptocurrency/news/bitso-launches-peso-denominated-money-market-in-a-defi-evolution",
+      "body": "Bitso launched a peso-denominated money-market style product, signalling continued LATAM experimentation with yield-bearing, regulated-like instruments in crypto-native rails. The launch adds to the region's trend of integrating traditional cash-management concepts into digital-asset platforms.",
+      "source": "ValueTheMarkets",
+      "date": "2026-06-17",
+      "captured_at": "2026-06-18 01:11:34",
+      "entity_ids": [
+        "bitso"
+      ],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [
+        "Latin America"
+      ],
+      "tags": [
+        "entity:bitso",
+        "market:stablecoins",
+        "region:Latin America"
+      ]
+    },
     {
       "title": "US SEC poised to allow tokenized stock trading in potential market shakeup",
       "url": "https://www.usnews.com/news/top-news/articles/2026-06-17/us-sec-poised-to-allow-stock-token-trading-in-potential-market-shakeup",
@@ -1896,48 +1939,17 @@
         "market:regulation",
         "region:North America"
       ]
-    },
-    {
-      "title": "FinCEN and OFAC publish proposed rule for stablecoin issuers under the GENIUS Act (30-day comment period)",
-      "url": "https://www.gtlaw.com/en/insights/2026/5/fincen-and-ofac-propose-aml-cft-sanctions-framework-for-payment-stablecoin-issuers-under-genius-act",
-      "source": "Greenberg Traurig",
-      "ts": "2026-05-21",
-      "severity": "info",
-      "category": "policy",
-      "body": "El 10 Abr 2026 FinCEN y OFAC emitieron una Proposed Rule para implementar requisitos AML/CFT y sanciones para permitted payment stablecoin issuers bajo GENIUS Act; comentarios hasta 9 Jun 2026.",
-      "captured_at": "2026-05-22 01:17:10",
-      "entity_ids": [],
-      "markets": [
-        "regulation",
-        "stablecoins"
-      ],
-      "regions": [],
-      "tags": [
-        "market:regulation",
-        "market:stablecoins"
-      ]
-    },
-    {
-      "title": "Broadridge DLR: record volumes in March (+392% YoY)",
-      "url": "https://www.broadridge.com/press-release/2026/broadridges-dlr-platform-achieves-392-percent-year-over-year-growth-in-march",
-      "source": "Broadridge",
-      "severity": "info",
-      "summary": "Broadridge report\u00f3 que su plataforma Distributed Ledger Repo (DLR) proces\u00f3 un promedio de ~$354B/d\u00eda en marzo y casi $8T en volumen mensual (marzo), con crecimiento interanual de 392%.",
-      "captured_at": "2026-05-18 13:30:53",
-      "entity_ids": [
-        "broadridge_dlr"
-      ],
-      "markets": [
-        "repo"
-      ],
-      "regions": [],
-      "tags": [
-        "entity:broadridge_dlr",
-        "market:repo"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed index at 22 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-18 01:11:34",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -1963,6 +1975,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-17 19:16:08",
-  "server_time_utc": "2026-06-17T19:16:08.913092Z"
+  "last_update": "2026-06-18 01:11:34",
+  "server_time_utc": "2026-06-18T01:11:34.510258Z"
 }
