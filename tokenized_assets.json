@@ -1,6 +1,21 @@
 {
-  "last_update": "2026-06-19 13:24:04",
+  "last_update": "2026-06-19 19:11:46",
   "assets": [
+    {
+      "id": "kfw_crypto_bond_jun2026",
+      "asset": "Crypto bond (EUR 100m)",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "Polygon",
+      "region": "EU",
+      "country": "Germany",
+      "flag": "DE",
+      "size_usd": null,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "A KfW digital bond issuance referenced by ICMA\u2019s tracker, involving Polygon and later migration to a regulated DLT layer (SWIAT/RL1)."
+    },
     {
       "id": "kfw_crypto_bond_polygon_2026_06_09",
       "asset": "Crypto bond",
