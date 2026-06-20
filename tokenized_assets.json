@@ -1,6 +1,23 @@
 {
-  "last_update": "2026-06-19 19:11:46",
+  "last_update": "2026-06-20 01:06:25",
   "assets": [
+    {
+      "id": "kfw_crypto_security_bond_2026-06-09",
+      "asset": "Crypto security bond",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": null,
+      "region": "EU",
+      "country": "Germany",
+      "flag": null,
+      "lat": null,
+      "lng": null,
+      "size_usd": null,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "ICMA tracker lists a KfW blockchain-based crypto security bond dated 2026-06-09 (chain and size not specified in the tracker excerpt)."
+    },
     {
       "id": "kfw_crypto_bond_jun2026",
       "asset": "Crypto bond (EUR 100m)",
