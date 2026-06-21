@@ -1,6 +1,21 @@
 {
-  "last_update": "2026-06-20 13:02:09",
+  "last_update": "2026-06-21 07:16:12",
   "assets": [
+    {
+      "id": "kfw_third_crypto_bond_jun2026",
+      "asset": "Third crypto bond",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "Polygon (planned migration to SWIAT RL1)",
+      "region": "EU",
+      "country": "Germany",
+      "flag": "DE",
+      "size_usd": null,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "KfW issued its third blockchain-based \u201ccrypto bond\u201d as part of Germany's electronic securities framework; issuance size was not publicly stated in the ICMA tracker entry."
+    },
     {
       "id": "kfw_third_crypto_bond_2026_06_09",
       "asset": "third crypto bond",
