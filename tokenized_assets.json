@@ -1,6 +1,23 @@
 {
-  "last_update": "2026-06-21 13:14:54",
+  "last_update": "2026-06-22 01:11:14",
   "assets": [
+    {
+      "id": "kfw_crypto_bond_2026_06_09",
+      "asset": "crypto bond",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "bond",
+      "chain": "blockchain / not specified",
+      "region": null,
+      "country": "Germany",
+      "flag": null,
+      "lat": null,
+      "lng": null,
+      "size_usd": 113000000,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": null
+    },
     {
       "id": "kfw_crypto_security_bond_jun2026",
       "asset": "Crypto security bond",
