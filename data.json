@@ -2,15 +2,15 @@
   "metrics": {
     "rwa_total": {
       "value": 32240000000.0,
-      "delta_pct": -0.12391573729863693,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_treas": {
-      "value": 5950000000.0,
-      "delta_pct": -38.78600823045267,
+      "value": 7700000000.0,
+      "delta_pct": 29.411764705882355,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
@@ -25,32 +25,32 @@
       "source_url": ""
     },
     "rwa_commodities": {
-      "value": 4580000000.0,
-      "delta_pct": 1.7777777777777777,
+      "value": 4500000000.0,
+      "delta_pct": -1.7467248908296942,
       "unit": "USD",
       "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_credit": {
-      "value": 2090000000.0,
-      "delta_pct": 60.76923076923077,
+      "value": 2210000000.0,
+      "delta_pct": 5.741626794258373,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_real_estate": {
-      "value": 107700000.0,
-      "delta_pct": -17.786259541984734,
+      "value": 112700000.0,
+      "delta_pct": 4.642525533890436,
       "unit": "USD",
       "label": "Tokenized Real Estate",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_equities": {
-      "value": 545400000.0,
-      "delta_pct": 3.1391830559757943,
+      "value": 4430000000.0,
+      "delta_pct": 712.2478914558122,
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
@@ -73,24 +73,24 @@
       "source_url": ""
     },
     "crypto_mcap": {
-      "value": 2320038707770.0,
-      "delta_pct": 1.373039676523361,
+      "value": 2291567909021.0,
+      "delta_pct": -1.2271691266895228,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
       "source_url": ""
     },
     "btc_dom": {
-      "value": 56.35,
-      "delta_pct": 0.24906600249066102,
+      "value": 56.31,
+      "delta_pct": -0.07098491570541109,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
     "eth_btc_ratio": {
-      "value": 0.02711,
-      "delta_pct": -0.220831799779172,
+      "value": 0.02693,
+      "delta_pct": -0.6639616377720383,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
@@ -378,21 +378,21 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -40000000.0,
-      "delta_pct": -0.12391573729863693,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 5950000000.0,
+      "value_num": 7700000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -3770000000.0,
-      "delta_pct": -38.78600823045267,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": 1750000000.0,
+      "delta_pct": 29.411764705882355,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
@@ -404,55 +404,55 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-22 13:46:01"
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
       "metric_key": "rwa_commodities",
       "metric_label": "Tokenized Commodities",
-      "value_num": 4580000000.0,
+      "value_num": 4500000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 80000000.0,
-      "delta_pct": 1.7777777777777777,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": -80000000.0,
+      "delta_pct": -1.7467248908296942,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_credit",
       "metric_label": "Tokenized Private Credit",
-      "value_num": 2090000000.0,
+      "value_num": 2210000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 790000000.0,
-      "delta_pct": 60.76923076923077,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": 120000000.0,
+      "delta_pct": 5.741626794258373,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_real_estate",
       "metric_label": "Tokenized Real Estate",
-      "value_num": 107700000.0,
+      "value_num": 112700000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -23300000.0,
-      "delta_pct": -17.786259541984734,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": 5000000.0,
+      "delta_pct": 4.642525533890436,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_equities",
       "metric_label": "Tokenized Equities",
-      "value_num": 545400000.0,
+      "value_num": 4430000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 16600000.0,
-      "delta_pct": 3.1391830559757943,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": 3884600000.0,
+      "delta_pct": 712.2478914558122,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
@@ -464,7 +464,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-22 13:46:01"
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "risk",
@@ -476,43 +476,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-22 13:46:01"
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "market",
       "metric_key": "crypto_mcap",
       "metric_label": "Total Crypto Market Cap",
-      "value_num": 2320038707770.0,
+      "value_num": 2291567909021.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 31423593561.0,
-      "delta_pct": 1.373039676523361,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": -28470798749.0,
+      "delta_pct": -1.2271691266895228,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 56.35,
+      "value_num": 56.31,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.14000000000000057,
-      "delta_pct": 0.24906600249066102,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": -0.03999999999999915,
+      "delta_pct": -0.07098491570541109,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "market",
       "metric_key": "eth_btc_ratio",
       "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02711,
+      "value_num": 0.02693,
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": -6.0000000000001025e-05,
-      "delta_pct": -0.220831799779172,
-      "captured_at": "2026-06-22 13:46:01"
+      "delta_num": -0.0001799999999999996,
+      "delta_pct": -0.6639616377720383,
+      "captured_at": "2026-06-22 18:59:37"
     },
     {
       "category": "onchain",
@@ -913,6 +913,39 @@
     }
   ],
   "news": [
+    {
+      "title": "KfW issues a crypto security bond (Germany)",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "body": "ICMA\u2019s tracker lists a new KfW crypto security bond dated 2026-06-09, highlighting continued experimentation with tokenized bond formats in European capital markets.",
+      "source": "ICMA tracker",
+      "date": "2026-06-09",
+      "captured_at": "2026-06-22 18:59:37",
+      "entity_ids": [],
+      "markets": [
+        "regulation"
+      ],
+      "regions": [
+        "Europe",
+        "North America"
+      ],
+      "tags": [
+        "market:regulation",
+        "region:Europe",
+        "region:North America"
+      ]
+    },
+    {
+      "title": "Top US banks reportedly form a tokenized deposit network initiative",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/big-us-banks-target-tokenised-132317506.html",
+      "body": "A report says major US banks are collaborating on a tokenized deposit network, with broader bank access expected in 2027, signaling growing momentum around bank-issued onchain deposits.",
+      "source": "Yahoo Finance",
+      "date": "2026-06-08",
+      "captured_at": "2026-06-22 18:59:37",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "Nigeria plans to use government payments to boost eNaira adoption",
       "url": "https://www.globalgovernmentfinance.com/nigeria-payments-system-vision-2028-enaira-plans/",
@@ -1813,53 +1846,17 @@
         "market:cbdc",
         "region:Middle East"
       ]
-    },
-    {
-      "title": "SAMA: E-payments accounted for 85% of total retail payments in 2025",
-      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
-      "body": "Saudi Central Bank (SAMA) reported e-payments reached 85% of total retail payments in 2025, highlighting continued digitization of the payments ecosystem.",
-      "source": "SAMA",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-30 13:11:16",
-      "entity_ids": [
-        "sama_saudi"
-      ],
-      "markets": [
-        "cbdc"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:sama_saudi",
-        "market:cbdc",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "SAMA says e-payments accounted for 85% of Saudi retail payments in 2025",
-      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
-      "body": "Saudi Central Bank (SAMA) reported that e-payments represented 85% of total retail payments in 2025, highlighting continued digital payments adoption supporting future tokenized settlement use cases.",
-      "source": "SAMA",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-30 07:13:21",
-      "entity_ids": [
-        "sama_saudi"
-      ],
-      "markets": [
-        "cbdc"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:sama_saudi",
-        "market:cbdc",
-        "region:Middle East"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Index at 23 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-22 18:59:37",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -1909,6 +1906,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-22 13:46:01",
-  "server_time_utc": "2026-06-22T13:46:01.916633Z"
+  "last_update": "2026-06-22 18:59:37",
+  "server_time_utc": "2026-06-22T18:59:37.256061Z"
 }
