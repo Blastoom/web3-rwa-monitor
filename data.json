@@ -1,5 +1,29 @@
 {
   "metrics": {
+    "crypto_mcap": {
+      "value": 2221569578235.0,
+      "delta_pct": -0.749790289068142,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 56.18,
+      "delta_pct": -0.01779676098949637,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02661,
+      "delta_pct": 0.1505457282649674,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 32280000000.0,
       "delta_pct": -89.13460567504796,
@@ -22,30 +46,6 @@
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2238352528126.0,
-      "delta_pct": -0.42330801552806346,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 56.19,
-      "delta_pct": 0.10689470871191015,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02657,
-      "delta_pct": -1.1532738095238142,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
       "source_url": ""
     },
     "stablecoin_mcap": {
@@ -371,6 +371,42 @@
   },
   "metrics_list": [
     {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2221569578235.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -16782949891.0,
+      "delta_pct": -0.749790289068142,
+      "captured_at": "2026-06-23 19:20:36"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 56.18,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.00999999999999801,
+      "delta_pct": -0.01779676098949637,
+      "captured_at": "2026-06-23 19:20:36"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02661,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 4.000000000000184e-05,
+      "delta_pct": 0.1505457282649674,
+      "captured_at": "2026-06-23 19:20:36"
+    },
+    {
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
@@ -404,42 +440,6 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-23 14:22:49"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2238352528126.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -9515405140.0,
-      "delta_pct": -0.42330801552806346,
-      "captured_at": "2026-06-23 14:22:49"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 56.19,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.05999999999999517,
-      "delta_pct": 0.10689470871191015,
-      "captured_at": "2026-06-23 14:22:49"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02657,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.00031000000000000125,
-      "delta_pct": -1.1532738095238142,
       "captured_at": "2026-06-23 14:22:49"
     },
     {
@@ -1861,6 +1861,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-23 14:22:49",
-  "server_time_utc": "2026-06-23T14:22:49.886091Z"
+  "last_update": "2026-06-23 19:20:36",
+  "server_time_utc": "2026-06-23T19:20:36.571387Z"
 }
