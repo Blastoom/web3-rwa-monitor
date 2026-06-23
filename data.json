@@ -1,18 +1,10 @@
 {
   "metrics": {
     "rwa_total": {
-      "value": 297090000000.0,
-      "delta_pct": 821.2093023255815,
+      "value": 32280000000.0,
+      "delta_pct": -89.13460567504796,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_treas": {
-      "value": 11170000000.0,
-      "delta_pct": 5.317744672826702,
-      "unit": "USD",
-      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -21,6 +13,86 @@
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "BlackRock BUIDL AUM",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "fear_greed": {
+      "value": 20.0,
+      "delta_pct": 0.0,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 2238352528126.0,
+      "delta_pct": -0.42330801552806346,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 56.19,
+      "delta_pct": 0.10689470871191015,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02657,
+      "delta_pct": -1.1532738095238142,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
+    "stablecoin_mcap": {
+      "value": 315347720306.0,
+      "delta_pct": 1.1797170474646934,
+      "unit": "USD",
+      "label": "Stablecoin Market Cap (total)",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdt_share": {
+      "value": 59.01,
+      "delta_pct": -1.2384937238493756,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 23.62,
+      "delta_pct": -1.5833333333333293,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usde_mcap": {
+      "value": 4477279212.0,
+      "delta_pct": -0.038009689023377174,
+      "unit": "USD",
+      "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "liq_24h": {
+      "value": 216460000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
+      "source_url": ""
+    },
+    "tokenized_treas": {
+      "value": 11170000000.0,
+      "delta_pct": 5.317744672826702,
+      "unit": "USD",
+      "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
       "source_url": ""
     },
@@ -64,83 +136,11 @@
       "category": "onchain",
       "source_url": ""
     },
-    "fear_greed": {
-      "value": 20.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 216460000.0,
-      "delta_pct": 240.9892879647133,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
-      "category": "risk",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2247867933266.0,
-      "delta_pct": -1.4616483181826094,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 56.13,
-      "delta_pct": -0.2488004265150179,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02688,
-      "delta_pct": -0.4075583549462727,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
-      "source_url": ""
-    },
     "tokenized_gold": {
       "value": 4400000000.0,
       "delta_pct": -95.14884233737597,
       "unit": "USD",
       "label": "Tokenized Gold Volume Q",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "stablecoin_mcap": {
-      "value": 311670885735.0,
-      "delta_pct": -0.8980055436118035,
-      "unit": "USD",
-      "label": "Stablecoin Market Cap (total)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdt_share": {
-      "value": 59.75,
-      "delta_pct": 0.9290540540540493,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdc_share": {
-      "value": 24.0,
-      "delta_pct": 0.797984040319199,
-      "unit": "%",
-      "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usde_mcap": {
-      "value": 4478981659.0,
-      "delta_pct": -18.563969836363636,
-      "unit": "USD",
-      "label": "USDe Market Cap",
       "category": "onchain",
       "source_url": ""
     },
@@ -374,25 +374,13 @@
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 297090000000.0,
+      "value_num": 32280000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 264840000000.0,
-      "delta_pct": 821.2093023255815,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_treas",
-      "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 11170000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 564000000.0,
-      "delta_pct": 5.317744672826702,
-      "captured_at": "2026-06-23 07:18:22"
+      "delta_num": -264810000000.0,
+      "delta_pct": -89.13460567504796,
+      "captured_at": "2026-06-23 14:22:49"
     },
     {
       "category": "onchain",
@@ -404,6 +392,126 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 20.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2238352528126.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -9515405140.0,
+      "delta_pct": -0.42330801552806346,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 56.19,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.05999999999999517,
+      "delta_pct": 0.10689470871191015,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02657,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.00031000000000000125,
+      "delta_pct": -1.1532738095238142,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "stablecoin_mcap",
+      "metric_label": "Stablecoin Market Cap (total)",
+      "value_num": 315347720306.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 3676834571.0,
+      "delta_pct": 1.1797170474646934,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 59.01,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.740000000000002,
+      "delta_pct": -1.2384937238493756,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 23.62,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.379999999999999,
+      "delta_pct": -1.5833333333333293,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usde_mcap",
+      "metric_label": "USDe Market Cap",
+      "value_num": 4477279212.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -1702447.0,
+      "delta_pct": -0.038009689023377174,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 216460000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-23 14:22:49"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_treas",
+      "metric_label": "Tokenized U.S. Treasuries (AUM)",
+      "value_num": 11170000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 564000000.0,
+      "delta_pct": 5.317744672826702,
       "captured_at": "2026-06-23 07:18:22"
     },
     {
@@ -467,66 +575,6 @@
       "captured_at": "2026-06-23 07:18:22"
     },
     {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 20.0,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
-      "category": "risk",
-      "metric_key": "liq_24h",
-      "metric_label": "Liquidations (24h)",
-      "value_num": 216460000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 152980000.0,
-      "delta_pct": 240.9892879647133,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2247867933266.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -33343285412.0,
-      "delta_pct": -1.4616483181826094,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 56.13,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.14000000000000057,
-      "delta_pct": -0.2488004265150179,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02688,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.00010999999999999899,
-      "delta_pct": -0.4075583549462727,
-      "captured_at": "2026-06-23 07:18:22"
-    },
-    {
       "category": "onchain",
       "metric_key": "tokenized_gold",
       "metric_label": "Tokenized Gold Volume Q",
@@ -537,54 +585,6 @@
       "delta_num": -86300000000.0,
       "delta_pct": -95.14884233737597,
       "captured_at": "2026-06-22 01:11:14"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "stablecoin_mcap",
-      "metric_label": "Stablecoin Market Cap (total)",
-      "value_num": 311670885735.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -2824183153.0,
-      "delta_pct": -0.8980055436118035,
-      "captured_at": "2026-06-21 19:12:02"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 59.75,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.5499999999999972,
-      "delta_pct": 0.9290540540540493,
-      "captured_at": "2026-06-21 19:12:02"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 24.0,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.19000000000000128,
-      "delta_pct": 0.797984040319199,
-      "captured_at": "2026-06-21 19:12:02"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usde_mcap",
-      "metric_label": "USDe Market Cap",
-      "value_num": 4478981659.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -1021018341.0,
-      "delta_pct": -18.563969836363636,
-      "captured_at": "2026-06-21 19:12:02"
     },
     {
       "category": "onchain",
@@ -1815,6 +1815,14 @@
     {
       "severity": "warning",
       "title": "Extreme fear in market",
+      "body": "Index at 20 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-23 14:22:49",
+      "acknowledged": 0
+    },
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
       "body": "Fear & Greed Index at 20 \u2014 extreme fear",
       "category": "risk",
       "created_at": "2026-06-23 07:18:22",
@@ -1851,16 +1859,8 @@
       "category": "risk",
       "created_at": "2026-06-22 01:11:14",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 23 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-21 13:14:54",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-23 07:18:22",
-  "server_time_utc": "2026-06-23T07:18:22.828725Z"
+  "last_update": "2026-06-23 14:22:49",
+  "server_time_utc": "2026-06-23T14:22:49.886091Z"
 }
