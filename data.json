@@ -1,16 +1,16 @@
 {
   "metrics": {
     "rwa_total": {
-      "value": 32250000000.0,
-      "delta_pct": 0.031017369727047148,
+      "value": 297090000000.0,
+      "delta_pct": 821.2093023255815,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_treas": {
-      "value": 10606000000.0,
-      "delta_pct": 37.74025974025974,
+      "value": 11170000000.0,
+      "delta_pct": 5.317744672826702,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
       "category": "onchain",
@@ -25,32 +25,32 @@
       "source_url": ""
     },
     "rwa_commodities": {
-      "value": 4597000000.0,
-      "delta_pct": 2.155555555555556,
+      "value": 4590000000.0,
+      "delta_pct": -0.1522732216663041,
       "unit": "USD",
       "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_credit": {
-      "value": 2033000.0,
-      "delta_pct": -99.90800904977377,
+      "value": 1810000000.0,
+      "delta_pct": 88930.98868666995,
       "unit": "USD",
       "label": "Tokenized Private Credit",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_real_estate": {
-      "value": 130900000.0,
-      "delta_pct": 16.149068322981368,
+      "value": 107000000.0,
+      "delta_pct": -18.258212375859433,
       "unit": "USD",
       "label": "Tokenized Real Estate",
       "category": "onchain",
       "source_url": ""
     },
     "tokenized_equities": {
-      "value": 1359000000.0,
-      "delta_pct": -69.32279909706546,
+      "value": 1240000000.0,
+      "delta_pct": -8.75643855776306,
       "unit": "USD",
       "label": "Tokenized Equities",
       "category": "onchain",
@@ -66,31 +66,39 @@
     },
     "fear_greed": {
       "value": 20.0,
-      "delta_pct": -13.043478260869565,
+      "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
       "source_url": ""
     },
+    "liq_24h": {
+      "value": 216460000.0,
+      "delta_pct": 240.9892879647133,
+      "unit": "USD",
+      "label": "Liquidations (24h)",
+      "category": "risk",
+      "source_url": ""
+    },
     "crypto_mcap": {
-      "value": 2281211218678.0,
-      "delta_pct": -0.4519477822249906,
+      "value": 2247867933266.0,
+      "delta_pct": -1.4616483181826094,
       "unit": "USD",
       "label": "Total Crypto Market Cap",
       "category": "market",
       "source_url": ""
     },
     "btc_dom": {
-      "value": 56.27,
-      "delta_pct": -0.07103534008168912,
+      "value": 56.13,
+      "delta_pct": -0.2488004265150179,
       "unit": "%",
       "label": "Bitcoin dominance",
       "category": "risk",
       "source_url": ""
     },
     "eth_btc_ratio": {
-      "value": 0.02699,
-      "delta_pct": 0.22279985146676948,
+      "value": 0.02688,
+      "delta_pct": -0.4075583549462727,
       "unit": "",
       "label": "ETH/BTC Ratio",
       "category": "market",
@@ -134,14 +142,6 @@
       "unit": "USD",
       "label": "USDe Market Cap",
       "category": "onchain",
-      "source_url": ""
-    },
-    "liq_24h": {
-      "value": 63480000.0,
-      "delta_pct": -87.02981018736081,
-      "unit": "USD",
-      "label": "Liquidations (24h)",
-      "category": "risk",
       "source_url": ""
     },
     "usde_share": {
@@ -374,25 +374,25 @@
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 32250000000.0,
+      "value_num": 297090000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 10000000.0,
-      "delta_pct": 0.031017369727047148,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": 264840000000.0,
+      "delta_pct": 821.2093023255815,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
-      "value_num": 10606000000.0,
+      "value_num": 11170000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 2906000000.0,
-      "delta_pct": 37.74025974025974,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": 564000000.0,
+      "delta_pct": 5.317744672826702,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
@@ -404,55 +404,55 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-23 01:07:08"
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
       "metric_key": "rwa_commodities",
       "metric_label": "Tokenized Commodities",
-      "value_num": 4597000000.0,
+      "value_num": 4590000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 97000000.0,
-      "delta_pct": 2.155555555555556,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -7000000.0,
+      "delta_pct": -0.1522732216663041,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_credit",
       "metric_label": "Tokenized Private Credit",
-      "value_num": 2033000.0,
+      "value_num": 1810000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -2207967000.0,
-      "delta_pct": -99.90800904977377,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": 1807967000.0,
+      "delta_pct": 88930.98868666995,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_real_estate",
       "metric_label": "Tokenized Real Estate",
-      "value_num": 130900000.0,
+      "value_num": 107000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 18200000.0,
-      "delta_pct": 16.149068322981368,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -23900000.0,
+      "delta_pct": -18.258212375859433,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
       "metric_key": "tokenized_equities",
       "metric_label": "Tokenized Equities",
-      "value_num": 1359000000.0,
+      "value_num": 1240000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -3071000000.0,
-      "delta_pct": -69.32279909706546,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -119000000.0,
+      "delta_pct": -8.75643855776306,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
@@ -464,7 +464,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-23 01:07:08"
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "risk",
@@ -474,45 +474,57 @@
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": -3.0,
-      "delta_pct": -13.043478260869565,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-23 07:18:22"
+    },
+    {
+      "category": "risk",
+      "metric_key": "liq_24h",
+      "metric_label": "Liquidations (24h)",
+      "value_num": 216460000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 152980000.0,
+      "delta_pct": 240.9892879647133,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "market",
       "metric_key": "crypto_mcap",
       "metric_label": "Total Crypto Market Cap",
-      "value_num": 2281211218678.0,
+      "value_num": 2247867933266.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -10356690343.0,
-      "delta_pct": -0.4519477822249906,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -33343285412.0,
+      "delta_pct": -1.4616483181826094,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "risk",
       "metric_key": "btc_dom",
       "metric_label": "Bitcoin dominance",
-      "value_num": 56.27,
+      "value_num": 56.13,
       "unit": "%",
       "source_url": "",
       "source_name": "",
-      "delta_num": -0.03999999999999915,
-      "delta_pct": -0.07103534008168912,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -0.14000000000000057,
+      "delta_pct": -0.2488004265150179,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "market",
       "metric_key": "eth_btc_ratio",
       "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02699,
+      "value_num": 0.02688,
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": 6.0000000000001025e-05,
-      "delta_pct": 0.22279985146676948,
-      "captured_at": "2026-06-23 01:07:08"
+      "delta_num": -0.00010999999999999899,
+      "delta_pct": -0.4075583549462727,
+      "captured_at": "2026-06-23 07:18:22"
     },
     {
       "category": "onchain",
@@ -573,18 +585,6 @@
       "delta_num": -1021018341.0,
       "delta_pct": -18.563969836363636,
       "captured_at": "2026-06-21 19:12:02"
-    },
-    {
-      "category": "risk",
-      "metric_key": "liq_24h",
-      "metric_label": "Liquidations (24h)",
-      "value_num": 63480000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -425950000.0,
-      "delta_pct": -87.02981018736081,
-      "captured_at": "2026-06-20 01:06:25"
     },
     {
       "category": "onchain",
@@ -913,6 +913,67 @@
     }
   ],
   "news": [
+    {
+      "title": "KfW issues third blockchain-based 'crypto bond' on Polygon",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "body": "ICMA's bond-market fintech tracker lists KfW's third crypto bond, using Polygon and the SWIAT/Regulated Layer One (RL1) infrastructure planned during the bond term. The tracker lists a size of about $107M (converted from \u20ac100M), dated 2026-06-09.",
+      "source": "ICMA",
+      "date": "2026-06-09",
+      "captured_at": "2026-06-23 07:18:22",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
+    {
+      "title": "JPMorgan highlights new Kinexys milestones and launches 'Kinexys Fund Flow'",
+      "url": "https://www.jpmorgan.com/payments/newsroom/kinexys-milestones-2026",
+      "body": "JPMorgan published an update outlining Kinexys milestones, including launching Kinexys Fund Flow (with an initial transaction involving J.P. Morgan Private Bank, J.P. Morgan Asset Management and Citco) and expanding Kinexys Digital Payments use cases. The post also notes a leadership update with Oliver Harris joining as Head of Kinexys.",
+      "source": "JPMorgan",
+      "date": "2026-04-28",
+      "captured_at": "2026-06-23 07:18:22",
+      "entity_ids": [
+        "jpmorgan_kinexys"
+      ],
+      "markets": [
+        "repo",
+        "tokenized_deposits"
+      ],
+      "regions": [],
+      "tags": [
+        "entity:jpmorgan_kinexys",
+        "market:repo",
+        "market:tokenized_deposits"
+      ]
+    },
+    {
+      "title": "Deutsche Bank publishes DAMA 2 litepaper for an institutional blueprint for tokenization on Ethereum L2",
+      "url": "https://www.db.com/news/detail/20250618-dama-2-litepaper-institutional-blueprint-for-asset-tokenisation-and-servicing-on-ethereum-layer-2?language_id=1",
+      "body": "Deutsche Bank released a DAMA 2 litepaper describing an institutional approach to asset tokenization and servicing on an Ethereum Layer 2. The publication is positioned as a blueprint for regulated tokenized-asset infrastructure.",
+      "source": "Deutsche Bank",
+      "date": "2025-06-18",
+      "captured_at": "2026-06-23 07:18:22",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
+    {
+      "title": "Top US banks reportedly plan a joint tokenized deposit system",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/big-us-banks-target-tokenised-132317506.html",
+      "body": "A report says several major US banks are coordinating on a tokenized deposit system, with an aim to make the platform available to US banks in the first half of 2027. The effort is described as a response to rising competition from stablecoins and tokenized cash-like instruments.",
+      "source": "Yahoo Finance",
+      "date": "2026-06-08",
+      "captured_at": "2026-06-23 07:18:22",
+      "entity_ids": [],
+      "markets": [
+        "stablecoins"
+      ],
+      "regions": [],
+      "tags": [
+        "market:stablecoins"
+      ]
+    },
     {
       "title": "KfW issues a crypto security bond (Germany)",
       "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
@@ -1748,107 +1809,17 @@
         "market:cbdc",
         "region:Middle East"
       ]
-    },
-    {
-      "title": "UAE central bank approves dirham-backed stablecoin DDSC for operational launch",
-      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
-      "body": "The Central Bank of the UAE approved a dirham-backed stablecoin (DDSC) to move into operational launch, signaling continued regulatory support for tokenized money and payments infrastructure in the region.",
-      "source": "The Asian Banker",
-      "date": "2026-05-30",
-      "captured_at": "2026-06-01 13:39:32",
-      "entity_ids": [
-        "adq_uae",
-        "fab_uae",
-        "ihc_uae"
-      ],
-      "markets": [
-        "stablecoins"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:adq_uae",
-        "entity:fab_uae",
-        "entity:ihc_uae",
-        "market:stablecoins",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "Saudi Central Bank says e-payments reached 85% of retail payments in 2025",
-      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
-      "body": "SAMA reported that electronic payments represented 85% of total retail payments in 2025, highlighting continued digitization of the payments ecosystem. This is relevant for regional stablecoin and tokenized settlement adoption monitoring.",
-      "source": "SAMA",
-      "date": "2026-05-31",
-      "captured_at": "2026-06-01 07:15:49",
-      "entity_ids": [
-        "sama_saudi"
-      ],
-      "markets": [
-        "cbdc",
-        "stablecoins"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:sama_saudi",
-        "market:cbdc",
-        "market:stablecoins",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "CBUAE approves UAE dirham-backed stablecoin DDSC for operational launch",
-      "url": "https://www.theasianbanker.com/press-releases/cbuae-approves-uae-dirham-backed-stablecoin-ddsc-for-operational-launch",
-      "body": "The Central Bank of the UAE approved the dirham-backed stablecoin DDSC to go live, with IHC, Sirius International Holding, and First Abu Dhabi Bank stating it will operate on ADI Chain and target regulated institutional use cases.",
-      "source": "The Asian Banker (re-disseminated press release)",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-31 07:06:37",
-      "entity_ids": [
-        "adq_uae",
-        "fab_uae",
-        "ihc_uae"
-      ],
-      "markets": [
-        "stablecoins"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:adq_uae",
-        "entity:fab_uae",
-        "entity:ihc_uae",
-        "market:stablecoins",
-        "region:Middle East"
-      ]
-    },
-    {
-      "title": "Saudi central bank says e-payments reached 85% of retail payments in 2025",
-      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
-      "body": "SAMA reported e-payments accounted for 85% of total retail payments in 2025, underscoring continued digitization of the payments stack across the Kingdom.",
-      "source": "SAMA",
-      "date": "2026-05-30",
-      "captured_at": "2026-05-30 19:07:01",
-      "entity_ids": [
-        "sama_saudi"
-      ],
-      "markets": [
-        "cbdc"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:sama_saudi",
-        "market:cbdc",
-        "region:Middle East"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 20 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-23 07:18:22",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -1888,16 +1859,8 @@
       "category": "risk",
       "created_at": "2026-06-21 13:14:54",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 23 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-21 07:16:12",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-23 01:07:08",
-  "server_time_utc": "2026-06-23T01:07:08.495196Z"
+  "last_update": "2026-06-23 07:18:22",
+  "server_time_utc": "2026-06-23T07:18:22.828725Z"
 }
