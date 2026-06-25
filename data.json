@@ -1,32 +1,8 @@
 {
   "metrics": {
-    "crypto_mcap": {
-      "value": 2178486920956.0,
-      "delta_pct": 1.6830336926259075,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 55.94,
-      "delta_pct": 0.3948312993539104,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02661,
-      "delta_pct": 1.0250569476082114,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
-      "source_url": ""
-    },
     "rwa_total": {
-      "value": 32220000000.0,
-      "delta_pct": 0.0,
+      "value": 32230000000.0,
+      "delta_pct": 0.031036623215394164,
       "unit": "USD",
       "label": "RWA on-chain (excl. stablecoins)",
       "category": "onchain",
@@ -42,17 +18,49 @@
     },
     "stablecoin_mcap": {
       "value": 296580000000.0,
-      "delta_pct": -5.951436810067504,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "Stablecoin Market Cap (total)",
       "category": "onchain",
       "source_url": ""
     },
+    "usdt_share": {
+      "value": 0.627,
+      "delta_pct": -0.0159464200287018,
+      "unit": "%",
+      "label": "USDT Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "usdc_share": {
+      "value": 0.246,
+      "delta_pct": 0.08136696501220737,
+      "unit": "%",
+      "label": "USDC Dominance",
+      "category": "onchain",
+      "source_url": ""
+    },
     "usde_mcap": {
       "value": 4500000000.0,
-      "delta_pct": -16.884963799487014,
+      "delta_pct": 0.0,
       "unit": "USD",
       "label": "USDe Market Cap",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "rwa_commodities": {
+      "value": 4400000000.0,
+      "delta_pct": -4.3478260869565215,
+      "unit": "USD",
+      "label": "Tokenized Commodities",
+      "category": "onchain",
+      "source_url": ""
+    },
+    "tokenized_gold": {
+      "value": 4400000000.0,
+      "delta_pct": 0.0,
+      "unit": "USD",
+      "label": "Tokenized Gold Volume Q",
       "category": "onchain",
       "source_url": ""
     },
@@ -64,9 +72,33 @@
       "category": "onchain",
       "source_url": ""
     },
+    "crypto_mcap": {
+      "value": 2206189907253.0,
+      "delta_pct": 1.2716618140100155,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 56.03,
+      "delta_pct": 0.16088666428316664,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02678,
+      "delta_pct": 0.6388575723412251,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
     "fear_greed": {
       "value": 17.0,
-      "delta_pct": -26.08695652173913,
+      "delta_pct": 0.0,
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
@@ -80,35 +112,11 @@
       "category": "risk",
       "source_url": ""
     },
-    "usdt_share": {
-      "value": 0.6271,
-      "delta_pct": -99.10503781932354,
-      "unit": "%",
-      "label": "USDT Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "usdc_share": {
-      "value": 0.2458,
-      "delta_pct": -99.11868053065615,
-      "unit": "%",
-      "label": "USDC Dominance",
-      "category": "onchain",
-      "source_url": ""
-    },
     "tokenized_treas": {
       "value": 3100000000.0,
       "delta_pct": -62.78511404561825,
       "unit": "USD",
       "label": "Tokenized U.S. Treasuries (AUM)",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "rwa_commodities": {
-      "value": 4600000000.0,
-      "delta_pct": 0.0,
-      "unit": "USD",
-      "label": "Tokenized Commodities",
       "category": "onchain",
       "source_url": ""
     },
@@ -133,14 +141,6 @@
       "delta_pct": 0.0,
       "unit": "USD",
       "label": "Tokenized Equities",
-      "category": "onchain",
-      "source_url": ""
-    },
-    "tokenized_gold": {
-      "value": 4400000000.0,
-      "delta_pct": -95.14884233737597,
-      "unit": "USD",
-      "label": "Tokenized Gold Volume Q",
       "category": "onchain",
       "source_url": ""
     },
@@ -371,52 +371,16 @@
   },
   "metrics_list": [
     {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2178486920956.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 36057803881.0,
-      "delta_pct": 1.6830336926259075,
-      "captured_at": "2026-06-25 01:09:04"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 55.94,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.21999999999999886,
-      "delta_pct": 0.3948312993539104,
-      "captured_at": "2026-06-25 01:09:04"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02661,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0002700000000000029,
-      "delta_pct": 1.0250569476082114,
-      "captured_at": "2026-06-25 01:09:04"
-    },
-    {
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
-      "value_num": 32220000000.0,
+      "value_num": 32230000000.0,
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-24 19:13:20"
+      "delta_num": 10000000.0,
+      "delta_pct": 0.031036623215394164,
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "onchain",
@@ -428,7 +392,7 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-24 19:13:20"
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "onchain",
@@ -438,9 +402,33 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -18767720306.0,
-      "delta_pct": -5.951436810067504,
-      "captured_at": "2026-06-24 19:13:20"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdt_share",
+      "metric_label": "USDT Dominance",
+      "value_num": 0.627,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -9.999999999998899e-05,
+      "delta_pct": -0.0159464200287018,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "usdc_share",
+      "metric_label": "USDC Dominance",
+      "value_num": 0.246,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.00020000000000000573,
+      "delta_pct": 0.08136696501220737,
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "onchain",
@@ -450,9 +438,33 @@
       "unit": "USD",
       "source_url": "",
       "source_name": "",
-      "delta_num": -914182807.0,
-      "delta_pct": -16.884963799487014,
-      "captured_at": "2026-06-24 19:13:20"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "rwa_commodities",
+      "metric_label": "Tokenized Commodities",
+      "value_num": 4400000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -200000000.0,
+      "delta_pct": -4.3478260869565215,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "onchain",
+      "metric_key": "tokenized_gold",
+      "metric_label": "Tokenized Gold Volume Q",
+      "value_num": 4400000000.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "onchain",
@@ -464,7 +476,43 @@
       "source_name": "",
       "delta_num": 0.0,
       "delta_pct": 0.0,
-      "captured_at": "2026-06-24 19:13:20"
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2206189907253.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 27702986297.0,
+      "delta_pct": 1.2716618140100155,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 56.03,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.09000000000000341,
+      "delta_pct": 0.16088666428316664,
+      "captured_at": "2026-06-25 07:07:48"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02678,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.00017,
+      "delta_pct": 0.6388575723412251,
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "risk",
@@ -474,9 +522,9 @@
       "unit": "",
       "source_url": "",
       "source_name": "",
-      "delta_num": -6.0,
-      "delta_pct": -26.08695652173913,
-      "captured_at": "2026-06-24 19:13:20"
+      "delta_num": 0.0,
+      "delta_pct": 0.0,
+      "captured_at": "2026-06-25 07:07:48"
     },
     {
       "category": "risk",
@@ -492,30 +540,6 @@
     },
     {
       "category": "onchain",
-      "metric_key": "usdt_share",
-      "metric_label": "USDT Dominance",
-      "value_num": 0.6271,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -69.4429,
-      "delta_pct": -99.10503781932354,
-      "captured_at": "2026-06-24 19:13:20"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "usdc_share",
-      "metric_label": "USDC Dominance",
-      "value_num": 0.2458,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -27.6442,
-      "delta_pct": -99.11868053065615,
-      "captured_at": "2026-06-24 19:13:20"
-    },
-    {
-      "category": "onchain",
       "metric_key": "tokenized_treas",
       "metric_label": "Tokenized U.S. Treasuries (AUM)",
       "value_num": 3100000000.0,
@@ -524,18 +548,6 @@
       "source_name": "",
       "delta_num": -5230000000.0,
       "delta_pct": -62.78511404561825,
-      "captured_at": "2026-06-24 13:13:20"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "rwa_commodities",
-      "metric_label": "Tokenized Commodities",
-      "value_num": 4600000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
       "captured_at": "2026-06-24 13:13:20"
     },
     {
@@ -573,18 +585,6 @@
       "delta_num": 0.0,
       "delta_pct": 0.0,
       "captured_at": "2026-06-24 13:13:20"
-    },
-    {
-      "category": "onchain",
-      "metric_key": "tokenized_gold",
-      "metric_label": "Tokenized Gold Volume Q",
-      "value_num": 4400000000.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -86300000000.0,
-      "delta_pct": -95.14884233737597,
-      "captured_at": "2026-06-22 01:11:14"
     },
     {
       "category": "onchain",
@@ -913,6 +913,34 @@
     }
   ],
   "news": [
+    {
+      "title": "HKMA issues inaugural public digital bonds (HKMC) via CMU DLT platform",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/06/20260611-3/",
+      "body": "ICMA\u2019s fintech tracker lists The Hong Kong Mortgage Corporation\u2019s inaugural public digital bond issuance (HK$12B equivalent) as one of the latest tokenized bond deals. This reinforces Hong Kong\u2019s push for DLT-based bond infrastructure via the CMU platform.",
+      "source": "ICMA",
+      "date": "2026-06-11",
+      "captured_at": "2026-06-25 07:07:48",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [
+        "Asia-Pacific"
+      ],
+      "tags": [
+        "region:Asia-Pacific"
+      ]
+    },
+    {
+      "title": "KfW completes third blockchain-based bond with initial issuance on Polygon",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "body": "ICMA\u2019s fintech tracker lists KfW\u2019s third blockchain-based bond (EUR 100M) as a recent tokenized issuance, initially issued on Polygon with a planned transition to a regulated layer-1 via SWIAT. The deal adds to the track record of regulated on-chain bond formats in Europe.",
+      "source": "ICMA",
+      "date": "2026-06-09",
+      "captured_at": "2026-06-25 07:07:48",
+      "entity_ids": [],
+      "markets": [],
+      "regions": [],
+      "tags": []
+    },
     {
       "title": "KfW issues third blockchain-based 'crypto bond' on Polygon",
       "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
@@ -1768,50 +1796,17 @@
         "entity:blackrock_buidl",
         "market:tokenized_treasuries"
       ]
-    },
-    {
-      "title": "European Commission opens MiCA review consultation, including tokenised financial instruments",
-      "url": "https://www.jdsupra.com/legalnews/mica-review-european-commission-1706716/",
-      "body": "The European Commission launched a consultation on the MiCA review, explicitly covering how tokenised financial instruments and stablecoins should be treated within EU regulatory perimeter.",
-      "source": "JD Supra",
-      "date": "2026-06-02",
-      "captured_at": "2026-06-03 01:10:51",
-      "entity_ids": [],
-      "markets": [
-        "stablecoins"
-      ],
-      "regions": [
-        "Europe"
-      ],
-      "tags": [
-        "market:stablecoins",
-        "region:Europe"
-      ]
-    },
-    {
-      "title": "Saudi Arabia: e-payments reach 85% of retail transactions",
-      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1139.aspx",
-      "body": "SAMA reported e-payments represented 85% of total retail payment transactions in Saudi Arabia in 2025, highlighting ongoing digitization of consumer payments and settlement rails.",
-      "source": "SAMA",
-      "date": "2026-06-01",
-      "captured_at": "2026-06-01 19:00:05",
-      "entity_ids": [
-        "sama_saudi"
-      ],
-      "markets": [
-        "cbdc"
-      ],
-      "regions": [
-        "Middle East"
-      ],
-      "tags": [
-        "entity:sama_saudi",
-        "market:cbdc",
-        "region:Middle East"
-      ]
     }
   ],
   "alerts": [
+    {
+      "severity": "warning",
+      "title": "Extreme fear in market",
+      "body": "Fear & Greed Index at 17 \u2014 extreme fear",
+      "category": "risk",
+      "created_at": "2026-06-25 07:07:48",
+      "acknowledged": 0
+    },
     {
       "severity": "warning",
       "title": "Extreme fear in market",
@@ -1845,6 +1840,6 @@
       "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-25 01:09:04",
-  "server_time_utc": "2026-06-25T01:09:04.246269Z"
+  "last_update": "2026-06-25 07:07:48",
+  "server_time_utc": "2026-06-25T07:07:48.390968Z"
 }
