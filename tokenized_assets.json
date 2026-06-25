@@ -1,6 +1,20 @@
 {
-  "last_update": "2026-06-23 07:18:22",
+  "last_update": "2026-06-25 13:16:04",
   "assets": [
+    {
+      "id": "hkmc_digital_bond_jun2026",
+      "asset": "HKMC digital bond",
+      "issuer": "The Hong Kong Mortgage Corporation Limited (HKMC)",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "CMU DLT platform",
+      "region": "APAC",
+      "country": "Hong Kong",
+      "size_usd": null,
+      "date": "2026-06-11",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/06/20260611-3/",
+      "description": "HKMC issued a digital bond via a DLT platform operated by the Central Moneymarkets Unit (CMU)."
+    },
     {
       "id": "kfw_crypto_bond_2026_06_09",
       "asset": "crypto bond",
