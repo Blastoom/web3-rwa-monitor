@@ -1,5 +1,37 @@
 {
   "metrics": {
+    "fear_greed": {
+      "value": 12.0,
+      "delta_pct": -29.411764705882355,
+      "unit": "",
+      "label": "Crypto Fear & Greed Index",
+      "category": "risk",
+      "source_url": ""
+    },
+    "crypto_mcap": {
+      "value": 2129540562568.0,
+      "delta_pct": -2.787544737612725,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 55.75,
+      "delta_pct": -0.4997322862752117,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02631,
+      "delta_pct": -1.5344311377245532,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 32030000000.0,
       "delta_pct": -0.6205398696866273,
@@ -62,38 +94,6 @@
       "unit": "USD",
       "label": "DeFi TVL (total)",
       "category": "onchain",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2190604647131.0,
-      "delta_pct": -0.7064332980022433,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 56.03,
-      "delta_pct": 0.0,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02672,
-      "delta_pct": -0.22404779686333465,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
-      "source_url": ""
-    },
-    "fear_greed": {
-      "value": 17.0,
-      "delta_pct": 0.0,
-      "unit": "",
-      "label": "Crypto Fear & Greed Index",
-      "category": "risk",
       "source_url": ""
     },
     "rwa_commodities": {
@@ -371,6 +371,54 @@
   },
   "metrics_list": [
     {
+      "category": "risk",
+      "metric_key": "fear_greed",
+      "metric_label": "Crypto Fear & Greed Index",
+      "value_num": 12.0,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -5.0,
+      "delta_pct": -29.411764705882355,
+      "captured_at": "2026-06-25 19:23:53"
+    },
+    {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2129540562568.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -61064084563.0,
+      "delta_pct": -2.787544737612725,
+      "captured_at": "2026-06-25 19:23:53"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 55.75,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.28000000000000114,
+      "delta_pct": -0.4997322862752117,
+      "captured_at": "2026-06-25 19:23:53"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02631,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": -0.00041000000000000064,
+      "delta_pct": -1.5344311377245532,
+      "captured_at": "2026-06-25 19:23:53"
+    },
+    {
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
@@ -460,54 +508,6 @@
       "metric_label": "DeFi TVL (total)",
       "value_num": 96195000000.0,
       "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-25 13:16:04"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2190604647131.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -15585260122.0,
-      "delta_pct": -0.7064332980022433,
-      "captured_at": "2026-06-25 13:16:04"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 56.03,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": 0.0,
-      "delta_pct": 0.0,
-      "captured_at": "2026-06-25 13:16:04"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02672,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -6.0000000000001025e-05,
-      "delta_pct": -0.22404779686333465,
-      "captured_at": "2026-06-25 13:16:04"
-    },
-    {
-      "category": "risk",
-      "metric_key": "fear_greed",
-      "metric_label": "Crypto Fear & Greed Index",
-      "value_num": 17.0,
-      "unit": "",
       "source_url": "",
       "source_name": "",
       "delta_num": 0.0,
@@ -1824,16 +1824,8 @@
       "category": "risk",
       "created_at": "2026-06-24 01:43:16",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 20 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-23 14:22:49",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-25 13:16:04",
-  "server_time_utc": "2026-06-25T13:16:04.597389Z"
+  "last_update": "2026-06-25 19:23:53",
+  "server_time_utc": "2026-06-25T19:23:53.743570Z"
 }
