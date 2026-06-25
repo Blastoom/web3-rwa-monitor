@@ -1,5 +1,29 @@
 {
   "metrics": {
+    "crypto_mcap": {
+      "value": 2178486920956.0,
+      "delta_pct": 1.6830336926259075,
+      "unit": "USD",
+      "label": "Total Crypto Market Cap",
+      "category": "market",
+      "source_url": ""
+    },
+    "btc_dom": {
+      "value": 55.94,
+      "delta_pct": 0.3948312993539104,
+      "unit": "%",
+      "label": "Bitcoin dominance",
+      "category": "risk",
+      "source_url": ""
+    },
+    "eth_btc_ratio": {
+      "value": 0.02661,
+      "delta_pct": 1.0250569476082114,
+      "unit": "",
+      "label": "ETH/BTC Ratio",
+      "category": "market",
+      "source_url": ""
+    },
     "rwa_total": {
       "value": 32220000000.0,
       "delta_pct": 0.0,
@@ -46,30 +70,6 @@
       "unit": "",
       "label": "Crypto Fear & Greed Index",
       "category": "risk",
-      "source_url": ""
-    },
-    "crypto_mcap": {
-      "value": 2142429117075.0,
-      "delta_pct": -3.3042040553140613,
-      "unit": "USD",
-      "label": "Total Crypto Market Cap",
-      "category": "market",
-      "source_url": ""
-    },
-    "btc_dom": {
-      "value": 55.72,
-      "delta_pct": -0.8011393982553014,
-      "unit": "%",
-      "label": "Bitcoin dominance",
-      "category": "risk",
-      "source_url": ""
-    },
-    "eth_btc_ratio": {
-      "value": 0.02634,
-      "delta_pct": -1.3113525665043073,
-      "unit": "",
-      "label": "ETH/BTC Ratio",
-      "category": "market",
       "source_url": ""
     },
     "liq_24h": {
@@ -371,6 +371,42 @@
   },
   "metrics_list": [
     {
+      "category": "market",
+      "metric_key": "crypto_mcap",
+      "metric_label": "Total Crypto Market Cap",
+      "value_num": 2178486920956.0,
+      "unit": "USD",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 36057803881.0,
+      "delta_pct": 1.6830336926259075,
+      "captured_at": "2026-06-25 01:09:04"
+    },
+    {
+      "category": "risk",
+      "metric_key": "btc_dom",
+      "metric_label": "Bitcoin dominance",
+      "value_num": 55.94,
+      "unit": "%",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.21999999999999886,
+      "delta_pct": 0.3948312993539104,
+      "captured_at": "2026-06-25 01:09:04"
+    },
+    {
+      "category": "market",
+      "metric_key": "eth_btc_ratio",
+      "metric_label": "ETH/BTC Ratio",
+      "value_num": 0.02661,
+      "unit": "",
+      "source_url": "",
+      "source_name": "",
+      "delta_num": 0.0002700000000000029,
+      "delta_pct": 1.0250569476082114,
+      "captured_at": "2026-06-25 01:09:04"
+    },
+    {
       "category": "onchain",
       "metric_key": "rwa_total",
       "metric_label": "RWA on-chain (excl. stablecoins)",
@@ -440,42 +476,6 @@
       "source_name": "",
       "delta_num": -6.0,
       "delta_pct": -26.08695652173913,
-      "captured_at": "2026-06-24 19:13:20"
-    },
-    {
-      "category": "market",
-      "metric_key": "crypto_mcap",
-      "metric_label": "Total Crypto Market Cap",
-      "value_num": 2142429117075.0,
-      "unit": "USD",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -73209211504.0,
-      "delta_pct": -3.3042040553140613,
-      "captured_at": "2026-06-24 19:13:20"
-    },
-    {
-      "category": "risk",
-      "metric_key": "btc_dom",
-      "metric_label": "Bitcoin dominance",
-      "value_num": 55.72,
-      "unit": "%",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.45000000000000284,
-      "delta_pct": -0.8011393982553014,
-      "captured_at": "2026-06-24 19:13:20"
-    },
-    {
-      "category": "market",
-      "metric_key": "eth_btc_ratio",
-      "metric_label": "ETH/BTC Ratio",
-      "value_num": 0.02634,
-      "unit": "",
-      "source_url": "",
-      "source_name": "",
-      "delta_num": -0.0003499999999999996,
-      "delta_pct": -1.3113525665043073,
       "captured_at": "2026-06-24 19:13:20"
     },
     {
@@ -1843,16 +1843,8 @@
       "category": "risk",
       "created_at": "2026-06-23 07:18:22",
       "acknowledged": 0
-    },
-    {
-      "severity": "warning",
-      "title": "Extreme fear in market",
-      "body": "Index at 20 \u2014 extreme fear",
-      "category": "risk",
-      "created_at": "2026-06-23 01:07:08",
-      "acknowledged": 0
     }
   ],
-  "last_update": "2026-06-24 19:13:20",
-  "server_time_utc": "2026-06-24T19:13:20.414663Z"
+  "last_update": "2026-06-25 01:09:04",
+  "server_time_utc": "2026-06-25T01:09:04.246269Z"
 }
