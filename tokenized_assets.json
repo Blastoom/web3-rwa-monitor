@@ -1,6 +1,36 @@
 {
-  "last_update": "2026-06-26 19:12:12",
+  "last_update": "2026-06-30 12:08:12",
   "assets": [
+    {
+      "id": "kfw_third_blockchain_bond_jun2026",
+      "asset": "KfW\u2019s third blockchain-based bond (crypto security)",
+      "issuer": "KfW",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "Polygon (planned migration to SWIAT/RL1)",
+      "region": "EU",
+      "country": "Germany",
+      "flag": "DE",
+      "size_usd": null,
+      "date": "2026-06-09",
+      "url": "https://www.kfw.de/About-KfW/Newsroom/Latest-News/Pressemitteilungen-Details_896512.html",
+      "description": "KfW issued its third blockchain-based bond under Germany\u2019s electronic securities framework; ICMA lists it as a recent crypto security issuance."
+    },
+    {
+      "id": "hkmc_public_digital_bonds_jun2026",
+      "asset": "HKMC\u2019s inaugural public digital bonds",
+      "issuer": "The Hong Kong Mortgage Corporation Limited (HKMC)",
+      "issuer_id": null,
+      "asset_type": "tokenized_bond",
+      "chain": "CMU DLT platform",
+      "region": "APAC",
+      "country": "Hong Kong",
+      "flag": "HK",
+      "size_usd": null,
+      "date": "2026-06-11",
+      "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/2026/06/20260611-3/",
+      "description": "HKMC issued its inaugural public digital bonds via the CMU DLT platform; ICMA lists it as a recent digital bond issuance."
+    },
     {
       "id": "kfw_third_blockchain_based_bond_crypto_security_2026_06_09",
       "asset": "Third blockchain-based bond (crypto security)",
